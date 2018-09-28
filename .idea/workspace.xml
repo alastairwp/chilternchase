@@ -14,7 +14,7 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/src/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
+            <state relative-caret-position="-135">
               <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
               <folding />
             </state>
@@ -168,7 +168,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1864" />
+    <option name="x" value="56" />
     <option name="y" value="54" />
     <option name="width" value="1864" />
     <option name="height" value="1146" />
@@ -345,7 +345,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1864" y="54" width="1864" height="1146" extended-state="0" />
+    <frame x="56" y="54" width="1864" height="1146" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25697425" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -719,7 +719,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/src/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
+        <state relative-caret-position="-135">
           <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
           <folding />
         </state>
