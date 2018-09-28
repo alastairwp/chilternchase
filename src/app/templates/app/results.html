@@ -1,0 +1,59 @@
+﻿
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+      <!-- Breadcrumbs Section-->
+      <section class="section breadcrumb-wrapper bg-primary">
+        <div class="shell">
+          <h1>Results</h1>
+        </div>
+      </section>
+      <!-- Hover Row Table Section-->
+      
+      <!-- Striped Table Section-->
+      <section class="section-lg bg-white text-center">
+        <div class="shell">
+            {% if race_year and race_type %}
+          <h3>{{ race_year }}&nbsp;-&nbsp;{{ race_type }}</h3>
+            {% endif %}
+          <div class="range range-xs-center">
+            <div class="cell-sm-10 cell-lg-8">
+              <div class="table-custom-wrap">
+                <table class="table-custom table-fixed table-primary">
+                    <tr>
+                        <th>Position</th>
+                        <th>Entrant Number</th>
+                        <th>Team Name</th>
+                        <th>Year</th>
+                        <th>Finish Time</th>
+                    </tr>
+
+                    {% for result in results %}
+                    {% if user.is_authenticated %}
+
+          <tr {% if result.user_id == request.user.id %} style="background-color:yellow;"{% endif %}>
+              {% else %}
+              <tr>
+    {% endif %}
+
+                        <td>{{ result.position }}</td>
+                        <td>{{ result.entrant_number }}</td>
+                        <td>{{ result.team_name }}</td>
+                        <td>{{ result.race_year }}</td>
+                        <td>{{ result.finish_time }}
+                            {% if result.result_id == course_record_5k.result_id or result.result_id == course_record_10k.result_id or result.result_id == course_record_10k.result_id %}
+                                    <br /><span style="font-size:13px;color:orange;">Course record!</span>
+                                {% endif %}
+                        </td>
+                    </tr>
+                 {% endfor %}
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+{% endblock %}

@@ -1,0 +1,695 @@
+﻿<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  
+<head>
+
+    <title>Home</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <!-- Stylesheets-->
+        {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:400,400i,700,900">
+    <link href="{% static "app/content/css/bootstrap.css" %}" rel="stylesheet" />
+    <link href="{% static "app/content/css/style.css" %}" rel="stylesheet" />
+		<!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="../../static/app/content/images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+    <!-- Page-->
+    <div class="text-left page">
+      <!-- Page preloader-->
+      <div class="page-loader">
+        <div>
+          <div class="page-loader-body">
+            <div class="icon-gradient-block">
+              <div class="icon-gradient-item"><span class="icon mdi mdi-run"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Page Header-->
+        <header class="page-header page-header-creative">
+            <!-- RD Navbar-->
+            <div class="rd-navbar-wrap">
+                <nav class="rd-navbar rd-navbar-creative" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fullwidth" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-md-stick-up-offset="80px" data-lg-stick-up-offset="58px" data-stick-up="true" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true">
+                    <div class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+                    <div class="rd-navbar-inner">
+                        <!-- RD Navbar Panel-->
+                        <div class="rd-navbar-panel">
+                            <!-- RD Navbar Toggle-->
+                            <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                            <!-- RD Navbar Brand-->
+                            <div class="contact-list rd-navbar-collapse">
+                                <ul class="group-lg">
+                                    <!--<li>
+                                  <div class="unit unit-spacing-xxs unit-xxs-horizontal unit-xxs-middle">
+                                    <div class="unit-left"><span class="icon icon-md icon-secondary mdi mdi-phone"></span></div>
+                                    <div class="unit-body"><a class="link-default" href="callto:#">1-800-1234-567</a></div>
+                                  </div>
+                                </li>-->
+                                    <li>
+                                        <div class="unit unit-spacing-xxs unit-xxs-horizontal unit-xxs-middle">
+                                            <div class="unit-left"><span class="icon icon-md icon-secondary mdi mdi-email-outline"></span></div>
+                                            <div class="unit-body"><a class="link-default" href="mailto:#">info@chilternchase.com</a></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="rd-navbar-aside-right">
+                            <div class="rd-navbar-nav-wrap">
+                                <!-- RD Navbar Nav-->
+                                <ul class="rd-navbar-nav">
+                                    {% if title == 'Home | Chiltern Chase' %}
+                                    <li class="active">
+                                        {% else %}
+                                        <li>
+                                        {% endif %}
+                                        <a href="/">Home</a></li>
+                                    <li>
+                                        <a href="/race-details">About</a>
+                                        <!-- RD Navbar Dropdown-->
+                                        <ul class="rd-navbar-dropdown">
+                                            <li><a href="/charities">Charities</a></li>
+                                            <li><a href="/sponsors">Sponsors</a></li>
+                                            <li><a href="/testimonials">Testimonials</a></li>
+                                            <li><a href="/frequently-asked-questions">FAQ</a></li>
+                                            <!--<li><a href="#">Running Clubs</a></li>-->
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/race-details">The Race</a>
+                                        <!-- RD Navbar Dropdown-->
+                                        <ul class="rd-navbar-dropdown">
+                                            <li><a target="_blank" href="http://www.sportsystems.co.uk/ss/event/ChilternChase15K10K5K2018">Race Registration</a></li>
+                                            <li><a href="/race-details">Race details</a></li>
+                                            <li><a href="/travel-information">Travel Information</a></li>
+                                            <li><a href="/prize-list">Prize List</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/gallery">Gallery</a>
+                                        <ul class="rd-navbar-dropdown">
+                                            <li><a href="/gallery/2017">2017</a></li>
+                                            <li><a href="/gallery/2016">2016</a></li>
+                                            <li><a href="/gallery/2015">2015</a></li>
+                                            <li><a href="/gallery/2014">2014</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Results</a>
+                                        <!-- RD Navbar Megamenu-->
+                                        <ul class="rd-navbar-megamenu">
+
+                                            <li>
+                                                <ul>
+                                                    <li style="text-align:center"><h4>5K</h4></li>
+                                                    <li><a href="/results/2018/5K">2018</a></li>
+                                                    <li><a href="/results/2017/5K">2017</a></li>
+                                                    <li><a href="/results/2016/5K">2016</a></li>
+                                                    <li><a href="/results/2015/5K">2015</a></li>
+                                                    <li><a href="/results/2014/5K">2014</a></li>
+                                                    <li><a href="/results/2013/5K">2013</a></li>
+                                                    <li><a href="/results/2012/5K">2012</a></li>
+                                                    <li><a href="/results/2011/5K">2011</a></li>
+                                                    <li><a href="/results/2010/5K">2010</a></li>
+                                                    <li><a href="/results/2009/5K">2009</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul>
+                                                    <li style="text-align:center"><h4>10K</h4></li>
+                                                    <li><a href="/results/2018/10K">2018</a></li>
+                                                    <li><a href="/results/2017/10K">2017</a></li>
+                                                    <li><a href="/results/2016/10K">2016</a></li>
+                                                    <li><a href="/results/2015/10K">2015</a></li>
+                                                    <li><a href="/results/2014/10K">2014</a></li>
+                                                    <li><a href="/results/2013/10K">2013</a></li>
+                                                    <li><a href="/results/2012/10K">2012</a></li>
+                                                    <li><a href="/results/2011/10K">2011</a></li>
+                                                    <li><a href="/results/2010/10K">2010</a></li>
+                                                    <li><a href="/results/2009/10K">2009</a></li>
+                                                    <li><a href="/results/2008/10K">2008</a></li>
+                                                    <li><a href="/results/2007/10K">2007</a></li>
+                                                    <li><a href="/results/2006/10K">2006</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul>
+                                                    <li style="text-align:center"><h4>15K</h4></li>
+                                                    <li><a href="/results/2018/15K">2018</a></li>
+                                                    <li><a href="/results/2017/15K">2017</a></li>
+                                                    <li><a href="/results/2016/15K">2016</a></li>
+                                                    <li><a href="/results/2015/15K">2015</a></li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    {% if user.is_authenticated %}
+                                    <li>
+                                        <a href="/members/dashboard">MyCC</a>
+                                        <ul class="rd-navbar-dropdown">
+                                            <li><a href="/members/dashboard">Dashboard</a></li>
+                                            <li><a href="/members/photo-captures">Photo Captures</a></li>
+                                            <li><a href="/members/leaderboards">Leaderboards</a></li>
+                                        </ul>
+                                    </li>
+                                    {% endif %}
+                                    <li>
+                                        {% if user.is_authenticated %}
+                                        <a href="{% url 'logout'%}">Logout</a>
+                                        {% else %}
+                                        <a href="{% url 'login'%}?next={{request.path}}">Login</a>
+                                        {% endif %}
+                                    </li>
+                                </ul><a class="button button-primary button-sm" target="_blank" href="https://www.justgiving.com/fundraising/ChilternChase2018">Donate Now </a>
+                            </div>
+                            <!--RD Navbar Search
+                            <div class="rd-navbar-search">
+                                <a class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search" href="#"><span></span></a>
+                                <form class="rd-search" action="#" data-search-live="rd-search-results-live" method="GET">
+                                    <div class="form-wrap">
+                                        <label class="form-label form-label" for="rd-navbar-search-form-input">Search...</label>
+                                        <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
+                                        <div class="rd-search-results-live" id="rd-search-results-live"></div>
+                                    </div>
+                                    <button class="rd-search-form-submit fa-search"></button>
+                                </form>
+                            </div>-->
+                            <a class="button button-primary button-sm" target="_blank" href="https://www.justgiving.com/fundraising/ChilternChase2018">Donate Now </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+
+      <section class="section section-xl bg-primary bg-primary-mod-1" style="background: url(../../static/app/content/images/slide1b.jpg) no-repeat center; background-size: cover;">
+        <div class="shell shell-wide">
+          <div class="range range-md-justify range-md-middle">
+            <div class="cell-sm-6 cell-lg-6 inset-modern-left"><!--<a class="brand-name" href="index-2.html"><img src="images/brand-condensed.png" width="217" height="52" alt=""></a>-->
+              <h1>The Chiltern Chase</h1>
+                <h2>9th June 2019 - 10.00am</h2>
+              <div class="button-group"><a class="button button-primary" target="_blank" href="http://www.sportsystems.co.uk/ss/event/ChilternChase15K10K5K2018">Race Registration</a><a class="button button-primary-outline" href="/race-details">more details</a></div>
+            </div>
+            <div class="cell-sm-6 cell-md-5 cell-lg-4 cell-xl-4 cell-xxl-3 inset-modern-right wow fadeInRight" data-wow-delay="0.3s"> 
+              <!--<div class="block-book-consultation">
+                <h4>Fill in the Form</h4>
+                <p>Please enter your name and e-mail in the form below to join a charity.</p>
+                <form class="rd-mailform text-left" data-form-output="form-output-global" data-form-type="contact" method="post" action="https://livedemo00.template-help.com/wt_62462/bat/rd-mailform.php">
+                  <div class="range range-xs-center range-15">
+                    <div class="cell-sm-12">
+                      <div class="form-wrap form-wrap-validation">
+                        <label class="form-label form-label-outside" for="forms-name-cre">First name</label>
+                        <input class="form-input" id="forms-name-cre" type="text" name="name" data-constraints="@Required">
+                      </div>
+                    </div>
+                    <div class="cell-sm-12">
+                      <div class="form-wrap form-wrap-validation">
+                        <label class="form-label form-label-outside" for="forms-phone-cre">Phone</label>
+                        <input class="form-input" id="forms-phone-cre" type="text" name="phone" data-constraints="@Numeric @Required">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-button">
+                    <button class="button button-primary button-block" type="submit">Join a Charity</button>
+                  </div>
+                </form>
+              </div>-->
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Icon Block-->
+      <section class="section section-lg bg-white">
+        <div class="shell shell-wide">
+          <div class="range range-40">
+            <!-- Icon Gradient Block-->
+            <div class="cell-sm-4">
+              <div class="icon-gradient-block wow fadeInUp" data-wow-delay="0.1s">
+                <div class="icon-gradient-item"><span class="icon mdi mdi-ambulance"></span></div>
+                <h4>Life</h4>
+                <p>The charities we support literally save lives. Your money makes all the difference to those who really need it. </p>
+              </div>
+            </div>
+            <!-- Icon Gradient Block-->
+            <div class="cell-sm-4">
+              <div class="icon-gradient-block wow fadeInUp" data-wow-delay="0.2s">
+                <div class="icon-gradient-item"><span class="icon mdi mdi-heart-outline"></span></div>
+                <h4>Health</h4>
+                <p>What better way to improve your health than running and taking in the crisp fresh air of the Chiltern countryside. </p>
+              </div>
+            </div>
+            <!-- Icon Gradient Block-->
+            <div class="cell-sm-4">
+              <div class="icon-gradient-block wow fadeInUp" data-wow-delay="0.3s">
+                <div class="icon-gradient-item"><span class="icon mdi mdi-shape-plus"></span></div>
+                <h4>Opportunity</h4>
+                <p>Our main charity is the Friends Of Ewelme School who are dedicated to raising money for the children of Ewelme School.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <!-- Blog Creative-->
+      <section class="section">
+        <div class="range range-condensed range-0">
+          <!-- Blog Creative Item-->
+          <div class="cell-md-4 cell-lg-4 blog-creative-wrap">
+            <article class="blog-creative">
+              <div class="blog-creative-image"><img src="../../static/app/content/images/blog-creative-01-640x480.jpg" alt="" width="640" height="480"/>
+              </div>
+              <div class="blog-creative-content">
+                <div class="blog-creative-content-top">
+                  <ul class="blog-creative-tags">
+                    <li><a target="_blank" href="http://sca-charity.org.uk/donate/">Donate now</a></li>
+                  </ul>
+                  <ul class="blog-creative-comments">
+                    <li><!--<span class="icon icon-md mdi mdi-comment-outline"></span><a href="blog-post.html#blog-post-comments">2 Comments</a>--></li>
+                  </ul>
+                </div>
+                <div class="blog-creative-content-bottom">
+                  <div class="blog-creative-title">
+                    <h3><a href="blog-post.html">South Central Ambulance Charity</a></h3>
+                  </div>
+                  <div class="blog-creative-meta">
+                    <ul class="inline-list-lg">
+                      <li><span class="icon icon-md mdi mdi-calendar-clock"></span><span>Years: 2017, 2018</span></li>
+                      <!--<li><span class="icon icon-md mdi mdi-account"></span><a href="#">by Austin Riley</a></li>-->
+                    </ul>
+                  </div><a class="button button-xs button-primary" href="/charities/2017">read more</a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- Blog Creative Item-->
+          <div class="cell-md-4 cell-lg-4 blog-creative-wrap">
+            <article class="blog-creative">
+              <div class="blog-creative-image"><img src="../../static/app/content/images/blog-creative-02-640x480.jpg" alt="" width="640" height="480"/>
+              </div>
+              <div class="blog-creative-content">
+                <div class="blog-creative-content-top">
+                  <ul class="blog-creative-tags">
+                    <li><a target="_blank" href="https://youngminds.org.uk/donate/">Donate now</a></li>
+                  </ul>
+                  <ul class="blog-creative-comments">
+                    <li><!--<span class="icon icon-md mdi mdi-comment-outline"></span><a href="blog-post.html#blog-post-comments">2 Comments</a>--></li>
+                  </ul>
+                </div>
+                <div class="blog-creative-content-bottom">
+                  <div class="blog-creative-title">
+                    <h3><a href="#">Young Minds</a></h3>
+                  </div>
+                  <div class="blog-creative-meta">
+                    <ul class="inline-list-lg">
+                      <li><span class="icon icon-md mdi mdi-calendar-clock"></span><span>Years: 2015, 2016</span></li>
+                      <!--<li><span class="icon icon-md mdi mdi-account"></span><a href="#">by Austin Riley</a></li>-->
+                    </ul>
+                  </div><a class="button button-xs button-primary" href="/charities/2016">read more</a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- Blog Creative Item-->
+          <div class="cell-md-4 cell-lg-4 blog-creative-wrap">
+            <article class="blog-creative">
+              <div class="blog-creative-image"><img src="../../static/app/content/images/blog-creative-03-640x480.jpg" alt="" width="640" height="480"/>
+              </div>
+              <div class="blog-creative-content">
+                <div class="blog-creative-content-top">
+                  <ul class="blog-creative-tags">
+                    <li><a target="_blank" href="https://www.bcrt.org.uk/get-involved/donate/">Donate now</a></li>
+                  </ul>
+                  <ul class="blog-creative-comments">
+                    <li><!--<span class="icon icon-md mdi mdi-comment-outline"></span><a href="blog-post.html#blog-post-comments">2 Comments</a>--></li>
+                  </ul>
+                </div>
+                <div class="blog-creative-content-bottom">
+                  <div class="blog-creative-title">
+                    <h3><a href="blog-post.html">Bone Cancer Research Trust</a></h3>
+                  </div>
+                  <div class="blog-creative-meta">
+                    <ul class="inline-list-lg">
+                      <li><span class="icon icon-md mdi mdi-calendar-clock"></span><span>Years: 2013, 2014</span></li>
+                      <!--<li><span class="icon icon-md mdi mdi-account"></span><a href="#">by Austin Riley</a></li>-->
+                    </ul>
+                  </div><a class="button button-xs button-primary" href="/charities/2014">read more</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-lg bg-gray-2 text-center">
+        <div class="shell shell-wide">
+          <h2>Testimonials</h2>
+          <div class="range range-lg range-30 text-left">
+              {% for testimonial in testimonials %}
+            <!-- Quote Minimal-->
+            <div class="cell-lg-3 cell-sm-6">
+              <div class="quote-minimal">
+                <div class="quote-minimal-icon"><span class="icon mdi mdi-format-quote"></span></div>
+                <div class="quote-minimal-inner">
+                  <!--<h5>Thanks for Your Help!</h5>-->
+                  <p>{{ testimonial.message }}</p>
+                  <div class="quote-info">
+                    <div class="unit unit-spacing-xs unit-xxs-horizontal unit-xxs-middle">
+                      <div class="unit-left"><div style="width:70px;height:70px" class="icon-gradient-item"><span class="icon mdi mdi-account"></span></div>
+                      </div>
+                      <div class="unit-body">
+                        <p class="quote-info-name">{{ testimonial.user.firstname }}</p>
+                        <p class="quote-info-cite">{{ testimonial.race_year }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              {% endfor %}
+
+          </div><a class="button button-primary" href="/testimonials">view all testimonials</a>
+        </div>
+      </section>
+
+      <!-- Chiltern Chase Marketing-->
+      <section class="parallax-container section">
+        <div class="material-parallax parallax"><img src="../../static/app/content/images/1200pxl.jpg" alt=""></div>
+        <div class="parallax-content section-xl context-dark">
+          <div class="shell shell-wide">
+            <div class="range range-center">
+              <div class="cell-lg-8">
+                <div class="range range-md-left range-30">
+                  <div class="cell-xs-12">
+                    <h1>Running for life, health and opportunity</h1>
+                  </div>
+                  <div class="cell-md-6 cell-xxl-6">
+                    <div class="quote-demo">
+                      <div class="unit unit-spacing-xs unit-xs-horizontal">
+                        <div class="unit-left"><span class="quote-demo-icon icon icon-lg icon-secondary mdi mdi-format-quote"></span></div>
+                        <div class="unit-body">
+                          <div class="quote-demo-q"><span class="heading-5">What started out as a simple fundraiser has now become an annual spectacle with runners coming from all over the country to run the Chiltern Chase. We are so grateful to be able to support local organisations that so desperately need the funds. </span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <h5 class="text-regular">If you would like to make a difference and help fund worthwhile charities then why not register for the Chiltern Chase race today!</h5>
+                    <div class="button-group"><a class="button button-primary" href="http://www.sportsystems.co.uk/ss/event/ChilternChase15K10K5K2018">Register today</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Sponsors-->
+      <section class="section section-lg bg-white">
+        <div class="shell shell-wide text-center">
+          <h2>Our Lead Sponsors</h2>
+          <div class="range range-lg text-left range-30">
+
+            <div class="cell-sm-6 cell-lg-3 wow fadeInUp" data-wow-delay="0.1s">
+              <!-- Sponsor Classic element-->
+              <div class="team-classic">
+                <div class="team-classic-header"><img src="../../static/app/content/images/team-01-420x420.jpg" alt="" width="420" height="420"/>
+                  <ul class="team-classic-list group-xs">
+                    <li><a class="icon icon-md icon-circle icon-white fa-facebook" href="https://www.facebook.com/pages/Grundon-Waste-Management/212549242240419"></a></li>
+                    <li><a class="icon icon-md icon-circle icon-white fa-twitter" href="https://twitter.com/GrundonRecycle"></a></li>
+                    <li><a class="icon icon-md icon-circle icon-white fa-instagram" href="https://www.instagram.com/grundonrecycle/"></a></li>
+                  </ul>
+                </div>
+                <h5 class="team-classic-title"><a href="http://www.grundon.com">Grundon</a></h5>
+                <p class="team-classic-cite">www.grundon.com</p>
+                <div class="divider"></div>
+                <p class="team-classic-text">Grundon is one of the UK’s leading suppliers of integrated waste management and environmental solutions. Situated near to Ewelme Grundon has been a loyal sponsor to the Chiltern Chase.</p>
+              </div>
+            </div>
+
+            <div class="cell-sm-6 cell-lg-3 wow fadeInUp" data-wow-delay="0.15s">
+              <!-- Team Classic element-->
+              <div class="team-classic">
+                <div class="team-classic-header"><img src="../../static/app/content/images/team-02-420x420.jpg" alt="" width="420" height="420"/>
+                   <ul class="team-classic-list group-xs">
+                    <li><a target="_blank" class="icon icon-md icon-circle icon-white fa-facebook" href="https://www.facebook.com/rowsehoney/"></a></li>
+                    <li><a target="_blank" class="icon icon-md icon-circle icon-white fa-twitter" href="https://twitter.com/rowsehoney"></a></li>
+                    <li><a target="_blank" class="icon icon-md icon-circle icon-white fa-instagram" href="https://www.instagram.com/rowsehoneyuk/"></a></li>
+                  </ul>
+                </div>
+                <h5 class="team-classic-title"><a href="https://www.rowsehoney.co.uk/">Rowse Honey</a></h5>
+                <p class="team-classic-cite">www.rowsehoney.co.uk</p>
+                <div class="divider"></div>
+                <p class="team-classic-text">Rowse started in 1938 when a chap called Tony Rowse started beekeeping at his home in Ewelme, Oxfordshire. He enjoyed it so much he decided to try and make a living from his hobby.</p>
+              </div>
+            </div>
+
+            <div class="cell-sm-6 cell-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="team-classic">
+                <div class="team-classic-header"><img src="../../static/app/content/images/team-03-420x420.jpg" alt="" width="420" height="420"/>
+                  <ul class="team-classic-list group-xs">
+                    <li><a target="_blank" class="icon icon-md icon-circle icon-white fa-facebook" href="https://www.facebook.com/sysdocgroup"></a></li>
+                    <li><a target="_blank" class="icon icon-md icon-circle icon-white fa-twitter" href="https://twitter.com/sysdocgroup"></a></li>
+                    <!--<li><a target="_blank" class="icon icon-md icon-circle icon-white fa-instagram" href="#"></a></li>-->
+                  </ul>
+                </div>
+                <h5 class="team-classic-title"><a href="http://www.sysdocgroup.com/">Sysdoc</a></h5>
+                <p class="team-classic-cite">www.sysdocgroup.com</p>
+                <div class="divider"></div>
+                <p class="team-classic-text">Sysdoc is an innovative specialist consultancy that works with clients to deliver successful and sustainable business transformation and change.</p>
+              </div>
+            </div>
+
+            <div class="cell-sm-6 cell-lg-3 wow fadeInUp" data-wow-delay="0.25s">
+              <div class="team-classic">
+                <div class="team-classic-header"><img src="../../static/app/content/images/team-04-420x420.jpg" alt="" width="420" height="420"/>
+                  <ul class="team-classic-list group-xs">
+                    <li><a target="_blank" class="icon icon-md icon-circle icon-white fa-facebook" href="https://www.facebook.com/pages/BTN-Turbo/111191505565143"></a></li>
+                    <!--<li><a target="_blank" class="icon icon-md icon-circle icon-white fa-twitter" href="#"></a></li>
+                    <li><a target="_blank" class="icon icon-md icon-circle icon-white fa-instagram" href="#"></a></li>-->
+                  </ul>
+                </div>
+                <h5 class="team-classic-title"><a href="http://www.btnturbo.com/">BTN Turbo</a></h5>
+                <p class="team-classic-cite">www.btnturbo.com</p>
+                <div class="divider"></div>
+                <p class="team-classic-text">BTN Turbo are dedicated to supplying an optimum quality product on time, at a competitve price and supporting the continuous development of the turbo charging industry.</p>
+              </div>
+            </div>
+
+          </div><a class="button button-primary" href="sponsors">VIEW ALL SPONSORS</a>
+        </div>
+      </section>
+
+      <!-- Page Footer-->
+        <footer class="section page-footer page-footer-plugin page-footer-creative section-md bg-gray-darker">
+            <div class="shell shell-wide">
+                <div class="range range-lg-center range-xl-justify">
+                    <div class="cell-lg-10 cell-xl-6">
+                        <div class="range range-40 range-xl-80">
+                            <div class="cell-sm-6">
+                                <!-- Contact Information-->
+                                <div class="inset-lg-right-50">
+                                    <h5>Contact Information</h5>
+                                    <div class="heading-divider"></div>
+                                    <ul class="list contact-list">
+                                        <!-- <li>
+                                      <div class="unit unit-spacing-xs unit-xxs-horizontal">
+                                        <div class="unit-left"><span class="icon icon-md icon-primary mdi mdi-map-marker"></span></div>
+                                        <div class="unit-body"><a href="#">2130 Fulton Street San Diego,<br>CA 94117-1080 USA</a></div>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="unit unit-spacing-xs unit-xxs-horizontal">
+                                        <div class="unit-left"><span class="icon icon-md icon-primary mdi mdi-phone"></span></div>
+                                        <div class="unit-body"><a href="callto:#">1-800-1234-567</a></div>
+                                      </div>
+                                    </li>
+                                    <li>-->
+                                        <div class="unit unit-spacing-xs unit-xxs-horizontal">
+                                            <div class="unit-left"><span class="icon icon-md icon-primary mdi mdi-email-outline"></span></div>
+                                            <div class="unit-body"><a href="mailto:info@chilternchase.com">info@chilternchase.com</a></div>
+                                        </div>
+                                        </li>
+                                    </ul>
+                                    <!-- Inline List-->
+                                    <ul class="inline-list-md">
+                                        <li><a class="icon icon-sm icon-default fa-facebook" href="https://www.facebook.com/chilternchase/"></a></li>
+                                        <li><a class="icon icon-sm icon-default fa-twitter" href="https://twitter.com/chilternchase"></a></li>
+                                        <!--<li><a class="icon icon-sm icon-default fa-instagram" href="#"></a></li>
+                                    <li><a class="icon icon-sm icon-default fa-google" href="#"></a></li>
+                                    <li><a class="icon icon-sm icon-default fa-pinterest-p" href="#"></a></li>
+                                    <li><a class="icon icon-sm icon-default fa-linkedin" href="#"></a></li>-->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cell-sm-6">
+                                <!-- Twitter-->
+                                <!--<h5>Facebook Feed</h5>
+                                <div class="heading-divider"></div>
+
+
+                                
+                            <div class="twitter" data-twitter-username="chiltern_chase">
+                                <div class="owl-carousel owl-carousel-minimal" data-items="1" data-dots="false" data-nav="true" data-stage-padding="0" data-loop="false" data-margin="0" data-mouse-drag="false">
+                                    <div class="item">
+                                        <div class="twitter-feed-minimal" data-twitter-type="tweet">
+                                            <span class="mdi mdi-twitter twitter-icon icon-md icon-primary"></span>
+                                            <time data-date="text" data-datetime="datetime" datetime="2017"></time>
+                                            <p class="twitter-feed-minimal-content" data-tweet="text"></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="twitter-feed-minimal" data-twitter-type="tweet">
+                                            <span class="mdi mdi-twitter twitter-icon icon-md icon-primary"></span>
+                                            <time data-date="text" data-datetime="datetime" datetime="2017"></time>
+                                            <p class="twitter-feed-minimal-content" data-tweet="text"></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="twitter-feed-minimal" data-twitter-type="tweet">
+                                            <span class="mdi mdi-twitter twitter-icon icon-md icon-primary"></span>
+                                            <time data-date="text" data-datetime="datetime" datetime="2017"></time>
+                                            <p class="twitter-feed-minimal-content" data-tweet="text"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            -->
+                            </div>
+                            <!--
+                                <div class="cell-sm-6">
+                                  <div class="inset-lg-right-50">
+
+                                    <h5>Newsletter</h5>
+                                    <div class="heading-divider"> </div>
+                                    <p>Keep up with our always upcoming news, updates, and publications. Enter your e-mail and subscribe to our newsletter.</p>
+
+                                    <form class="mailchimp-mailform rd-mailform-inline text-left" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="#">
+                                      <div class="form-wrap form-wrap-validation">
+                                        <label class="form-label form-label-sm" for="forms-newsletter-email">Enter your e-mail</label>
+                                        <input class="form-input form-input-sm" id="forms-newsletter-email" type="email" name="email" data-constraints="@Email @Required">
+                                      </div>
+                                      <button class="button button-xs button-primary-accent" type="submit">Subscribe</button>
+                                    </form>
+                                  </div>
+                                </div>
+
+                                <div class="cell-sm-6">
+
+                                  <h5>Flickr Feed</h5>
+                                  <div class="heading-divider"> </div>
+                                  <div class="thumb-wrap">
+                                    <div class="flickr" data-flickr-tags="tm-62462" data-lightgallery="group">
+                                      <div class="range range-10 range-narrow">
+                                        <div class="cell-xxs-6 cell-sm-4">
+                                          <div class="flickr-item" data-type="flickr-item">
+                                            <div class="thumb-default"><a href="#" data-image_b="href" data-lightgallery="item"><img src="images/_blank.png" width="120" height="120" data-image_b="src" alt="">
+                                                <div class="thumb-default-overlay"></div></a></div>
+                                          </div>
+                                        </div>
+                                        <div class="cell-xxs-6 cell-sm-4">
+                                          <div class="flickr-item" data-type="flickr-item">
+                                            <div class="thumb-default"><a href="#" data-image_b="href" data-lightgallery="item"><img src="images/_blank.png" width="120" height="120" data-image_b="src" alt="">
+                                                <div class="thumb-default-overlay"></div></a></div>
+                                          </div>
+                                        </div>
+                                        <div class="cell-xxs-6 cell-sm-4">
+                                          <div class="flickr-item" data-type="flickr-item">
+                                            <div class="thumb-default"><a href="#" data-image_b="href" data-lightgallery="item"><img src="images/_blank.png" width="120" height="120" data-image_b="src" alt="">
+                                                <div class="thumb-default-overlay"></div></a></div>
+                                          </div>
+                                        </div>
+                                        <div class="cell-xxs-6 cell-sm-4">
+                                          <div class="flickr-item" data-type="flickr-item">
+                                            <div class="thumb-default"><a href="#" data-image_b="href" data-lightgallery="item"><img src="images/_blank.png" width="120" height="120" data-image_b="src" alt="">
+                                                <div class="thumb-default-overlay"></div></a></div>
+                                          </div>
+                                        </div>
+                                        <div class="cell-xxs-6 cell-sm-4">
+                                          <div class="flickr-item" data-type="flickr-item">
+                                            <div class="thumb-default"><a href="#" data-image_b="href" data-lightgallery="item"><img src="images/_blank.png" width="120" height="120" data-image_b="src" alt="">
+                                                <div class="thumb-default-overlay"></div></a></div>
+                                          </div>
+                                        </div>
+                                        <div class="cell-xxs-6 cell-sm-4">
+                                          <div class="flickr-item" data-type="flickr-item">
+                                            <div class="thumb-default"><a href="#" data-image_b="href" data-lightgallery="item"><img src="images/_blank.png" width="120" height="120" data-image_b="src" alt="">
+                                                <div class="thumb-default-overlay"></div></a></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div> -->
+                            <div class="cell-lg-10 cell-xl-5">
+                                <!-- Get in Touch-->
+                                <!--<h5>Get in Touch</h5>
+                                <div class="heading-divider"> </div>
+
+                                <form class="rd-mailform text-left" data-form-output="form-output-global" data-form-type="contact" method="post" action="https://livedemo00.template-help.com/wt_62462/bat/rd-mailform.php">
+                                    <div class="range range-xs-center range-15">
+                                        <div class="cell-sm-6">
+                                            <div class="form-wrap form-wrap-validation">
+                                                <label class="form-label form-label-outside" for="forms-name1">First name</label>
+                                                <input class="form-input" id="forms-name1" type="text" name="name" data-constraints="@Required">
+                                            </div>
+                                        </div>
+                                        <div class="cell-sm-6">
+                                            <div class="form-wrap form-wrap-validation">
+                                                <label class="form-label form-label-outside" for="forms-last-name1">Last name</label>
+                                                <input class="form-input" id="forms-last-name1" type="text" name="last-name" data-constraints="@Required">
+                                            </div>
+                                        </div>
+                                        <div class="cell-sm-6">
+                                            <div class="form-wrap form-wrap-validation">
+                                                <label class="form-label form-label-outside" for="forms-email1">E-mail</label>
+                                                <input class="form-input" id="forms-email1" type="email" name="email" data-constraints="@Email @Required">
+                                            </div>
+                                        </div>
+                                        <div class="cell-sm-6">
+                                            <div class="form-wrap form-wrap-validation">
+                                                <label class="form-label form-label-outside" for="forms-phone1">Phone</label>
+                                                <input class="form-input" id="forms-phone1" type="text" name="phone" data-constraints="@Numeric @Required">
+                                            </div>
+                                        </div>
+                                        <div class="cell-sm-12">
+                                            <div class="form-wrap form-wrap-validation">
+                                                <label class="form-label form-label-outside" for="forms-message1">Message</label>
+                                                <textarea class="form-input" id="forms-message1" name="message" data-constraints="@Required"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-button">
+                                        <button class="button button-primary" type="submit">Send</button>
+                                    </div>
+                                </form>-->
+                            </div>
+                        </div>
+                        <div class="range range-lg-center">
+                            <div class="cell-lg-10 cell-xl-12">
+                                <p class="copyright">
+                                    &#169; <span id="copyright-year"></span> All Rights Reserved <a href="/terms-of-use">Terms of Use</a> and <a href="privacy-policy">Privacy Policy</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+        </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+	
+    <script src="../../static/app/scripts/core.min.js"></script>
+    <script src="../../static/app/scripts/script.js"></script>
+  </body>
+
+</html>

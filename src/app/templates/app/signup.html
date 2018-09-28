@@ -1,0 +1,44 @@
+﻿{% extends 'app/layout.html' %}
+
+{% block content %}
+    <section class="section breadcrumb-wrapper bg-primary">
+        <div class="shell">
+          <h1>Website Sign Up</h1>
+          <br /><br /><br />
+        </div>
+      </section>
+    <section class="section section-lg bg-white text-center">
+        <div class="shell">
+          <div class="range range-xl range-xs-center">
+            <div class="cell-sm-10 cell-md-8 cell-lg-4">
+              <div class="tab-content text-left">
+                <div style="width:300px">
+                  <!-- RD Login Form-->
+                    <form method="post">
+                      {% csrf_token %}
+                      {% for field in form %}
+                        <p>
+                          {{ field.label_tag }}<br>
+                          {{ field }}
+                          {% if field.help_text %}
+                            <small style="color: grey"></small>
+                          {% endif %}
+                          {% for error in field.errors %}
+                            <p style="color: red">{{ error }}</p>
+                          {% endfor %}
+                        </p>
+                      {% endfor %}
+                      <br>
+                      <button type="submit">Sign up</button>
+                    </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+{% endblock %}

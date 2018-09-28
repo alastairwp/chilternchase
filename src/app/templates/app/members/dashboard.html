@@ -1,0 +1,238 @@
+﻿{% extends "app/layout.html" %} {% block content %}
+
+<!-- Breadcrumbs Section-->
+<section class="section breadcrumb-wrapper bg-primary">
+    <div class="shell">
+        <h1>Team Member Profile</h1>
+    </div>
+</section>
+<!-- Our Team Section Minimal-->
+<section class="section section-lg bg-white" style="padding-top:30px;padding-bottom:30px">
+    <div class="shell shell-wide">
+        <div class="range range-md-middle range-40 team-member">
+            <div class="cell-sm-6 cell-lg-4"><img class="img-round" src="../../static/app/content/images/person.png" alt="" width="510" height="510" />
+            </div>
+            <div class="cell-sm-6 cell-lg-4">
+                <div class="team-member-content">
+                    <h3 class="team-member-title">{{ current_user.firstname }} {{ current_user.surname }}</h3>
+                    <p class="team-member-cite"></p>
+                    <h5>Address:</h5>
+                    <p>No address given<br><br><br><br></p>
+                    <ul class="team-member-contact">
+                        <li>
+                            <div class="unit unit-spacing-xs unit-xxs-horizontal">
+                                <div class="unit-left"><span class="icon icon-md icon-secondary mdi mdi-phone"></span></div>
+                                <div class="unit-body"><a href="callto:#">No number given</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="unit unit-spacing-xs unit-xxs-horizontal">
+                                <div class="unit-left"><span class="icon icon-md icon-secondary mdi mdi-email-outline"></span></div>
+                                <div class="unit-body"><a href="mailto:#">{{ current_user.email }}</a></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="inline-list-md">
+                        <li><a class="icon icon-sm icon-default fa-facebook" href="#"></a></li>
+                        <li><a class="icon icon-sm icon-default fa-twitter" href="#"></a></li>
+                        <!--<li><a class="icon icon-sm icon-default fa-instagram" href="#"></a></li>
+                        <li><a class="icon icon-sm icon-default fa-google" href="#"></a></li>
+                        <li><a class="icon icon-sm icon-default fa-pinterest-p" href="#"></a></li>
+                        <li><a class="icon icon-sm icon-default fa-linkedin" href="#"></a></li>
+                    </ul><a class="button button-primary-outline" href="#">Register now</a>-->
+                </div>
+            </div>
+            <div class="cell-lg-4">
+                <div class="cell-sm-10 cell-md-4 cell-lg-4 cell-xl-3">
+              <div class="range range-30 range-lg-60 address-info-wrap">
+                <div class="cell-xs-6 cell-md-12 address-info-item">
+                  <h5>My Stats</h5>
+                  <div class="heading-divider heading-divider-default"></div>
+                  <div class="unit unit-spacing-xs unit-xxs-horizontal unit-gel">
+                    <div class="unit-left"><span class="icon icon-md icon-secondary mdi mdi-run"></span></div>
+                      <div class="unit-body">You have entered <b>{{ races_run.count }}</b> races</div>
+                  </div>
+                </div>
+                <div style="margin-top:5px" class="cell-xs-6 cell-md-12 address-info-item">
+                  <div class="heading-divider heading-divider-default"></div>
+                  <div class="unit unit-spacing-xs unit-xxs-horizontal unit-gel">
+                    <div class="unit-left"><span class="icon icon-md icon-secondary mdi mdi-run"></span></div>
+                      {% if not personal_best_5k and not personal_best_10k and not personal_best_15k %}
+                      <div class="unit-body">You have no personal bests</div>
+                      {% else %}
+                      <div class="unit-body">Personal bests:<br>
+                        {% if personal_best_5k %}
+                        <b>{{ personal_best_5k.race_year }}-{{ personal_best_5k.race_type }}:</b>&nbsp; {{ personal_best_5k.finish_time }}<br />
+                        {% endif %}
+                        {% if personal_best_10k %}
+                        <b>{{ personal_best_10k.race_year }}-{{ personal_best_10k.race_type }}:</b> {{ personal_best_10k.finish_time }}<br />
+                        {% endif %}
+                        {% if personal_best_15k %}
+                        <b>{{ personal_best_15k.race_year }}-{{ personal_best_15k.race_type }}:</b>  {{ personal_best_15k.finish_time }}
+                        {% endif %}
+                    </div>
+                      {% endif %}
+                  </div>
+                </div>
+                <div style="margin-top:5px" class="cell-xs-6 cell-md-12 address-info-item">
+                    <div class="heading-divider heading-divider-default"></div>
+                  <div class="unit unit-spacing-xs unit-xxs-horizontal unit-gel">
+                    <div class="unit-left"><span class="icon icon-md icon-secondary mdi mdi-run"></span></div>
+                      <div class="unit-body">You are captured in <b>{{ photo_captures }}</b> photos</div>
+                  </div>
+
+                </div>
+                  {% if races_run.count %}
+                <div style="margin-top:5px" class="cell-xs-6 cell-md-12 address-info-item">
+                  <div class="heading-divider heading-divider-default"></div>
+                  <div class="unit unit-spacing-xs unit-xxs-horizontal unit-gel">
+                    <div class="unit-left"><span class="icon icon-md icon-secondary mdi mdi-run"></span></div>
+                    <div class="unit-body">Your highest position was <b>{{ highest_position_race.position }}</b> in the <b>{{ highest_position_race.race_type }}</b> race in {{ highest_position_race.race_year }}<b></b></div>
+                  </div>
+                </div>
+                  {% endif %}
+              </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Helen’s Projects Section-->
+<section class="section section-lg bg-gray-2" style="padding-top:30px;padding-bottom:30px">
+    <div id="myraces"></div>
+    {% if new_races %}
+    <div class="shell shell-wide">
+        <h2 class="text-center">New races found!</h2>
+        <div class="range range-xs-center text-left">
+            <div class="cell-sm-10 cell-lg-8">
+                <div class="table-custom-wrap">
+                    <table class="table-custom table-fixed table-hover-rows">
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Race type</th>
+                            <th>Entrant no.</th>
+                            <th>Year</th>
+                            <th>Chip time</th>
+                        </tr>
+                        {% for new_race in new_races %}
+
+                        <tr>
+                            <td style="padding-left:0px">
+                                {% if not new_race.user_id_id %}
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <button class="button button-xs button-primary" style="padding-left:5px;padding-right:5px" type="submit">This is me</button>
+                                    <input type="hidden" name="this_me_id" value="{{ new_race.result_id }}">
+                                </form>
+                                {% endif %}
+                            </td>
+                            <td>{{ new_race.firstname }} {{ new_race.surname }}</td>
+                            <td>{{ new_race.race_type }}</td>
+                            <td>{{ new_race.entrant_number }}</td>
+                            <td>{{ new_race.race_year }}</td>
+                            <td>{{ new_race.finish_time }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %} {% if races_run %}
+    <div class="shell shell-wide">
+        <h2 class="text-center">My races</h2>
+        <div class="range range-xs-center text-left">
+            <div class="cell-sm-10 cell-lg-8">
+                <div class="table-custom-wrap">
+                    <table class="table-custom table-fixed table-hover-rows">
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Race type</th>
+                            <th>Entrant no.</th>
+                            <th>Year</th>
+                            <th>Chip time</th>
+                        </tr>
+                        {% for race_run in races_run %}
+
+                        <tr>
+                            <td style="padding-left:0px">
+                                {% if not race_run.user_id_id %}
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <button class="button button-xs button-primary" style="padding-left:5px;padding-right:5px;background-color:#ff3333;border-color:#ff3333" type="submit">Not me</button>
+                                    <input type="hidden" name="race_not_me" value="{{ race_run.result_id }}">
+                                </form>
+                                {% endif %}
+                            </td>
+                            <td>{{ race_run.firstname }} {{ race_run.surname }}</td>
+                            <td>{{ race_run.race_type }}</td>
+                            <td>{{ race_run.entrant_number }}</td>
+                            <td>{{ race_run.race_year }}</td>
+                            <td>{{ race_run.finish_time }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+
+</section>
+<!-- Testimonials-->
+<section class="section section-lg bg-white">
+    <div class="shell shell-wide">
+
+    </div>
+</section>
+
+<section class="section section-lg bg-gray-2">
+    <div id="testimonials" class="cell-xs-12" id="blog-post-comments">
+        <div class="shell shell-wide">
+            <h3>My testimonials</h3>
+            <div class="heading-divider"></div>
+            <div class="comments">
+               {% if not my_testimonials %}
+                      <h4>You haven't made any testimonials</h4>
+                      {% endif %}
+                      {% for testimonial in my_testimonials %}
+                <div class="comment">
+
+                    <div class="unit unit-xxs unit-xs-horizontal">
+
+                        <div class="unit-body">
+                            <ul class="inline-list-md">
+                              <li><span class="comment-title">{{ firstname }} {{ surname }}, {{ testimonial.race_year }}</span></li>
+                                <li><span class="comment-time">{{ testimonial.date_created }}</span></li>
+                            </ul>
+                            <p><i>"{{ testimonial.message }}"</i></p>
+                        </div>
+
+                    </div>
+
+                </div>
+              {% endfor %}
+            </div>
+        </div>
+        <div class="shell shell-wide">
+            <h4>Tell us your experience</h4>
+            <div class="heading-divider"></div>
+            <form method="post">
+              {% csrf_token %}
+                <div class="range range-xs-center range-15">
+                    <div class="cell-sm-12">
+                        <div class="form-wrap form-wrap-validation">
+                            <label class="form-label form-label-outside" for="forms-message">Message</label>
+                            <textarea class="form-input" id="forms-message" name="message" data-constraints="@Required"></textarea>
+                        </div>
+                    </div>
+                </div>
+                    <button class="button button-primary" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

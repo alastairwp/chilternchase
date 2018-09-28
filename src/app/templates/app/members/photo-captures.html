@@ -1,0 +1,94 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<!-- Breadcrumbs Section-->
+<section class="section breadcrumb-wrapper bg-primary">
+    <div class="shell">
+        <h1>Photo Captures</h1>
+    </div>
+</section>
+
+<!-- Grid Portfolio Section-->
+<section class="section section-lg bg-white">
+    <div class="shell shell-wide" data-lightgallery="group">
+        <div class="row">
+
+            <!-- Isotope Filters-->
+            <div class="col-lg-12">
+                <div class="isotope-filters isotope-filters-horizontal">
+                    <button class="isotope-filters-toggle button button-sm button-primary"
+                            data-custom-toggle="#isotope-filters" data-custom-toggle-disable-on-blur="true">Filter<span
+                            class="caret"></span></button>
+                    <ul class="isotope-filters-list" id="isotope-filters">
+                        {% for user_race in user_races %}
+                        {% if user_race.race_year == url_race_year|add:"0" %}
+                        <li><a class="active" href="/members/photo-captures/{{ user_race.race_year }}">{{ user_race.race_year }}</a></li>
+                        {% else %}
+                        <li><a href="/members/photo-captures/{{ user_race.race_year }}">{{ user_race.race_year }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <!-- Isotope Content-->
+            <div class="col-lg-12">
+                {% if images %}
+                <div class="range range-30 range-lg-40 range-xl-60">
+                    <div class="cell-xxs-4">
+                        <div class="grid-demonstration-item">
+                            <p>{{ images_count }} of {{ user_photos_count }} photos </p>
+                        </div>
+                    </div>
+                    <div class="cell-xxs-4">
+                        <div class="grid-demonstration-item">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="cell-xxs-4">
+                        <div class="grid-demonstration-item">
+                            <p>Photos taken by Barry Cornelius <a href="http://www.oxonraces.com">www.oxonraces.com</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if not images %}
+                    {% if not user_races %}
+                        <h4>When you have finished a race, select it in your dashboard and your photos will appear here within a few days.</h4>
+                    {% else %}
+                        <h3>There are no photos captured of you in {{ url_race_year }}</h3>
+                    {% endif %}
+                {% endif %}
+                <div class="row isotope" data-isotope-layout="fitRows" data-isotope-group="gallery">
+                    {% for image in images %}
+                    <div class="col-xs-12 col-sm-6 col-lg-4 isotope-item" data-filter="Type 1">
+                        <div class="gallery-item-wrap"><a class="gallery-item"
+                                                          href="{{image.url_pre_string}}{{image.filename}}_o.{{image.extension}}"
+                                                          data-lightgallery="item"><img
+                                src="{{image.url_pre_string}}{{image.filename}}.{{image.extension}}" alt="" width="570"
+                                height="380"/></a></div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pagination-->
+<nav class="pagination-wrap" style="margin-bottom:30px">
+    <ul class="pagination-custom 1">
+
+        {% for num in images.paginator.page_range %}
+        {% ifequal num images.number %}
+        <li class="active"><span>{{ num }}</span></li>
+        {% else %}
+        <li><a href="?page={{ num }}">{{ num }}</a></li>
+        {% endifequal %}
+        {% endfor %}
+    </ul>
+</nav>
+{% endblock %}

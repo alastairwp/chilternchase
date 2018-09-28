@@ -1,0 +1,111 @@
+﻿
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+      <!-- Breadcrumbs Section-->
+      <section class="section breadcrumb-wrapper bg-primary">
+        <div class="shell">
+          <h1>Testimonials</h1>
+          <!--<ol class="breadcrumb-custom">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>Testimonials
+            </li>
+          </ol>--><br /><br /><br />
+        </div>
+      </section>
+      <!-- Testimonials 4 Columns Layout Section
+      <section class="section section-lg bg-gray-2">
+        <div class="shell shell-wide">
+          <h2 class="text-center">4 Column Layout</h2>
+          <div class="range range-lg range-30">
+            <div class="cell-lg-3 cell-sm-6">
+              <div class="quote-minimal">
+                <div class="quote-minimal-icon"><span class="icon mdi mdi-format-quote"></span></div>
+                <div class="quote-minimal-inner">
+                  <h5>Thanks for Your Help!</h5>
+                  <p>Charity has been a partner charity to Open Heart for over 4 years and we have always been delighted with their skills in professional event management. They helped us during our cooperation.</p>
+                  <div class="quote-info">
+                    <div class="unit unit-spacing-xs unit-xxs-horizontal unit-xxs-middle">
+                      <div class="unit-left"><img class="img-circle" src="images/testimonials-01-70x70.jpg" alt="" width="70" height="70"/>
+                      </div>
+                      <div class="unit-body">
+                        <p class="quote-info-name">Harry Wilson</p>
+                        <p class="quote-info-cite">Open Heart</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>-->
+
+
+      <!-- Testimonials 2 Columns Layout Section
+      <section class="section section-lg bg-white">
+        <div class="shell shell-wide">
+          <h2 class="text-center">2 Column Layout</h2>
+          <div class="range range-30">
+            <div class="cell-sm-6">
+              <div class="inset-sm-right-30">
+                <div class="quote-big">
+                  <div class="quote-big-icon"><span class="icon mdi mdi-format-quote"></span></div>
+                  <div class="quote-big-inner">
+                    <p class="quote-big-text">Charity has been a partner charity to Open Heart for over 4 years and we have always been delighted with their skills in professional event management. They helped us during our cooperation. </p>
+                    <div class="quote-info">
+                      <div class="unit unit-spacing-xs unit-xxs-horizontal unit-xxs-middle">
+                        <div class="unit-left"><img class="img-circle" src="images/testimonials-01-70x70.jpg" alt="" width="70" height="70"/>
+                        </div>
+                        <div class="unit-body">
+                          <p class="quote-info-name">Harry Wilson</p>
+                          <p class="quote-info-cite">Open Heart</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>-->
+
+      <!-- Testimonials 3 Columns Layout Section-->
+      <section class="section section-lg bg-secondary">
+        <div class="shell shell-wide">
+          <!--<h2 class="text-center"></h2>-->
+          <div class="range range-xl range-60 range-sm-center range-lg-left">
+
+        {% for testimonial in testimonials %}
+            <div class="cell-sm-8 cell-md-6 cell-lg-4">
+              <div class="quote-mean">
+                <div class="quote-info">
+                  <div class="unit unit-xxs-horizontal">
+                    <div class="unit-left">
+                      <div class="quote-mean-img"><img class="img-circle" src="../../static/app/content/images/person.png" alt="" width="118" height="118"/>
+                      </div>
+                    </div>
+                    <div class="unit-body">
+                      <p class="quote-info-name">{{ testimonial.user.firstname }}</p>
+                      <p class="quote-info-cite">{{ testimonial.race_year }}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="quote-mean-body">
+                  <div class="quote-mean-body-inner">
+                    <div class="quote-mean-icon"><span class="icon mdi mdi-format-quote"></span></div>
+                    <p class="quote-mean-text">{{ testimonial.message }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+
+          </div>
+        </div>
+      </section>
+
+{% endblock %}

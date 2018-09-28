@@ -1,0 +1,240 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+      <!-- Breadcrumbs Section-->
+      <section class="section breadcrumb-wrapper bg-primary">
+        <div class="shell">
+          <h1>Leaderboards</h1>
+          
+        </div>
+      </section>
+      <!-- Horizontal Tabs Section-->
+      <section class="section section-lg bg-white text-center">
+        <div class="shell">
+          <h2>Men's Leaderboards</h2>
+          <div class="range range-lg range-xs-center tabs-custom-wrap text-left">
+            <div class="cell-sm-10 cell-lg-8">
+              <!-- Bootstrap tabs-->
+              <div class="tabs-custom tabs-horizontal" id="tabs-1">
+                <!-- Nav tabs-->
+                <ul class="nav-custom nav-custom-tabs">
+                  <li class="active"><a href="#tabs-1-1" data-toggle="tab">5K</a></li>
+                  <li><a href="#tabs-1-2" data-toggle="tab">10K</a></li>
+                  <li><a href="#tabs-1-3" data-toggle="tab">15K</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="range range-lg range-xs-center">
+            <div class="cell-sm-10 cell-lg-8">
+              <div class="tab-content text-left">
+                <!--Tab Section-->
+                <div class="tab-pane fade in active" id="tabs-1-1">
+                    <div class="cell-sm-10 cell-lg-8">
+                      <div class="table-custom-wrap">
+                        <table class="table-custom table-fixed table-primary">
+                          <tr>
+                            <th>Position</th>
+                            <th>Name</th>
+                            <th>Year</th>
+                            <th>Time</th>
+                          </tr>
+                            {% for leader in mens_5k_leaders %}
+                          <tr {% if leader.user_id == current_user_id %} style="background-color:yellow;"{% endif %}>
+                            <td>{{ leader.position }}</td>
+                            <td>{{ leader.firstname }} {{ leader.surname }}</td>
+                            <td>{{ leader.race_year }}</td>
+                            <td>{{ leader.finish_time }}
+                              {% if leader.result_id == course_record_5k.result_id %}
+                              <br /><span style="font-size:13px;color:orange;">Course record!</span>
+                              {% endif %}
+                            </td>
+                          </tr>
+                         {% endfor %}
+                        </table>
+                      </div>
+                    </div>
+
+                </div>
+
+                <!--Tab Section-->
+                <div class="tab-pane fade" id="tabs-1-2">
+                  <div class="cell-sm-10 cell-lg-8">
+                      <div class="table-custom-wrap">
+                        <table class="table-custom table-fixed table-primary">
+                          <tr>
+                            <th>Position</th>
+                            <th>Name</th>
+                            <th>Year</th>
+                            <th>Time</th>
+                          </tr>
+                          
+                          {% for leader in mens_10k_leaders %}
+                          <tr {% if leader.user_id == current_user_id %} style="background-color:yellow;"{% endif %}>
+                            <td>{{ leader.position }}</td>
+                            <td>{{ leader.firstname }} {{ leader.surname }}</td>
+                            <td>{{ leader.race_year }}</td>
+                            <td>{{ leader.finish_time }}
+                            {% if leader.result_id == course_record_10k.result_id %}
+                              <br /><span style="font-size:13px;color:orange;">Course record!</span>
+                              {% endif %}
+                            </td>
+                          </tr>
+                         {% endfor %}
+                        </table>
+                      </div>
+                    </div>
+                </div>
+
+                <!--Tab Section-->
+                <div class="tab-pane fade" id="tabs-1-3">
+                  <div class="cell-sm-10 cell-lg-8">
+                      <div class="table-custom-wrap">
+                        <table class="table-custom table-fixed table-primary">
+                          <tr>
+                            <th>Position</th>
+                            <th>Name</th>
+                            <th>Year</th>
+                            <th>Time</th>
+                          </tr>
+                          {% for leader in mens_15k_leaders %}
+                          <tr {% if leader.user_id == current_user_id %} style="background-color:yellow;"{% endif %}>
+                            <td>{{ leader.position }}</td>
+                            <td>{{ leader.firstname }} {{ leader.surname }}</td>
+                            <td>{{ leader.race_year }}</td>
+                            <td>{{ leader.finish_time }}
+                            {% if leader.result_id == course_record_15k.result_id %}
+                              <br /><span style="font-size:13px;color:orange;">Course record!</span>
+                              {% endif %}
+                            </td>
+                          </tr>
+                         {% endfor %}
+                        </table>
+                      </div>
+                    </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+     
+      </section>
+      
+     
+
+      <!-- Horizontal Tabs Section-->
+      <section class="section section-lg bg-white text-center">
+        <div class="shell">
+          <h2>Women's Leaderboards</h2>
+          <div class="range range-lg range-xs-center tabs-custom-wrap text-left">
+            <div class="cell-sm-10 cell-lg-8">
+              <!-- Bootstrap tabs-->
+              <div class="tabs-custom tabs-horizontal" id="tabs-2">
+                <!-- Nav tabs-->
+                <ul class="nav-custom nav-custom-tabs">
+                  <li class="active"><a href="#tabs-2-1" data-toggle="tab">5K</a></li>
+                  <li><a href="#tabs-2-2" data-toggle="tab">10K</a></li>
+                  <li><a href="#tabs-2-3" data-toggle="tab">15K</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="range range-lg range-xs-center">
+            <div class="cell-sm-10 cell-lg-8">
+              <div class="tab-content text-left">
+                <!--Tab Section-->
+                <div class="tab-pane fade in active" id="tabs-2-1">
+                    <div class="cell-sm-10 cell-lg-8">
+                      <div class="table-custom-wrap">
+                        <table class="table-custom table-fixed table-primary">
+                          <tr>
+                            <th>Position</th>
+                            <th>Name</th>
+                            <th>Year</th>
+                            <th>Time</th>
+                          </tr>
+                            {% for leader in womens_5k_leaders %}
+                          <tr {% if leader.user_id == current_user_id %} style="background-color:yellow;"{% endif %}>
+                            <td>{{ leader.position }}</td>
+                            <td>{{ leader.firstname }} {{ leader.surname }}</td>
+                            <td>{{ leader.race_year }}</td>
+                            <td>{{ leader.finish_time }}
+                            {% if leader.result_id == course_record_5k.result_id %}
+                              <br /><span style="font-size:13px;color:orange;">Course record!</span>
+                              {% endif %}
+                            </td>
+                          </tr>
+                         {% endfor %}
+                        </table>
+                      </div>
+                    </div>
+
+                </div>
+
+                <!--Tab Section-->
+                <div class="tab-pane fade" id="tabs-2-2">
+                  <div class="cell-sm-10 cell-lg-8">
+                      <div class="table-custom-wrap">
+                        <table class="table-custom table-fixed table-primary">
+                          <tr>
+                            <th>Position</th>
+                            <th>Name</th>
+                            <th>Year</th>
+                            <th>Time</th>
+                          </tr>
+                          
+                          {% for leader in womens_10k_leaders %}
+                          <tr {% if leader.user_id == current_user_id %} style="background-color:yellow;"{% endif %}>
+                            <td>{{ leader.position }}</td>
+                            <td>{{ leader.firstname }} {{ leader.surname }}</td>
+                            <td>{{ leader.race_year }}</td>
+                            <td>{{ leader.finish_time }}
+                              {% if leader.result_id == course_record_10k.result_id %}
+                              <br /><span style="font-size:13px;color:orange;">Course record!</span>
+                              {% endif %}
+                            </td>
+                          </tr>
+                         {% endfor %}
+                        </table>
+                      </div>
+                    </div>
+                </div>
+
+                <!--Tab Section-->
+                <div class="tab-pane fade" id="tabs-2-3">
+                  <div class="cell-sm-10 cell-lg-8">
+                      <div class="table-custom-wrap">
+                        <table class="table-custom table-fixed table-primary">
+                          <tr>
+                            <th>Position</th>
+                            <th>Name</th>
+                            <th>Year</th>
+                            <th>Time</th>
+                          </tr>
+                          {% for leader in womens_15k_leaders %}
+                          <tr {% if leader.user_id == current_user_id %} style="background-color:yellow;"{% endif %}>
+                            <td>{{ leader.position }}</td>
+                            <td>{{ leader.firstname }} {{ leader.surname }}</td>
+                            <td>{{ leader.race_year }}</td>
+                            <td>{{ leader.finish_time }}
+
+                            {% if leader.result_id == course_record_15k.result_id %}
+                              <br /><span style="font-size:13px;color:orange;">Course record!</span>
+                              {% endif %}</td>
+                          </tr>
+                         {% endfor %}
+                        </table>
+                      </div>
+                    </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+{% endblock %}

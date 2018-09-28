@@ -1,0 +1,52 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+      <!-- Breadcrumbs Section-->
+      <section class="section breadcrumb-wrapper bg-primary">
+        <div class="shell">
+          <h1>Frequently asked questions</h1>
+          <!--<ol class="breadcrumb-custom">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Elements</a></li>
+            <li>Tabs &amp; accordions
+            </li>
+          </ol>
+              --><br /><br /><br />
+        </div>
+      </section>
+
+      <!-- Accordions Section-->
+      <section class="section section-lg bg-white text-center">
+        <div class="shell">
+          <!--<h2>Accordion</h2>-->
+          <div class="range range-lg range-xs-center panel-custom-group-wrap">
+            <div class="cell-sm-10 cell-lg-8">
+              <!-- Bootstrap collapse-->
+              <div class="panel-custom-group text-left" id="accordion1" role="tablist" aria-multiselectable="true">
+                <!-- Bootstrap panel-->
+                  {% for faq in faqs %}
+                  
+                <div class="panel panel-custom panel-custom-default">
+                  <div class="panel-custom-heading" id="accordion1Heading1" role="tab">
+                    <p class="panel-custom-title"><p class="panel-custom-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion{{ forloop.counter }}" href="#accordion{{ forloop.counter }}Collapse1" aria-controls="accordion{{ forloop.counter }}Collapse2">{{ faq.question }}</a>
+                    </p>
+                  </div>
+                  <div class="panel-custom-collapse collapse" id="accordion{{ forloop.counter }}Collapse1" role="tabpanel" aria-labelledby="accordion{{ forloop.counter }}Heading1">
+                    <div class="panel-custom-body">
+                      <p>{{ faq.answer }}</p>
+                    </div>
+                  </div>
+                </div>
+                  {% endfor %}
+                
+           
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+{% endblock %}
+      

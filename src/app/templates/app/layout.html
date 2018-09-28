@@ -1,0 +1,394 @@
+﻿
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  
+<head>
+
+    <!-- Site Title-->
+    <title>{% block title %}Chiltern Chase{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    {% load staticfiles %}
+    <link href="{% static "app/content/css/bootstrap.css" %}" rel="stylesheet" />
+    <link href="{% static "app/content/css/style.css" %}" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:400,400i,700,900">
+		<!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+    <!-- Page-->
+    <div class="text-left page">
+      <!-- Page preloader
+      <div class="page-loader">
+        <div>
+          <div class="page-loader-body">
+            <div class="icon-gradient-block">
+              <div class="icon-gradient-item"><span class="icon mdi mdi-run"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>-->
+      <!-- Page Header-->
+      <header class="page-header page-header-modern">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-modern" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fullwidth" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-md-stick-up-offset="80px" data-lg-stick-up-offset="70px" data-stick-up="true" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true">
+            <div class="rd-navbar-inner"> 
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand"><a class="brand-name" href="index-2.html"><img style="height:52px" src="../../static/app/content/images/200pxl.jpg" alt=""></a></div>
+
+              </div>
+              <div class="rd-navbar-aside-right">
+                <div class="rd-navbar-nav-wrap">
+                  <!-- RD Navbar Nav-->
+                  <ul class="rd-navbar-nav">
+                    {% if title == 'Home | Chiltern Chase' %}
+                      <li class="active">
+                          {% else %}
+                          <li>
+                        {% endif %}
+                        <a href="/">Home</a></li>
+                       {% if title == 'About | Chiltern Chase' or title == 'Charities | Chiltern Chase' or title == 'Sponsors | Chiltern Chase' or title == 'Testimonials | Chiltern Chase' or title == 'FAQ | Chiltern Chase' %}
+                      <li class="active">
+                          {% else %}
+                          <li>
+                        {% endif %}
+                        <a href="#">About</a>
+                      <!-- RD Navbar Dropdown-->
+                      <ul class="rd-navbar-dropdown">
+                        <li><a href="/charities">Charities</a></li>
+                        <li><a href="/sponsors">Sponsors</a></li>
+                        <li><a href="/testimonials">Testimonials</a></li>
+                        <li><a href="/frequently-asked-questions">FAQ</a></li>
+                       <!--<li><a href="#">Running Clubs</a></li>-->
+                      </ul>
+                    </li>
+                    <li>
+                        {% if title == 'Race Details | Chiltern Chase' or title == 'Travel Information | Chiltern Chase' or title == 'Prize List | Chiltern Chase' %}
+                      <li class="active">
+                          {% else %}
+                          <li>
+                        {% endif %}
+                        <a href="/race-details">The Race</a>
+                      <!-- RD Navbar Dropdown-->
+                      <ul class="rd-navbar-dropdown">   
+                        <li><a target="_blank" href="http://www.sportsystems.co.uk/ss/event/ChilternChase15K10K5K2018">Race Registration</a></li>
+                        <li><a href="/race-details">Race details</a></li>
+                        <li><a href="/travel-information">Travel Information</a></li>
+                        <li><a href="/prize-list">Prize List</a></li>
+                      </ul>
+                    </li>
+                    <li>{% if title == 'Gallery | Chiltern Chase' %}
+                      <li class="active">
+                          {% else %}
+                          <li>
+                        {% endif %}
+                        <a href="/gallery">Gallery</a>
+                      <ul class="rd-navbar-dropdown">
+                            <li><a href="/gallery/2017">2017</a></li>
+                            <li><a href="/gallery/2016">2016</a></li>
+                            <li><a href="/gallery/2015">2015</a></li>
+                            <li><a href="/gallery/2014">2014</a></li>
+                      </ul>
+                    </li>
+                    {% if title == 'Results | Chiltern Chase' %}
+                      <li class="active">
+                          {% else %}
+                          <li>
+                        {% endif %}
+                        <a href="#">Results</a>
+                      <!-- RD Navbar Megamenu-->
+                      <ul class="rd-navbar-megamenu">
+                        <li>
+                            <ul>
+                                <li style="text-align:center"><h4>5K</h4></li>
+                                <li><a href="/results/2018/5K">2018</a></li>
+                                <li><a href="/results/2017/5K">2017</a></li>
+                                <li><a href="/results/2016/5K">2016</a></li>
+                                <li><a href="/results/2015/5K">2015</a></li>
+                                <li><a href="/results/2014/5K">2014</a></li>
+                                <li><a href="/results/2013/5K">2013</a></li>
+                                <li><a href="/results/2012/5K">2012</a></li>
+                                <li><a href="/results/2011/5K">2011</a></li>
+                                <li><a href="/results/2010/5K">2010</a></li>
+                                <li><a href="/results/2009/5K">2009</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li style="text-align:center"><h4>10K</h4></li>
+                                <li><a href="/results/2018/10K">2018</a></li>
+                                <li><a href="/results/2017/10K">2017</a></li>
+                                <li><a href="/results/2016/10K">2016</a></li>
+                                <li><a href="/results/2015/10K">2015</a></li>
+                                <li><a href="/results/2014/10K">2014</a></li>
+                                <li><a href="/results/2013/10K">2013</a></li>
+                                <li><a href="/results/2012/10K">2012</a></li>
+                                <li><a href="/results/2011/10K">2011</a></li>
+                                <li><a href="/results/2010/10K">2010</a></li>
+                                <li><a href="/results/2009/10K">2009</a></li>
+                                <li><a href="/results/2008/10K">2008</a></li>
+                                <li><a href="/results/2007/10K">2007</a></li>
+                                <li><a href="/results/2006/10K">2006</a></li>
+                            </ul>
+                        </li>
+
+                         <li>
+                            <ul>
+                                <li style="text-align:center"><h4>15K</h4></li>
+                                <li><a href="/results/2018/15K">2018</a></li>
+                                <li><a href="/results/2017/15K">2017</a></li>
+                                <li><a href="/results/2016/15K">2016</a></li>
+                                <li><a href="/results/2015/15K">2015</a></li>
+                            </ul>
+                        </li>
+                  </ul>
+                </li>
+                {% if user.is_authenticated %}
+                {% if title == 'Dashboard | Chiltern Chase' or title == 'Photo Captures | Chiltern Chase' or title == 'Leaderboards | Chiltern Chase' %}
+                      <li class="active">
+                          {% else %}
+                          <li>
+                        {% endif %}
+                    <a href="/members/dashboard">MyCC</a>
+                    <ul class="rd-navbar-dropdown">
+                        <li><a href="/members/dashboard">Dashboard</a></li>
+                        <li><a href="/members/photo-captures">Photo Captures</a></li>
+                        <li><a href="/members/leaderboards">Leaderboards</a></li>
+                    </ul>
+                </li>
+                {% endif %}
+                 <li>
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'logout'%}">Logout</a>
+                    {% else %}
+                    <a href="{% url 'login'%}?next={{request.path}}">Login</a>
+                    {% endif %}
+                </li>
+                  </ul><a class="button button-primary button-sm" target="_blank" href="https://www.justgiving.com/fundraising/ChilternChase2018">Donate Now </a>
+                            </div>
+                            <!--RD Navbar Search
+                            <div class="rd-navbar-search">
+                                <a class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search" href="#"><span></span></a>
+                                <form class="rd-search" action="#" data-search-live="rd-search-results-live" method="GET">
+                                    <div class="form-wrap">
+                                        <label class="form-label form-label" for="rd-navbar-search-form-input">Search...</label>
+                                        <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
+                                        <div class="rd-search-results-live" id="rd-search-results-live"></div>
+                                    </div>
+                                    <button class="rd-search-form-submit fa-search"></button>
+                                </form>
+                            </div>-->
+                            <a class="button button-primary button-sm" target="_blank" href="https://www.justgiving.com/fundraising/ChilternChase2018">Donate Now </a>
+                        </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+        {% block content %}{% endblock %}
+
+      <!-- Page Footer-->
+      <footer class="section page-footer page-footer-plugin page-footer-creative section-md bg-gray-darker">
+        <div class="shell shell-wide">
+          <div class="range range-lg-center range-xl-justify">
+            <div class="cell-lg-10 cell-xl-6">
+              <div class="range range-40 range-xl-80">
+                <div class="cell-sm-6">
+                  <!-- Contact Information-->
+                  <div class="inset-lg-right-50">
+                    <h5>Contact Information</h5>
+                    <div class="heading-divider"></div>
+                    <ul class="list contact-list">
+                     <!-- <li>
+                        <div class="unit unit-spacing-xs unit-xxs-horizontal">
+                          <div class="unit-left"><span class="icon icon-md icon-primary mdi mdi-map-marker"></span></div>
+                          <div class="unit-body"><a href="#">2130 Fulton Street San Diego,<br>CA 94117-1080 USA</a></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="unit unit-spacing-xs unit-xxs-horizontal">
+                          <div class="unit-left"><span class="icon icon-md icon-primary mdi mdi-phone"></span></div>
+                          <div class="unit-body"><a href="callto:#">1-800-1234-567</a></div>
+                        </div>
+                      </li>
+                      <li>-->
+                        <div class="unit unit-spacing-xs unit-xxs-horizontal">
+                          <div class="unit-left"><span class="icon icon-md icon-primary mdi mdi-email-outline"></span></div>
+                          <div class="unit-body"><a href="mailto:info@chilternchase.com">info@chilternchase.com</a></div>
+                        </div>
+                      </li>
+                    </ul>
+                    <!-- Inline List-->
+                    <ul class="inline-list-md">
+                      <li><a class="icon icon-sm icon-default fa-facebook" href="https://www.facebook.com/chilternchase/"></a></li>
+                      <li><a class="icon icon-sm icon-default fa-twitter" href="https://twitter.com/chilternchase"></a></li>
+                     <!--<li><a class="icon icon-sm icon-default fa-instagram" href="#"></a></li>
+                      <li><a class="icon icon-sm icon-default fa-google" href="#"></a></li>
+                      <li><a class="icon icon-sm icon-default fa-pinterest-p" href="#"></a></li>
+                      <li><a class="icon icon-sm icon-default fa-linkedin" href="#"></a></li>-->
+                    </ul>
+                  </div>
+                </div>
+                <div class="cell-sm-6">
+                  <!-- Twitter
+                  <h5>Twitter Feed</h5>
+                  <div class="heading-divider"></div>
+                  <div class="twitter" data-twitter-username="chilternchase">
+
+                    <div class="owl-carousel owl-carousel-minimal" data-items="1" data-dots="false" data-nav="true" data-stage-padding="0" data-loop="false" data-margin="0" data-mouse-drag="false">
+                      <div class="item">
+                        <div class="twitter-feed-minimal" data-twitter-type="tweet"><span class="mdi mdi-twitter twitter-icon icon-md icon-primary"></span>
+                          <time data-date="text" data-datetime="datetime" datetime="2017"></time>
+                          <p class="twitter-feed-minimal-content" data-tweet="text"></p>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="twitter-feed-minimal" data-twitter-type="tweet"><span class="mdi mdi-twitter twitter-icon icon-md icon-primary"></span>
+                          <time data-date="text" data-datetime="datetime" datetime="2017"></time>
+                          <p class="twitter-feed-minimal-content" data-tweet="text"></p>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="twitter-feed-minimal" data-twitter-type="tweet"><span class="mdi mdi-twitter twitter-icon icon-md icon-primary"></span>
+                          <time data-date="text" data-datetime="datetime" datetime="2017"></time>
+                          <p class="twitter-feed-minimal-content" data-tweet="text"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>-->
+                </div>
+<!--
+                <div class="cell-sm-6">
+                  <div class="inset-lg-right-50">
+                    
+                    <h5>Newsletter</h5>
+                    <div class="heading-divider"> </div>
+                    <p>Keep up with our always upcoming news, updates, and publications. Enter your e-mail and subscribe to our newsletter.</p>
+                    
+                    <form class="mailchimp-mailform rd-mailform-inline text-left" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="#">
+                      <div class="form-wrap form-wrap-validation">
+                        <label class="form-label form-label-sm" for="forms-newsletter-email">Enter your e-mail</label>
+                        <input class="form-input form-input-sm" id="forms-newsletter-email" type="email" name="email" data-constraints="@Email @Required">
+                      </div>
+                      <button class="button button-xs button-primary-accent" type="submit">Subscribe</button>
+                    </form>
+                  </div>
+                </div>
+   
+                <div class="cell-sm-6">
+                 
+                  <h5>Flickr Feed</h5>
+                  <div class="heading-divider"> </div>
+                  <div class="thumb-wrap">
+                    <div class="flickr" data-flickr-tags="tm-62462" data-lightgallery="group">
+                      <div class="range range-10 range-narrow">
+                        <div class="cell-xxs-6 cell-sm-4">
+                          <div class="flickr-item" data-type="flickr-item">
+                            <div class="thumb-default"><a href="#" data-image_b="href" data-lightgallery="item"><img src="images/_blank.png" width="120" height="120" data-image_b="src" alt="">
+                                <div class="thumb-default-overlay"></div></a></div>
+                          </div>
+                        </div>
+                        <div class="cell-xxs-6 cell-sm-4">
+                          <div class="flickr-item" data-type="flickr-item">
+                            <div class="thumb-default"><a href="#" data-image_b="href" data-lightgallery="item"><img src="images/_blank.png" width="120" height="120" data-image_b="src" alt="">
+                                <div class="thumb-default-overlay"></div></a></div>
+                          </div>
+                        </div>
+                        <div class="cell-xxs-6 cell-sm-4">
+                          <div class="flickr-item" data-type="flickr-item">
+                            <div class="thumb-default"><a href="#" data-image_b="href" data-lightgallery="item"><img src="images/_blank.png" width="120" height="120" data-image_b="src" alt="">
+                                <div class="thumb-default-overlay"></div></a></div>
+                          </div>
+                        </div>
+                        <div class="cell-xxs-6 cell-sm-4">
+                          <div class="flickr-item" data-type="flickr-item">
+                            <div class="thumb-default"><a href="#" data-image_b="href" data-lightgallery="item"><img src="images/_blank.png" width="120" height="120" data-image_b="src" alt="">
+                                <div class="thumb-default-overlay"></div></a></div>
+                          </div>
+                        </div>
+                        <div class="cell-xxs-6 cell-sm-4">
+                          <div class="flickr-item" data-type="flickr-item">
+                            <div class="thumb-default"><a href="#" data-image_b="href" data-lightgallery="item"><img src="images/_blank.png" width="120" height="120" data-image_b="src" alt="">
+                                <div class="thumb-default-overlay"></div></a></div>
+                          </div>
+                        </div>
+                        <div class="cell-xxs-6 cell-sm-4">
+                          <div class="flickr-item" data-type="flickr-item">
+                            <div class="thumb-default"><a href="#" data-image_b="href" data-lightgallery="item"><img src="images/_blank.png" width="120" height="120" data-image_b="src" alt="">
+                                <div class="thumb-default-overlay"></div></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <div class="cell-lg-10 cell-xl-5">
+              <!-- Get in Touch-->
+              <!--<h5>Get in Touch</h5>
+              <div class="heading-divider"> </div>
+              <form class="rd-mailform text-left" data-form-output="form-output-global" data-form-type="contact" method="post" action="#">
+                <div class="range range-xs-center range-15">
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label form-label-outside" for="forms-name1">First name</label>
+                      <input class="form-input" id="forms-name1" type="text" name="name" data-constraints="@Required">
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label form-label-outside" for="forms-last-name1">Last name</label>
+                      <input class="form-input" id="forms-last-name1" type="text" name="last-name" data-constraints="@Required">
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label form-label-outside" for="forms-email1">E-mail</label>
+                      <input class="form-input" id="forms-email1" type="email" name="email" data-constraints="@Email @Required">
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label form-label-outside" for="forms-phone1">Phone</label>
+                      <input class="form-input" id="forms-phone1" type="text" name="phone" data-constraints="@Numeric @Required">
+                    </div>
+                  </div>
+                  <div class="cell-sm-12">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label form-label-outside" for="forms-message1">Message</label>
+                      <textarea class="form-input" id="forms-message1" name="message" data-constraints="@Required"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-button">
+                  <button class="button button-primary" type="submit">Send</button>
+                </div>
+              </form>-->
+            </div>
+          </div>
+          <div class="range range-lg-center">
+            <div class="cell-lg-10 cell-xl-12">
+              <p class="copyright">&#169; <span id="copyright-year"></span> All Rights Reserved <a href="/terms-of-use">Terms of Use</a> and <a href="privacy-policy">Privacy Policy</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="../../static/app/scripts/core.min.js"></script>
+    <script src="../../static/app/scripts/script.js"></script>
+  </body>
+
+</html>

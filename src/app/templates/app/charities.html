@@ -1,0 +1,142 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+{% load static %}
+<!-- Breadcrumbs Section-->
+<section class="section breadcrumb-wrapper bg-primary">
+    <div class="shell">
+        <h1>The charities we support and their stories</h1>
+        <br/><br/>
+    </div>
+</section>
+
+<!-- Blog  Post Section-->
+<section class="section section-lg bg-gray-2">
+    <div class="shell shell-wide">
+        <div class="range range-60 range-md-center">
+            <div class="cell-lg-8 cell-xl-6">
+                <div class="single-blog">
+                    <div class="range range-60 range-xl-120">
+
+
+                        {% for charity in charities %}
+                        {% load humanize %}
+                        <div class="cell-xs-12">
+                            <h2>{{ charity.charity.name }}</h2><br>
+
+                            <div class="range range-30 range-lg-40 range-xl-60">
+                                <div class="cell-xxs-4">
+                                    <div class="grid-demonstration-item">
+                                        <h5>Money raised in {{ charity.race_year }} </h5><h2>£{{ charity.amount_raised }}</h2>
+                                    </div>
+                                </div>
+                                <div class="cell-xxs-4">
+                                    <div class="grid-demonstration-item">
+                                        {% if raised_totals %}
+                                        {% for total_raised in raised_totals %}
+                                        {% if total_raised.charity_id|slugify == charity.charity.charity_id|slugify %}
+                                        <h5>Total raised: </h5><h2>£{{ total_raised.total_raised }}</h2>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="cell-xxs-4">
+                                    <div class="grid-demonstration-item">
+                                        <!--<h5>Chosen charity for years: </h5><h5>{{ years_sponsored }}</h5>-->
+
+                                    </h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p>{{ charity.short_description }}</p>
+
+                            <img src="{{ charity.cover_image_url.url }}" width="1200" height="800" alt="">
+
+                            <p>{{ charity.long_description }}</p>
+                            <div class="range range-xs-middle range-10">
+                                <!--<div class="cell-xs-4 cell-sm-6"><a class="text-italic" href="#">News</a></div>-->
+                                <div class="cell-xs-8 cell-sm-6 text-xs-right">
+                                    <ul class="inline-list-md list-middle">
+                                        <!--<li class="text-italic text-gray-light">Share this post!</li>-->
+                                        {% if charity.charity.facebook_url %}
+                                        <li><a class="icon icon-md icon-default fa-facebook" target="_blank"
+                                               href="{{ charity.facebook_url }}"></a></li>
+                                        {% endif %}
+                                        {% if charity.charity.twitter_url %}
+                                        <li><a class="icon icon-md icon-default fa-twitter" target="_blank"
+                                               href="{{ charity.twitter_url }}"></a></li>
+                                        {% endif %}
+                                    </ul>
+                                </div>
+                            </div>
+                        <div class="heading-divider" style="margin-top:30px"></div>
+                        </div>
+
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="cell-lg-4">
+                <div class="blog-aside-wrap">
+                    <!-- Blog Aside-->
+                    <aside class="blog-aside">
+                        <div class="range range-40 range-xl-90">
+
+                            <!-- Archive-->
+                            <div class="cell-xs-12 cell-sm-6 cell-lg-12">
+                                <h5>Archive</h5>
+                                <div class="heading-divider"></div>
+                                <div class="range">
+                                    <div class="cell-xxs-6">
+                                        <ul class="list list-marked">
+                                            {% if race_years %}
+                                            {% for race_year in race_years %}
+                                            {% if race_year.race_year|slugify == url_race_year|slugify %}
+                                            <li><a style="color:#c2d848" href="/charities/{{ race_year.race_year }}">{{ race_year.race_year }}</a></li>
+                                            {% else %}
+                                            <li><a href="/charities/{{ race_year.race_year }}">{{ race_year.race_year }}</a></li>
+                                            {% endif %}
+                                            {% endfor %}
+                                            {% endif %}
+                                        </ul>
+                                    </div>
+
+                                    <div class="cell-xxs-6">
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="cell-xs-12 cell-sm-6 cell-lg-12">
+                                <!-- Facebook Feed-->
+                                <h5>Facebook feed</h5>
+                                <div class="heading-divider"></div>
+                                <div id="fb-root">
+                                    <div class="fb-page-responsive">
+                                        <div class="fb-page" data-href="https://www.facebook.com/chilternchase"
+                                             data-tabs="timeline" data-height="540" data-small-header="false"
+                                             data-adapt-container-width="true" data-hide-cover="false"
+                                             data-show-facepile="true">
+                                            <div class="fb-xfbml-parse-ignore">
+                                                <blockquote cite="https://www.facebook.com/chilternchase"><a
+                                                        href="https://www.facebook.com/chilternchase">Chiltern Chase</a>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
