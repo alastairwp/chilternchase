@@ -1,7 +1,7 @@
 ﻿{% extends "app/layout.html" %}
 
 {% block content %}
-{% load static %}
+
 <!-- Breadcrumbs Section-->
 <section class="section breadcrumb-wrapper bg-primary">
     <div class="shell">
@@ -51,9 +51,9 @@
                             </div>
 
                             <p>{{ charity.short_description }}</p>
-
+                            {% if charity.cover_image_url %}
                             <img src="{{ charity.cover_image_url.url }}" width="1200" height="800" alt="">
-
+                            {% endif %}
                             <p>{{ charity.long_description }}</p>
                             <div class="range range-xs-middle range-10">
                                 <!--<div class="cell-xs-4 cell-sm-6"><a class="text-italic" href="#">News</a></div>-->
