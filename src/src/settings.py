@@ -31,8 +31,8 @@ SECRET_KEY = os.environ.get('CC_SECRET_KEY')
 # DEBUG = False
 # ALLOWED_HOSTS = os.environ.get('CC_DJANGO_ALLOWED_HOSTS').split(',')
 # *******************************
-DEBUG = True
-ALLOWED_HOSTS = ['*']
+DEBUG = False
+ALLOWED_HOSTS = os.environ.get('CC_DJANGO_ALLOWED_HOSTS').split(',')
 
 
 # Application definition
