@@ -145,7 +145,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 AUTH_USER_MODEL = 'user.User'
-
+LOGOUT_REDIRECT_URL = '/'
 EMAIL_HOST = os.environ.get('EMAIL_HOST')
 EMAIL_PORT = os.environ.get('EMAIL_PORT')
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')

@@ -2,7 +2,7 @@
 
 # Create your views here.
 
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login as cclogin, authenticate
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
@@ -29,7 +29,6 @@ class RegisterForm(UserCreationForm):
         self.fields['password2'].widget.attrs.update({'class': 'form-control'})
 
 
-
 def signup(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
@@ -40,8 +39,9 @@ def signup(request):
             email = form.cleaned_data.get('email')
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=email, password=raw_password)
-            login(request, user)
+            cclogin(request, user)
             return redirect('/members/dashboard')
     else:
         form = RegisterForm()
     return render(request, 'app/signup.html', {'form': form})
+

@@ -49,7 +49,7 @@ urlpatterns = [
     url(r'^reset/done/$', auth_views.PasswordResetView,
         {'template_name': 'app/password_reset_complete.html'}, name='password_reset_complete'),
     url(r'^accounts/login/$',
-        auth_views.LoginView,
+        auth_views.LoginView.as_view(),
         {
             'template_name': 'app/login.html',
             'authentication_form': app.forms.BootstrapAuthenticationForm,
@@ -61,9 +61,8 @@ urlpatterns = [
         },
         name='login'),
     url(r'^accounts/logout$',
-        auth_views.LogoutView,
+        auth_views.LogoutView.as_view(),
         {
-            'next_page': '/',
         },
         name='logout'),
     # Uncomment the admin/doc line below to enable admin documentation:

@@ -1,0 +1,56 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+      <!-- Breadcrumbs Section-->
+      <section class="section breadcrumb-wrapper bg-primary">
+        <div class="shell">
+          <h1>Log in</h1>
+          <br /><br /><br />
+        </div>
+      </section>
+      <!-- Log In/Register Section-->
+      <section class="section section-lg bg-white text-center">
+        <div class="shell">
+
+          <div class="range range-xl range-xs-center">
+            <div class="cell-sm-10 cell-md-8 cell-lg-6">
+              <div class="tab-content text-left">
+                <div style="width:70%;margin-left:20px">
+                  <!-- RD Login Form-->
+                  <form method="post" class="form-horizontal">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                        <label for="id_username" class="control-label" style="float:left;position:relative;display:block;">Username</label>
+                        <div>
+                            {{ form.username }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_password" class="control-label" style="float:left;position:relative;display:block;">Password</label>
+                        <div>
+                            {{ form.password }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <input type="hidden" name="next" value="/members/dashboard" />
+                            <input type="submit" value="Log in" class="btn btn-default" style="text-align:right" />
+                            <a style="margin-left: 15px;font-size:14px" href="{% url 'signup'%}">Sign up</a>
+                            <a style="margin-left: 15px;font-size:14px" href="{% url 'password_reset'%}">Forgot password?</a>
+                        </div>
+                    </div>
+                    {% if form.errors %}
+                    <p class="validation-summary-errors">Please enter a correct user name and password.</p>
+                    {% endif %}
+                    </form>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+{% endblock %}

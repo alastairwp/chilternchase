@@ -186,7 +186,7 @@ class SponsorProfile(models.Model):
     enabled = models.BooleanField("Enabled", default=False)
     sponsorship_amount = models.PositiveIntegerField("Sponsorship Amount", default=0, null=False, blank=False)
     website_url = models.CharField("Website URL", max_length=255, null=True, blank=True)
-    logo_url = models.ImageField(upload_to='uploads/', blank=True, null=True)
+    logo_url = models.ImageField(upload_to='media', blank=True, null=True)
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
 
