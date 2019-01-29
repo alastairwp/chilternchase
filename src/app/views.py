@@ -78,7 +78,6 @@ def charitydetails(request, race_year):
     race_years = Result.objects.all().order_by('-race_year').distinct('race_year')
     charities = CharityProfile.objects.filter(enabled=True).filter(race_year=race_year).filter(charity__isnull=False)
     raised_totals = CharityProfile.objects.all().values('charity_id').annotate(total_raised=Sum('amount_raised'))
-
     return render(
         request,
         'app/charities.html',
@@ -87,7 +86,7 @@ def charitydetails(request, race_year):
             'url_race_year': race_year,
             'title': 'Charities | Chiltern Chase',
             'race_years': race_years,
-            'raised_totals': raised_totals,
+            'raised_totals': raised_totals
         }
     )
 
@@ -184,7 +183,7 @@ def home(request):
         {
             'title': 'Home | Chiltern Chase',
             'year': datetime.now().year,
-            'testimonials': testimonials,
+            'testimonials': testimonials
         }
     )
 
@@ -214,11 +213,13 @@ def prize_list(request):
 
 def race_details(request):
     assert isinstance(request, HttpRequest)
+    master_total = CharityProfile.objects.aggregate(Sum('amount_raised'))
     return render(
         request,
         'app/race-details.html',
         {
-            'title': 'Race Details | Chiltern Chase'
+            'title': 'Race Details | Chiltern Chase',
+            'master_total': master_total
         }
     )
 
