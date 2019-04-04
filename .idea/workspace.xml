@@ -27,9 +27,9 @@
         <entry file="file://$PROJECT_DIR$/src/app/templates/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="465">
-              <caret line="458" column="100" lean-forward="false" selection-start-line="458" selection-start-column="100" selection-end-line="458" selection-end-column="100" />
+              <caret line="458" column="99" lean-forward="false" selection-start-line="458" selection-start-column="99" selection-end-line="458" selection-end-column="99" />
               <folding>
-                <marker date="1554414073073" expanded="false" signature="735:877" ph="..." />
+                <marker date="1554414513617" expanded="false" signature="735:877" ph="..." />
               </folding>
             </state>
           </provider>
@@ -765,9 +765,9 @@
     <entry file="file://$PROJECT_DIR$/src/app/templates/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
-          <caret line="458" column="100" lean-forward="false" selection-start-line="458" selection-start-column="100" selection-end-line="458" selection-end-column="100" />
+          <caret line="458" column="99" lean-forward="false" selection-start-line="458" selection-start-column="99" selection-end-line="458" selection-end-column="99" />
           <folding>
-            <marker date="1554414073073" expanded="false" signature="735:877" ph="..." />
+            <marker date="1554414513617" expanded="false" signature="735:877" ph="..." />
           </folding>
         </state>
       </provider>
