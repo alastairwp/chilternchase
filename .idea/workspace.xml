@@ -27,9 +27,9 @@
         <entry file="file://$PROJECT_DIR$/src/app/templates/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="465">
-              <caret line="458" column="84" lean-forward="false" selection-start-line="458" selection-start-column="84" selection-end-line="458" selection-end-column="84" />
+              <caret line="458" column="100" lean-forward="false" selection-start-line="458" selection-start-column="100" selection-end-line="458" selection-end-column="100" />
               <folding>
-                <marker date="1554412185956" expanded="false" signature="735:877" ph="..." />
+                <marker date="1554414073073" expanded="false" signature="735:877" ph="..." />
               </folding>
             </state>
           </provider>
@@ -264,6 +264,16 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="content" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chilternchase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chilternchase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chilternchase" type="b2602c69:ProjectViewProjectNode" />
@@ -755,9 +765,9 @@
     <entry file="file://$PROJECT_DIR$/src/app/templates/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
-          <caret line="458" column="84" lean-forward="false" selection-start-line="458" selection-start-column="84" selection-end-line="458" selection-end-column="84" />
+          <caret line="458" column="100" lean-forward="false" selection-start-line="458" selection-start-column="100" selection-end-line="458" selection-end-column="100" />
           <folding>
-            <marker date="1554412185956" expanded="false" signature="735:877" ph="..." />
+            <marker date="1554414073073" expanded="false" signature="735:877" ph="..." />
           </folding>
         </state>
       </provider>
