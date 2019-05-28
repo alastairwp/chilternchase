@@ -35,19 +35,17 @@
                       <div class="table-custom-wrap">
                         <table class="table-custom table-fixed table-primary">
                           <tr>
-                            <th>Position</th>
-                            <th>Name</th>
-                            <th>Year</th>
-                            <th>Time</th>
+                            <th>Race Position</th>
+                            <th>Race Year</th>
+                            <th>Finish Time</th>
                           </tr>
                             {% for leader in mens_5k_leaders %}
-                          <tr {% if leader.user_id == current_user_id %} style="background-color:yellow;"{% endif %}>
+                          <tr>
                             <td>{{ leader.position }}</td>
-                            <td>{{ leader.firstname }} {{ leader.surname }}</td>
                             <td>{{ leader.race_year }}</td>
                             <td>{{ leader.finish_time }}
-                              {% if leader.result_id == course_record_5k.result_id %}
-                              <br /><span style="font-size:13px;color:orange;">Course record!</span>
+                              {% if leader.result_id == mens_course_record_5k.result_id %}
+                              <br /><span style="font-size:13px;color:orange;">Men's Course record!</span>
                               {% endif %}
                             </td>
                           </tr>
@@ -64,20 +62,18 @@
                       <div class="table-custom-wrap">
                         <table class="table-custom table-fixed table-primary">
                           <tr>
-                            <th>Position</th>
-                            <th>Name</th>
-                            <th>Year</th>
-                            <th>Time</th>
+                            <th>Race Position</th>
+                            <th>Race Year</th>
+                            <th>Finish Time</th>
                           </tr>
                           
                           {% for leader in mens_10k_leaders %}
-                          <tr {% if leader.user_id == current_user_id %} style="background-color:yellow;"{% endif %}>
+                          <tr>
                             <td>{{ leader.position }}</td>
-                            <td>{{ leader.firstname }} {{ leader.surname }}</td>
                             <td>{{ leader.race_year }}</td>
                             <td>{{ leader.finish_time }}
-                            {% if leader.result_id == course_record_10k.result_id %}
-                              <br /><span style="font-size:13px;color:orange;">Course record!</span>
+                            {% if leader.result_id == mens_course_record_10k.result_id %}
+                              <br /><span style="font-size:13px;color:orange;">Men's Course record!</span>
                               {% endif %}
                             </td>
                           </tr>
@@ -93,19 +89,17 @@
                       <div class="table-custom-wrap">
                         <table class="table-custom table-fixed table-primary">
                           <tr>
-                            <th>Position</th>
-                            <th>Name</th>
-                            <th>Year</th>
-                            <th>Time</th>
+                            <th>Race Position</th>
+                            <th>Race Year</th>
+                            <th>Finish Time</th>
                           </tr>
                           {% for leader in mens_15k_leaders %}
-                          <tr {% if leader.user_id == current_user_id %} style="background-color:yellow;"{% endif %}>
+                          <tr>
                             <td>{{ leader.position }}</td>
-                            <td>{{ leader.firstname }} {{ leader.surname }}</td>
                             <td>{{ leader.race_year }}</td>
                             <td>{{ leader.finish_time }}
-                            {% if leader.result_id == course_record_15k.result_id %}
-                              <br /><span style="font-size:13px;color:orange;">Course record!</span>
+                            {% if leader.result_id == mens_course_record_15k.result_id %}
+                              <br /><span style="font-size:13px;color:orange;">Men's Course record!</span>
                               {% endif %}
                             </td>
                           </tr>
@@ -120,7 +114,6 @@
           </div>
         </div>
 
-     
       </section>
       
      
@@ -151,19 +144,17 @@
                       <div class="table-custom-wrap">
                         <table class="table-custom table-fixed table-primary">
                           <tr>
-                            <th>Position</th>
-                            <th>Name</th>
-                            <th>Year</th>
-                            <th>Time</th>
+                            <th>Race Position</th>
+                            <th>Race Year</th>
+                            <th>Finish Time</th>
                           </tr>
                             {% for leader in womens_5k_leaders %}
-                          <tr {% if leader.user_id == current_user_id %} style="background-color:yellow;"{% endif %}>
+                          <tr>
                             <td>{{ leader.position }}</td>
-                            <td>{{ leader.firstname }} {{ leader.surname }}</td>
                             <td>{{ leader.race_year }}</td>
                             <td>{{ leader.finish_time }}
-                            {% if leader.result_id == course_record_5k.result_id %}
-                              <br /><span style="font-size:13px;color:orange;">Course record!</span>
+                            {% if leader.result_id == womens_course_record_5k.result_id %}
+                              <br /><span style="font-size:13px;color:orange;">Women's Course record!</span>
                               {% endif %}
                             </td>
                           </tr>
@@ -180,20 +171,18 @@
                       <div class="table-custom-wrap">
                         <table class="table-custom table-fixed table-primary">
                           <tr>
-                            <th>Position</th>
-                            <th>Name</th>
-                            <th>Year</th>
-                            <th>Time</th>
+                            <th>Race Position</th>
+                            <th>Race Year</th>
+                            <th>Finish Time</th>
                           </tr>
                           
                           {% for leader in womens_10k_leaders %}
-                          <tr {% if leader.user_id == current_user_id %} style="background-color:yellow;"{% endif %}>
+                          <tr>
                             <td>{{ leader.position }}</td>
-                            <td>{{ leader.firstname }} {{ leader.surname }}</td>
                             <td>{{ leader.race_year }}</td>
                             <td>{{ leader.finish_time }}
-                              {% if leader.result_id == course_record_10k.result_id %}
-                              <br /><span style="font-size:13px;color:orange;">Course record!</span>
+                              {% if leader.result_id == womens_course_record_10k.result_id %}
+                              <br /><span style="font-size:13px;color:orange;">Women's Course record!</span>
                               {% endif %}
                             </td>
                           </tr>
@@ -209,20 +198,18 @@
                       <div class="table-custom-wrap">
                         <table class="table-custom table-fixed table-primary">
                           <tr>
-                            <th>Position</th>
-                            <th>Name</th>
-                            <th>Year</th>
-                            <th>Time</th>
+                            <th>Race Position</th>
+                            <th>Race Year</th>
+                            <th>Finish Time</th>
                           </tr>
                           {% for leader in womens_15k_leaders %}
-                          <tr {% if leader.user_id == current_user_id %} style="background-color:yellow;"{% endif %}>
+                          <tr>
                             <td>{{ leader.position }}</td>
-                            <td>{{ leader.firstname }} {{ leader.surname }}</td>
                             <td>{{ leader.race_year }}</td>
                             <td>{{ leader.finish_time }}
 
-                            {% if leader.result_id == course_record_15k.result_id %}
-                              <br /><span style="font-size:13px;color:orange;">Course record!</span>
+                            {% if leader.result_id == womens_course_record_15k.result_id %}
+                              <br /><span style="font-size:13px;color:orange;">Women's Course record!</span>
                               {% endif %}</td>
                           </tr>
                          {% endfor %}

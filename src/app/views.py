@@ -188,6 +188,44 @@ def home(request):
     )
 
 
+def leaderboards(request):
+    assert isinstance(request, HttpRequest)
+    current_user = request.user
+    mens_5k_leaders = Result.objects.filter(gender__iexact="male").filter(race_type__iexact="5K").order_by("finish_time")[:10]
+    mens_10k_leaders = Result.objects.filter(gender__iexact="male").filter(race_type__iexact="10K").order_by("finish_time")[:10]
+    mens_15k_leaders = Result.objects.filter(gender__iexact="male").filter(race_type__iexact="15K").order_by("finish_time")[:10]
+    womens_5k_leaders = Result.objects.filter(gender__iexact="female").filter(race_type__iexact="5K").order_by("finish_time")[:10]
+    womens_10k_leaders = Result.objects.filter(gender__iexact="female").filter(race_type__iexact="10K").order_by("finish_time")[:10]
+    womens_15k_leaders = Result.objects.filter(gender__iexact="female").filter(race_type__iexact="15K").order_by("finish_time")[:10]
+    mens_course_record_5k = Result.objects.filter(race_type__iexact="5K").filter(gender__iexact="male").order_by('finish_time').first()
+    mens_course_record_10k = Result.objects.filter(race_type__iexact="10K").filter(gender__iexact="male").order_by('finish_time').first()
+    mens_course_record_15k = Result.objects.filter(race_type__iexact="15K").filter(gender__iexact="male").order_by('finish_time').first()
+    womens_course_record_5k = Result.objects.filter(race_type__iexact="5K").filter(gender__iexact="female").order_by('finish_time').first()
+    womens_course_record_10k = Result.objects.filter(race_type__iexact="10K").filter(gender__iexact="female").order_by('finish_time').first()
+    womens_course_record_15k = Result.objects.filter(race_type__iexact="15K").filter(gender__iexact="female").order_by('finish_time').first()
+
+    return render(
+        request,
+        'app/leaderboards.html',
+        {
+            'mens_5k_leaders': mens_5k_leaders,
+            'mens_10k_leaders': mens_10k_leaders,
+            'mens_15k_leaders': mens_15k_leaders,
+            'womens_5k_leaders': womens_5k_leaders,
+            'womens_10k_leaders': womens_10k_leaders,
+            'womens_15k_leaders': womens_15k_leaders,
+            'current_user_id': current_user.id,
+            'title': 'Leaderboards | Chiltern Chase',
+            'mens_course_record_5k': mens_course_record_5k,
+            'mens_course_record_10k': mens_course_record_10k,
+            'mens_course_record_15k': mens_course_record_15k,
+            'womens_course_record_5k': womens_course_record_5k,
+            'womens_course_record_10k': womens_course_record_10k,
+            'womens_course_record_15k': womens_course_record_15k,
+        }
+    )
+
+
 def privacy_policy(request):
     assert isinstance(request, HttpRequest)
     return render(
