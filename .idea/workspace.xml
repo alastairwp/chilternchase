@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a4a21c4-6ed8-4548-928b-c584c91c45cd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/app/templates/app/index.html" afterPath="$PROJECT_DIR$/src/app/templates/app/index.html" />
       <change beforePath="$PROJECT_DIR$/src/app/templates/app/race-details.html" afterPath="$PROJECT_DIR$/src/app/templates/app/race-details.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/src/app/templates/app/race-details.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="370">
-              <caret line="61" column="108" lean-forward="false" selection-start-line="61" selection-start-column="108" selection-end-line="61" selection-end-column="108" />
+              <caret line="196" column="81" lean-forward="false" selection-start-line="196" selection-start-column="81" selection-end-line="196" selection-end-column="81" />
               <folding>
                 <element signature="n#style#0;n#h4#1;n#div#0;n#div#0;n#div#0;n#section#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h4#2;n#div#0;n#div#0;n#div#0;n#section#2;n#!!top" expanded="true" />
@@ -119,9 +117,9 @@
                 <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#4;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h4#0;n#div#0;n#div#1;n#div#0;n#div#0;n#section#4;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h4#0;n#div#0;n#div#2;n#div#0;n#div#0;n#section#4;n#!!top" expanded="true" />
-                <marker date="1559550853428" expanded="false" signature="4611:4629" ph="..." />
-                <marker date="1559550853428" expanded="false" signature="6313:6331" ph="..." />
-                <marker date="1559550853428" expanded="false" signature="7176:7194" ph="..." />
+                <marker date="1559551477770" expanded="false" signature="4611:4629" ph="..." />
+                <marker date="1559551477770" expanded="false" signature="6313:6331" ph="..." />
+                <marker date="1559551477770" expanded="false" signature="7176:7194" ph="..." />
               </folding>
             </state>
           </provider>
@@ -890,7 +888,7 @@
     <entry file="file://$PROJECT_DIR$/src/app/templates/app/race-details.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
-          <caret line="61" column="108" lean-forward="false" selection-start-line="61" selection-start-column="108" selection-end-line="61" selection-end-column="108" />
+          <caret line="196" column="81" lean-forward="false" selection-start-line="196" selection-start-column="81" selection-end-line="196" selection-end-column="81" />
           <folding>
             <element signature="n#style#0;n#h4#1;n#div#0;n#div#0;n#div#0;n#section#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h4#2;n#div#0;n#div#0;n#div#0;n#section#2;n#!!top" expanded="true" />
@@ -934,9 +932,9 @@
             <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h4#0;n#div#0;n#div#1;n#div#0;n#div#0;n#section#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h4#0;n#div#0;n#div#2;n#div#0;n#div#0;n#section#4;n#!!top" expanded="true" />
-            <marker date="1559550853428" expanded="false" signature="4611:4629" ph="..." />
-            <marker date="1559550853428" expanded="false" signature="6313:6331" ph="..." />
-            <marker date="1559550853428" expanded="false" signature="7176:7194" ph="..." />
+            <marker date="1559551477770" expanded="false" signature="4611:4629" ph="..." />
+            <marker date="1559551477770" expanded="false" signature="6313:6331" ph="..." />
+            <marker date="1559551477770" expanded="false" signature="7176:7194" ph="..." />
           </folding>
         </state>
       </provider>
