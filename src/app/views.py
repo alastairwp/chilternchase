@@ -268,7 +268,6 @@ def results(request, race_year, race_type):
     course_record_5k = Result.objects.filter(race_type__iexact="5K").order_by('finish_time').first()
     course_record_10k = Result.objects.filter(race_type__iexact="10K").order_by('finish_time').first()
     course_record_15k = Result.objects.filter(race_type__iexact="15K").order_by('finish_time').first()
-
     return render(
         request,
         'app/results.html',
@@ -279,7 +278,7 @@ def results(request, race_year, race_type):
             'title': 'Results | Chiltern Chase',
             'course_record_5k': course_record_5k,
             'course_record_10k': course_record_10k,
-            'course_record_15k': course_record_15k,
+            'course_record_15k': course_record_15k
         }
     )
 

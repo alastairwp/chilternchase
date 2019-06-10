@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a4a21c4-6ed8-4548-928b-c584c91c45cd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/app/templates/app/index.html" afterPath="$PROJECT_DIR$/src/app/templates/app/index.html" />
-      <change beforePath="$PROJECT_DIR$/src/app/templates/app/layout.html" afterPath="$PROJECT_DIR$/src/app/templates/app/layout.html" />
-      <change beforePath="$PROJECT_DIR$/src/app/templates/app/prize-list.html" afterPath="$PROJECT_DIR$/src/app/templates/app/prize-list.html" />
-      <change beforePath="$PROJECT_DIR$/src/app/templates/app/race-details.html" afterPath="$PROJECT_DIR$/src/app/templates/app/race-details.html" />
+      <change beforePath="$PROJECT_DIR$/src/app/templates/app/results.html" afterPath="$PROJECT_DIR$/src/app/templates/app/results.html" />
+      <change beforePath="$PROJECT_DIR$/src/app/views.py" afterPath="$PROJECT_DIR$/src/app/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,7 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/templates/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="669">
@@ -26,6 +24,16 @@
                 <element signature="n#style#0;n#span#1;n#li#0;n#ul#0;n#div#1;n#div#1;n#div#1;n#article#0;n#div#1;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <marker date="1560172425303" expanded="false" signature="735:877" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="results.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/templates/app/results.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="42" column="71" lean-forward="false" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -45,8 +53,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3255">
-              <caret line="224" column="9" lean-forward="false" selection-start-line="224" selection-start-column="9" selection-end-line="224" selection-end-column="9" />
+            <state relative-caret-position="392">
+              <caret line="261" column="5" lean-forward="true" selection-start-line="261" selection-start-column="5" selection-end-line="261" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -193,16 +201,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="travel-information.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/templates/app/travel-information.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="65" column="223" lean-forward="false" selection-start-line="65" selection-start-column="223" selection-end-line="65" selection-end-column="223" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -215,7 +213,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>distinct</find>
       <find>just want</find>
       <find>sysdoc</find>
       <find>support</find>
@@ -245,6 +242,7 @@
       <find>age</find>
       <find>race reg</find>
       <find>it's</find>
+      <find>pre</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -277,7 +275,6 @@
         <option value="$PROJECT_DIR$/src/app/templates/app/testimonials.html" />
         <option value="$PROJECT_DIR$/src/app/templates/app/sponsors.html" />
         <option value="$PROJECT_DIR$/src/app/admin.py" />
-        <option value="$PROJECT_DIR$/src/app/templates/app/results.html" />
         <option value="$PROJECT_DIR$/src/src/wsgi.py" />
         <option value="$PROJECT_DIR$/src/app/templates/app/charities.html" />
         <option value="$PROJECT_DIR$/src/user/views.py" />
@@ -287,12 +284,13 @@
         <option value="$PROJECT_DIR$/src/app/templates/app/travel-information.html" />
         <option value="$PROJECT_DIR$/src/app/members.py" />
         <option value="$PROJECT_DIR$/src/src/urls.py" />
-        <option value="$PROJECT_DIR$/src/app/views.py" />
         <option value="$PROJECT_DIR$/src/app/templates/app/leaderboards.html" />
         <option value="$PROJECT_DIR$/src/app/templates/app/prize-list.html" />
         <option value="$PROJECT_DIR$/src/app/templates/app/race-details.html" />
         <option value="$PROJECT_DIR$/src/app/templates/app/layout.html" />
         <option value="$PROJECT_DIR$/src/app/templates/app/index.html" />
+        <option value="$PROJECT_DIR$/src/app/views.py" />
+        <option value="$PROJECT_DIR$/src/app/templates/app/results.html" />
       </list>
     </option>
   </component>
@@ -389,6 +387,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chilternchase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chilternchase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chilternchase" type="b2602c69:ProjectViewProjectNode" />
@@ -682,13 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/templates/app/results.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/migrations/0031_auto_20180530_1652.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -841,14 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3255">
-          <caret line="224" column="9" lean-forward="false" selection-start-line="224" selection-start-column="9" selection-end-line="224" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/templates/app/prize-list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -965,6 +956,22 @@
             <element signature="n#style#0;n#span#1;n#li#0;n#ul#0;n#div#1;n#div#1;n#div#1;n#article#0;n#div#1;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <marker date="1560172425303" expanded="false" signature="735:877" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="261" column="5" lean-forward="true" selection-start-line="261" selection-start-column="5" selection-end-line="261" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/templates/app/results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="71" lean-forward="false" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
+          <folding />
         </state>
       </provider>
     </entry>
