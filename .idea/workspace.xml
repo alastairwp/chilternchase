@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a4a21c4-6ed8-4548-928b-c584c91c45cd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/app/templates/app/results.html" afterPath="$PROJECT_DIR$/src/app/templates/app/results.html" />
-      <change beforePath="$PROJECT_DIR$/src/app/views.py" afterPath="$PROJECT_DIR$/src/app/views.py" />
+      <change beforePath="$PROJECT_DIR$/src/app/templates/app/leaderboards.html" afterPath="$PROJECT_DIR$/src/app/templates/app/leaderboards.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,7 +27,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="results.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="results.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/templates/app/results.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="630">
@@ -53,8 +52,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="261" column="5" lean-forward="true" selection-start-line="261" selection-start-column="5" selection-end-line="261" selection-end-column="5" />
+            <state relative-caret-position="1333">
+              <caret line="261" column="5" lean-forward="false" selection-start-line="261" selection-start-column="5" selection-end-line="261" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -159,11 +158,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="leaderboards.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="leaderboards.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/templates/app/leaderboards.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3165">
-              <caret line="211" column="87" lean-forward="false" selection-start-line="211" selection-start-column="87" selection-end-line="211" selection-end-column="87" />
+            <state relative-caret-position="722">
+              <caret line="218" column="80" lean-forward="false" selection-start-line="218" selection-start-column="80" selection-end-line="218" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -284,13 +283,13 @@
         <option value="$PROJECT_DIR$/src/app/templates/app/travel-information.html" />
         <option value="$PROJECT_DIR$/src/app/members.py" />
         <option value="$PROJECT_DIR$/src/src/urls.py" />
-        <option value="$PROJECT_DIR$/src/app/templates/app/leaderboards.html" />
         <option value="$PROJECT_DIR$/src/app/templates/app/prize-list.html" />
         <option value="$PROJECT_DIR$/src/app/templates/app/race-details.html" />
         <option value="$PROJECT_DIR$/src/app/templates/app/layout.html" />
         <option value="$PROJECT_DIR$/src/app/templates/app/index.html" />
         <option value="$PROJECT_DIR$/src/app/views.py" />
         <option value="$PROJECT_DIR$/src/app/templates/app/results.html" />
+        <option value="$PROJECT_DIR$/src/app/templates/app/leaderboards.html" />
       </list>
     </option>
   </component>
@@ -824,14 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/templates/app/leaderboards.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3165">
-          <caret line="211" column="87" lean-forward="false" selection-start-line="211" selection-start-column="87" selection-end-line="211" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/templates/app/charities.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
@@ -959,18 +950,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="261" column="5" lean-forward="true" selection-start-line="261" selection-start-column="5" selection-end-line="261" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/templates/app/results.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="42" column="71" lean-forward="false" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1333">
+          <caret line="261" column="5" lean-forward="false" selection-start-line="261" selection-start-column="5" selection-end-line="261" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/templates/app/leaderboards.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="218" column="80" lean-forward="false" selection-start-line="218" selection-start-column="80" selection-end-line="218" selection-end-column="80" />
           <folding />
         </state>
       </provider>

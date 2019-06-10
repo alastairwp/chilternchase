@@ -36,12 +36,14 @@
                         <table class="table-custom table-fixed table-primary">
                           <tr>
                             <th>Race Position</th>
+                            <th>Name</th>
                             <th>Race Year</th>
                             <th>Finish Time</th>
                           </tr>
                             {% for leader in mens_5k_leaders %}
                           <tr>
                             <td>{{ leader.position }}</td>
+                            <td>{{ leader.firstname }} {{ leader.surname }}</td>
                             <td>{{ leader.race_year }}</td>
                             <td>{{ leader.finish_time }}
                               {% if leader.result_id == mens_course_record_5k.result_id %}
@@ -63,6 +65,7 @@
                         <table class="table-custom table-fixed table-primary">
                           <tr>
                             <th>Race Position</th>
+                            <th>Name</th>
                             <th>Race Year</th>
                             <th>Finish Time</th>
                           </tr>
@@ -70,6 +73,7 @@
                           {% for leader in mens_10k_leaders %}
                           <tr>
                             <td>{{ leader.position }}</td>
+                            <td>{{ leader.firstname }} {{ leader.surname }}</td>
                             <td>{{ leader.race_year }}</td>
                             <td>{{ leader.finish_time }}
                             {% if leader.result_id == mens_course_record_10k.result_id %}
@@ -90,12 +94,14 @@
                         <table class="table-custom table-fixed table-primary">
                           <tr>
                             <th>Race Position</th>
+                            <th>Name</th>
                             <th>Race Year</th>
                             <th>Finish Time</th>
                           </tr>
                           {% for leader in mens_15k_leaders %}
                           <tr>
                             <td>{{ leader.position }}</td>
+                            <td>{{ leader.firstname }} {{ leader.surname }}</td>
                             <td>{{ leader.race_year }}</td>
                             <td>{{ leader.finish_time }}
                             {% if leader.result_id == mens_course_record_15k.result_id %}
@@ -145,12 +151,14 @@
                         <table class="table-custom table-fixed table-primary">
                           <tr>
                             <th>Race Position</th>
+                            <th>Name</th>
                             <th>Race Year</th>
                             <th>Finish Time</th>
                           </tr>
                             {% for leader in womens_5k_leaders %}
                           <tr>
                             <td>{{ leader.position }}</td>
+                            <td>{{ leader.firstname }} {{ leader.surname }}</td>
                             <td>{{ leader.race_year }}</td>
                             <td>{{ leader.finish_time }}
                             {% if leader.result_id == womens_course_record_5k.result_id %}
@@ -172,6 +180,7 @@
                         <table class="table-custom table-fixed table-primary">
                           <tr>
                             <th>Race Position</th>
+                            <th>Name</th>
                             <th>Race Year</th>
                             <th>Finish Time</th>
                           </tr>
@@ -179,6 +188,7 @@
                           {% for leader in womens_10k_leaders %}
                           <tr>
                             <td>{{ leader.position }}</td>
+                            <td>{{ leader.firstname }} {{ leader.surname }}</td>
                             <td>{{ leader.race_year }}</td>
                             <td>{{ leader.finish_time }}
                               {% if leader.result_id == womens_course_record_10k.result_id %}
@@ -199,12 +209,14 @@
                         <table class="table-custom table-fixed table-primary">
                           <tr>
                             <th>Race Position</th>
+                            <th>Name</th>
                             <th>Race Year</th>
                             <th>Finish Time</th>
                           </tr>
                           {% for leader in womens_15k_leaders %}
                           <tr>
                             <td>{{ leader.position }}</td>
+                            <td>{{ leader.firstname }} {{ leader.surname }}</td>
                             <td>{{ leader.race_year }}</td>
                             <td>{{ leader.finish_time }}
 
