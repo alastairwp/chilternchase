@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a4a21c4-6ed8-4548-928b-c584c91c45cd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/app/templates/app/results.html" afterPath="$PROJECT_DIR$/src/app/templates/app/results.html" />
+      <change beforePath="$PROJECT_DIR$/src/app/templates/app/index.html" afterPath="$PROJECT_DIR$/src/app/templates/app/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/app/templates/app/layout.html" afterPath="$PROJECT_DIR$/src/app/templates/app/layout.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,18 +17,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/templates/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="669">
-              <caret line="303" column="3" lean-forward="false" selection-start-line="303" selection-start-column="3" selection-end-line="303" selection-end-column="3" />
+            <state relative-caret-position="238">
+              <caret line="112" column="96" lean-forward="true" selection-start-line="112" selection-start-column="96" selection-end-line="112" selection-end-column="96" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#article#0;n#div#1;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#li#0;n#ul#0;n#div#1;n#div#1;n#div#1;n#article#0;n#div#1;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1560172425303" expanded="false" signature="735:877" ph="..." />
+                <marker date="1560247008206" expanded="false" signature="735:877" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="results.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="results.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/templates/app/results.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="690">
@@ -37,13 +38,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="layout.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/templates/app/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="81" column="24" lean-forward="false" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="101" />
+            <state relative-caret-position="530">
+              <caret line="113" column="76" lean-forward="true" selection-start-line="113" selection-start-column="76" selection-end-line="113" selection-end-column="76" />
               <folding>
-                <marker date="1560172360067" expanded="false" signature="714:856" ph="..." />
+                <marker date="1560247008198" expanded="false" signature="714:856" ph="..." />
               </folding>
             </state>
           </provider>
@@ -285,11 +286,11 @@
         <option value="$PROJECT_DIR$/src/src/urls.py" />
         <option value="$PROJECT_DIR$/src/app/templates/app/prize-list.html" />
         <option value="$PROJECT_DIR$/src/app/templates/app/race-details.html" />
-        <option value="$PROJECT_DIR$/src/app/templates/app/layout.html" />
-        <option value="$PROJECT_DIR$/src/app/templates/app/index.html" />
         <option value="$PROJECT_DIR$/src/app/views.py" />
         <option value="$PROJECT_DIR$/src/app/templates/app/leaderboards.html" />
         <option value="$PROJECT_DIR$/src/app/templates/app/results.html" />
+        <option value="$PROJECT_DIR$/src/app/templates/app/index.html" />
+        <option value="$PROJECT_DIR$/src/app/templates/app/layout.html" />
       </list>
     </option>
   </component>
@@ -928,28 +929,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/templates/app/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="81" column="24" lean-forward="false" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="101" />
-          <folding>
-            <marker date="1560172360067" expanded="false" signature="714:856" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/templates/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="669">
-          <caret line="303" column="3" lean-forward="false" selection-start-line="303" selection-start-column="3" selection-end-line="303" selection-end-column="3" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#article#0;n#div#1;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#li#0;n#ul#0;n#div#1;n#div#1;n#div#1;n#article#0;n#div#1;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1560172425303" expanded="false" signature="735:877" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1333">
@@ -966,11 +945,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/templates/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="112" column="96" lean-forward="true" selection-start-line="112" selection-start-column="96" selection-end-line="112" selection-end-column="96" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#article#0;n#div#1;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#li#0;n#ul#0;n#div#1;n#div#1;n#div#1;n#article#0;n#div#1;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1560247008206" expanded="false" signature="735:877" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/templates/app/results.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="46" column="50" lean-forward="false" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/templates/app/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="113" column="76" lean-forward="true" selection-start-line="113" selection-start-column="76" selection-end-line="113" selection-end-column="76" />
+          <folding>
+            <marker date="1560247008198" expanded="false" signature="714:856" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
