@@ -27,6 +27,7 @@
                         <th>Name</th>
                         <th>Team Name</th>
                         <th>Year</th>
+                        <th>Chip Time</th>
                         <th>Finish Time</th>
                     </tr>
 
@@ -43,6 +44,7 @@
                         <td>{{ result.firstname }} {{ result.surname }}</td>
                         <td>{{ result.team_name }}</td>
                         <td>{{ result.race_year }}</td>
+                        <td>{{ result.chip_time }}</td>
                         <td>{{ result.finish_time }}
                             {% if result.result_id == course_record_5k.result_id or result.result_id == course_record_10k.result_id or result.result_id == course_record_10k.result_id %}
                                     <br /><span style="font-size:13px;color:orange;">Course record!</span>
