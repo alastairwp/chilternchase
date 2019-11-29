@@ -32,6 +32,7 @@ SECRET_KEY = os.environ.get('CC_SECRET_KEY')
 # ALLOWED_HOSTS = os.environ.get('CC_DJANGO_ALLOWED_HOSTS').split(',')
 # *******************************
 DEBUG = True
+
 ALLOWED_HOSTS = os.environ.get('CC_DJANGO_ALLOWED_HOSTS').split(',')
 
 
@@ -89,19 +90,29 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'src.wsgi.application'
 
+"""
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2   ',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'sqlite3.db'),
     }
 }
 
-import dj_database_url
-DATABASES['default'] = dj_database_url.config()
+
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ.get('CC_DB_NAME'),
+        'USER': os.environ.get('CC_DB_USER'),
+        'PASSWORD': os.environ.get('CC_DB_PASS'),
+        'HOST': os.environ.get('CC_DB_HOST'),
+        'PORT': os.environ.get('CC_DB_PORT'),
+    }
+}
+
+# import dj_database_url
+# DATABASES['default'] = dj_database_url.config()
 
 
 # db_from_env = dj_database_url.config(conn_max_age=500)

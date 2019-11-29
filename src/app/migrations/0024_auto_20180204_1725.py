@@ -78,11 +78,6 @@ class Migration(migrations.Migration):
             new_name='user',
         ),
         migrations.RenameField(
-            model_name='marketingsource',
-            old_name='marketingsource_id',
-            new_name='marketing_source_id',
-        ),
-        migrations.RenameField(
             model_name='runningclub',
             old_name='runningclub_id',
             new_name='running_club_id',
@@ -125,10 +120,6 @@ class Migration(migrations.Migration):
         migrations.RemoveField(
             model_name='testimonial',
             name='user_id',
-        ),
-        migrations.RemoveField(
-            model_name='userprofile',
-            name='marketingsource_id',
         ),
         migrations.AddField(
             model_name='contact',

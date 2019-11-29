@@ -16,6 +16,7 @@
 		<!--[if lt IE 10]>
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <script src="js/html5shiv.min.js"></script>
+
 		<![endif]-->
   </head>
   <body>
@@ -155,7 +156,7 @@
                             </ul>
                       </ul>
                 </li>
-              <!--
+
                 {% if user.is_authenticated %}
                 {% if title == 'Dashboard | Chiltern Chase' or title == 'Photo Captures | Chiltern Chase' or title == 'Leaderboards | Chiltern Chase' %}
                       <li class="active">
@@ -166,7 +167,7 @@
                     <ul class="rd-navbar-dropdown">
                         <li><a href="/members/dashboard">Dashboard</a></li>
                         <li><a href="/members/photo-captures">Photo Captures</a></li>
-                        <li><a href="/members/leaderboards">Leaderboards</a></li>
+                        <li><a href="/leaderboards">Leaderboards</a></li>
                     </ul>
                 </li>
                 {% endif %}
@@ -179,7 +180,7 @@
                     <a href="{% url 'login'%}?next={{request.path}}">Login</a>
                     {% endif %}
                 </li>
-                -->
+
                   </ul><a class="button button-primary button-sm" target="_blank" href="https://www.justgiving.com/fundraising/ChilternChase2018">Donate Now </a>
                             </div>
                             <!--RD Navbar Search

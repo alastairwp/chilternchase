@@ -17,6 +17,7 @@
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="../../static/app/content/images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <script src="js/html5shiv.min.js"></script>
 		<![endif]-->
+
   </head>
   <body>
     <!-- Page-->
@@ -156,14 +157,14 @@
 
                                         </ul>
                                     </li>
-                                    <!--
+
                                     {% if user.is_authenticated %}
                                     <li>
                                         <a href="/members/dashboard">MyCC</a>
                                         <ul class="rd-navbar-dropdown">
                                             <li><a href="/members/dashboard">Dashboard</a></li>
                                             <li><a href="/members/photo-captures">Photo Captures</a></li>
-                                            <li><a href="/members/leaderboards">Leaderboards</a></li>
+                                            <li><a href="/leaderboards">Leaderboards</a></li>
                                         </ul>
                                     </li>
                                     {% endif %}
@@ -175,7 +176,7 @@
                                         <a href="{% url 'login'%}?next={{request.path}}">Login</a>
                                         {% endif %}
                                     </li>
-                                    -->
+
                                 </ul><a class="button button-primary button-sm" target="_blank" href="https://www.justgiving.com/fundraising/ChilternChase2018">Donate Now </a>
                             </div>
                             <!--RD Navbar Search
@@ -203,7 +204,7 @@
           <div class="range range-md-justify range-md-middle">
             <div class="cell-sm-6 cell-lg-6 inset-modern-left"><!--<a class="brand-name" href="index-2.html"><img src="images/brand-condensed.png" width="217" height="52" alt=""></a>-->
               <h1>The Chiltern Chase</h1>
-                <h2>9th June 2019 - 10.00am</h2>
+                <h2>Next race - 7th June 2019</h2>
               <div class="button-group"><!--<a class="button button-primary" target="_blank" href="/race-details">Pre-Race Registration</a>-->
                 <a class="button button-primary-outline" href="/race-details">more details</a></div>
             </div>
@@ -338,7 +339,7 @@
             <!-- The Stroke Association-->
           <div class="cell-md-4 cell-lg-4 blog-creative-wrap">
             <article class="blog-creative">
-              <div class="blog-creative-image"><img src="http://84.92.85.38/photos/images/stroke_logo2.jpg" alt="" width="640" height="480"/> </div>
+              <div class="blog-creative-image"><img src="{% static 'app/content/images/stroke_logo2.jpg' %}" alt="" width="640" height="480"/> </div>
               <div class="blog-creative-content">
                 <div class="blog-creative-content-top">
                   <ul class="blog-creative-tags">
@@ -354,7 +355,7 @@
                   </div>
                   <div class="blog-creative-meta">
                     <ul class="inline-list-lg">
-                      <li><span class="icon icon-md mdi mdi-calendar-clock"></span><span style="background-color: rgba(10, 10, 10, 0.4);">Years: 2015, 2016</span></li>
+                      <li><span class="icon icon-md mdi mdi-calendar-clock"></span><span style="background-color: rgba(10, 10, 10, 0.4);">Years: 2019, 2020</span></li>
                       <!--<li><span class="icon icon-md mdi mdi-account"></span><a href="#">by Austin Riley</a></li>-->
                     </ul>
                   </div><a class="button button-xs button-primary" href="/charities/2019">read more</a>
@@ -395,17 +396,28 @@
         </div>
       </section>
 
+    <section class="section section-lg bg-gray-darker text-center">
+        <div class="shell shell-wide">
+          <h2>Letter from John Howell OBE MP</h2>
+            <div style="margin-bottom:30px;margin-top:25px">
+                <p>Our local MP John Howell wrote to the Chiltern Chase committee to congratulate everyone for raising £100,000 over the last fourteen years. If you have attended or participated our races over the years we'd like to thank you for your support. We couldn't done it without you. This recognition makes the hard work that the committee put into this event every year worthwhile. </p>
+            </div>
+            <div>
+                <a target="_blank" href="{% static 'app/content/docs/john-howell-cc-letter.pdf' %}"><img width="200px" src="{% static 'app/content/images/john-howell-letter-image.png' %}"></a><br />
+                click to open
+            </div>
+        </div>
+    </section>
+        <!-- Testimonials -->
       <section class="section section-lg bg-gray-2 text-center">
         <div class="shell shell-wide">
           <h2>Testimonials</h2>
           <div class="range range-lg range-30 text-left">
               {% for testimonial in testimonials %}
-            <!-- Quote Minimal-->
             <div class="cell-lg-3 cell-sm-6">
               <div class="quote-minimal">
                 <div class="quote-minimal-icon"><span class="icon mdi mdi-format-quote"></span></div>
                 <div class="quote-minimal-inner">
-                  <!--<h5>Thanks for Your Help!</h5>-->
                   <p>{{ testimonial.message }}</p>
                   <div class="quote-info">
                     <div class="unit unit-spacing-xs unit-xxs-horizontal unit-xxs-middle">

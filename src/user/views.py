@@ -5,28 +5,34 @@
 from django.contrib.auth import login as cclogin, authenticate
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import auth
+from django.contrib import messages
+from django.urls import reverse
 from django import forms
 from user.models import User
 
 
-class RegisterForm(UserCreationForm):
-    firstname = forms.CharField()
-    surname = forms.CharField()
-    email = forms.EmailField()
-    password1 = forms.PasswordInput
-    password2 = forms.PasswordInput
+def login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = auth.authenticate(username=username, password=password)
 
-    class Meta:
-        model = User
-        fields = ('email', 'firstname', 'surname')
+        if user:
+            if user.is_active:
+                auth.login(request, user)
+                return redirect(reverse('dashboard'))
 
-    def __init__(self, *args, **kwargs):
-        super(RegisterForm, self).__init__(*args, **kwargs)
-        self.fields['firstname'].widget.attrs.update({'class': 'form-control'})
-        self.fields['surname'].widget.attrs.update({'class': 'form-control'})
-        self.fields['email'].widget.attrs.update({'class': 'form-control'})
-        self.fields['password1'].widget.attrs.update({'class': 'form-control'})
-        self.fields['password2'].widget.attrs.update({'class': 'form-control'})
+            else:
+                messages.warning(request,
+                                 "Your account is not active. If you've just registered check your inbox for an activation email. Alternatively contact support.")
+                return redirect(reverse('login'))
+
+        else:
+            messages.error(request, 'Invalid username/password')
+            return redirect(reverse('login'))
+    else:
+        return render(request, 'app/login.html')
 
 
 def signup(request):
