@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a4a21c4-6ed8-4548-928b-c584c91c45cd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/static/app/content/images/fawley-farms-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/static/app/content/images/ewelme-2019.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/static/app/content/media/ewelme-2019.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/static/app/content/images/fawley-farms-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/static/app/content/media/fawley-farms-logo.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,11 +58,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/static/app/content/media" />
       <recent name="$PROJECT_DIR$/src/app/static/app/content/images" />
       <recent name="$PROJECT_DIR$/src/app/static/app/content/docs" />
       <recent name="$PROJECT_DIR$/src/app/templates/app" />
       <recent name="$PROJECT_DIR$/src/app/templates/app/registration" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
