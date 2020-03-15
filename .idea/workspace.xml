@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a4a21c4-6ed8-4548-928b-c584c91c45cd" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/static/app/content/images/fawley-farms-logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/static/app/content/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/static/app/content/css/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,15 +53,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/auth/templates/registration" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/static/app/content/images" />
       <recent name="$PROJECT_DIR$/src/app/static/app/content/docs" />
       <recent name="$PROJECT_DIR$/src/app/templates/app" />
       <recent name="$PROJECT_DIR$/src/app/templates/app/registration" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/auth/templates/registration" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
