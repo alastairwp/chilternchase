@@ -554,13 +554,13 @@ small,
 
 @media (min-width: 992px) {
   .block-career {
-    min-height: 290px;
+    min-height: 520px;
   }
 }
 
 @media (min-width: 1200px) {
   .block-career {
-    height: 350px;
+    height: 520px;
   }
   .block-career .icon {
     font-size: 150px;
@@ -570,9 +570,9 @@ small,
 
 @media (min-width: 1600px) {
   .block-career {
-    height: 430px;
+    height: 520px;
   }
-  * + .block-career-title {
+  .block-career-title {
     margin-top: 45px;
   }
 }
