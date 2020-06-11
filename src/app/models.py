@@ -92,7 +92,6 @@ class MarketingPreference(models.Model):
 
 
 class MarketingSource(models.Model):
-    marketing_source_id = models.AutoField(primary_key=True)
     name = models.CharField("Name", max_length=255)
     enabled = models.BooleanField("Enabled", default=False)
     date_created = models.DateTimeField(auto_now_add=True)

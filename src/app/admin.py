@@ -46,7 +46,7 @@ class MarketingPreferenceAdmin(admin.ModelAdmin):
 
 
 class MarketingSourceAdmin(admin.ModelAdmin):
-    list_display = ["marketing_source_id", "name", "enabled"]
+    list_display = ["name", "enabled"]
 
     class Meta:
         Model = MarketingSource
