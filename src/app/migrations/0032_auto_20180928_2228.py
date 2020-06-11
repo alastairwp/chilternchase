@@ -99,11 +99,6 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterField(
             model_name='userprofile',
-            name='marketing_source',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='app.MarketingSource'),
-        ),
-        migrations.AlterField(
-            model_name='userprofile',
             name='user',
             field=models.OneToOneField(null=True, on_delete=django.db.models.deletion.SET_NULL, to=settings.AUTH_USER_MODEL),
         ),
