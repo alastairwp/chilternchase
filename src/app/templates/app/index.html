@@ -9,10 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <!-- Stylesheets-->
-        {% load staticfiles %}
+        {% load static %}
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:400,400i,700,900">
-    <link href="{% static "app/content/css/bootstrap.css" %}" rel="stylesheet" />
-    <link href="{% static "app/content/css/style.css" %}" rel="stylesheet" />
+    <link href="{% static 'app/content/css/bootstrap.css' %}" rel="stylesheet" />
+    <link href="{% static 'app/content/css/style.css' %}" rel="stylesheet" />
 		<!--[if lt IE 10]>
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="../../static/app/content/images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <script src="js/html5shiv.min.js"></script>
@@ -196,7 +196,7 @@
                 </nav>
             </div>
         </header>
-
+<!--
         <section class="section section-xl bg-primary bg-primary-mod-1" style="background-color:red;padding-top:30px;margin-bottom:0px;padding-bottom:30px">
             <div class="shell shell-wide" style="padding:0px;margin-bottom:0px;">
 
@@ -211,42 +211,19 @@
                 </div>
             </div>
         </section>
-
+-->
       <section class="section section-xl bg-primary bg-primary-mod-1" style="background: url(../../static/app/content/images/slide1b.jpg) no-repeat center; background-size: cover;">
         <div class="shell shell-wide">
           <div class="range range-md-justify range-md-middle">
-            <div class="cell-sm-6 cell-lg-6 inset-modern-left"><!--<a class="brand-name" href="index-2.html"><img src="images/brand-condensed.png" width="217" height="52" alt=""></a>-->
-              <!--<h1>The Chiltern Chase</h1>
-                <h2>Next race - 7th June 2020</h2>
-                <h3>Registration 2020 now open!</h3>
+            <div class="cell-sm-6 cell-lg-6 inset-modern-left"><!--<a class="brand-name" href="/"><img src="images/brand-condensed.png" width="217" height="52" alt=""></a>-->
+              <h1>The Chiltern Chase</h1>
+                <h2>Race Day 2021 - Sunday 13th June</h2> 
+                <h3>Registration now open!</h3>
               <div class="button-group">
-                  <a class="button button-primary" target="_blank" href="/race-details">Pre-Race Registration</a>
-                <a class="button button-primary-outline" href="/race-details">more details</a></div>-->
+                  <a class="button button-primary" target="_blank" href="https://register.enthuse.com/ps/event/ChilternChase15K10K5K2021">Race Registration</a>
+                <!--<a class="button button-primary-outline" href="/race-details">more details</a></div>-->
             </div>
-            <div class="cell-sm-6 cell-md-5 cell-lg-4 cell-xl-4 cell-xxl-3 inset-modern-right wow fadeInRight" data-wow-delay="0.3s"> 
-              <!--<div class="block-book-consultation">
-                <h4>Fill in the Form</h4>
-                <p>Please enter your name and e-mail in the form below to join a charity.</p>
-                <form class="rd-mailform text-left" data-form-output="form-output-global" data-form-type="contact" method="post" action="https://livedemo00.template-help.com/wt_62462/bat/rd-mailform.php">
-                  <div class="range range-xs-center range-15">
-                    <div class="cell-sm-12">
-                      <div class="form-wrap form-wrap-validation">
-                        <label class="form-label form-label-outside" for="forms-name-cre">First name</label>
-                        <input class="form-input" id="forms-name-cre" type="text" name="name" data-constraints="@Required">
-                      </div>
-                    </div>
-                    <div class="cell-sm-12">
-                      <div class="form-wrap form-wrap-validation">
-                        <label class="form-label form-label-outside" for="forms-phone-cre">Phone</label>
-                        <input class="form-input" id="forms-phone-cre" type="text" name="phone" data-constraints="@Numeric @Required">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-button">
-                    <button class="button button-primary button-block" type="submit">Join a Charity</button>
-                  </div>
-                </form>
-              </div>-->
+            <div class="cell-sm-6 cell-md-5 cell-lg-4 cell-xl-4 cell-xxl-3 inset-modern-right wow fadeInRight" data-wow-delay="0.3s">
             </div>
           </div>
         </div>
