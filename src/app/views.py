@@ -257,6 +257,7 @@ def race_details(request):
 def results(request, race_year, race_type):
     assert isinstance(request, HttpRequest)
     results = Result.objects.filter(race_year=race_year).filter(race_type=race_type.upper()).order_by('position')
+    race_years = Result.objects.all().order_by('-race_year').distinct('race_year')
     course_record_5k = Result.objects.filter(race_type__iexact="5K").order_by('finish_time').first()
     course_record_10k = Result.objects.filter(race_type__iexact="10K").order_by('finish_time').first()
     course_record_15k = Result.objects.filter(race_type__iexact="15K").order_by('finish_time').first()
@@ -266,6 +267,7 @@ def results(request, race_year, race_type):
         {
             'results': results,
             'race_year': race_year,
+            'race_years': race_years,
             'race_type': race_type,
             'title': 'Results | Chiltern Chase',
             'course_record_5k': course_record_5k,
