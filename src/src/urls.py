@@ -29,6 +29,7 @@ urlpatterns = [
     path('prize-list', app_views.prize_list, name='prize_list'),
     path('gallery', app_views.gallery, name='gallery'),
     re_path(r'^gallery/(?P<race_year>\d+)$', app_views.gallerydetails, name='gallerydetails'),
+    path('results/', app_views.results_home, name='results_home'),
     re_path(r'^results/(?P<race_year>\d+)/(?P<race_type>[A-Za-z0-9]+)$', app_views.results, name='results'),
     path('sponsors/', app_views.sponsors, name='sponsors'),
     path('frequently-asked-questions/', app_views.faq, name='faq'),

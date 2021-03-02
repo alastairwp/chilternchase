@@ -1,7 +1,7 @@
 """
 Definition of views.
 """
-from django.http import HttpRequest
+from django.http import HttpRequest, HttpResponseRedirect
 from django.shortcuts import render
 from django.template import RequestContext
 from django.db.models import Sum
@@ -252,6 +252,13 @@ def race_details(request):
             'master_total': master_total
         }
     )
+
+
+def results_home(request):
+    assert isinstance(request, HttpRequest)
+    race_year = Result.objects.all().order_by('-race_year').distinct('race_year').first()
+    result_url = '/results/' + str(race_year.race_year) + '/5K'
+    return HttpResponseRedirect(result_url)
 
 
 def results(request, race_year, race_type):
