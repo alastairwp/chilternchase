@@ -1,296 +1,638 @@
-﻿{% extends "app/layout.html" %}
-
-{% block content %}
-{% load humanize %}
-<section class="section section-xl bg-primary bg-primary-mod-1" style="background-color:#009dab;padding-top:30px;margin-bottom:0px;padding-bottom:30px">
-  <div class="shell shell-wide" style="padding:0px;margin-bottom:0px;">
-
-      <div style="text-align:left;">
-        <p>We are going for it! The next Chiltern Chase race is scheduled to take place on Sunday 4th July 2021. We don't know what Government restrictions will be in place at this time but we hope that circumstances will allow 
-          us to go ahead with the race.</p>
-        <p>Should the Government restrictions prohibit us from holding the race, we can accommodate the following three options for you, regarding your entrance fee:
-          <ol style="list-style: decimal;margin-left:30px">
-            <li>We can provide you a full refund</li>
-            <li>We can retain your registration fee for the next Chiltern Chase race</li>
-            <li>You can choose to donate your registration fee to <a href="https://www.stroke.org.uk/donate/autumn-appeal-2020?utm_source=google&utm_medium=ppc&utm_campaign=autumn_campaign&utm_content=brand&gclid=Cj0KCQiA0rSABhDlARIsAJtjfCfL97sr2BaQ7kCD7UmUAf3IXR0J2TfYE7VgNv63EpFuOA1W_AfhGssaAoOOEALw_wcB&gclsrc=aw.ds"><u>this year's chosen charity.</u></a></li>
-          </ol>
-          <p>We recently updated our race declaration form to reflect how things will operate on the day and what protections will be in place. To let us know your choice please email us at info@chilternchase.com</p>
-      </div>
+﻿{% extends "app/layout.html" %} {% block content %} {% load humanize %}
+<section
+  class="section section-xl bg-primary bg-primary-mod-1"
+  style="
+    background-color: #009dab;
+    padding-top: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 30px;
+  "
+>
+  <div class="shell shell-wide" style="padding: 0px; margin-bottom: 0px">
+    <div style="text-align: left">
+      <p>
+        We are going for it! The next Chiltern Chase race is scheduled to take
+        place on Sunday 4th July 2021. We don't know what Government
+        restrictions will be in place at this time but we hope that
+        circumstances will allow us to go ahead with the race.
+      </p>
+      <p>
+        Should the Government restrictions prohibit us from holding the race, we
+        can accommodate the following three options for you, regarding your
+        entrance fee:
+      </p>
+      <ol style="list-style: decimal; margin-left: 30px">
+        <li>We can provide you a full refund</li>
+        <li>
+          We can retain your registration fee for the next Chiltern Chase race
+        </li>
+        <li>
+          You can choose to donate your registration fee to
+          <a
+            href="https://www.stroke.org.uk/donate/autumn-appeal-2020?utm_source=google&utm_medium=ppc&utm_campaign=autumn_campaign&utm_content=brand&gclid=Cj0KCQiA0rSABhDlARIsAJtjfCfL97sr2BaQ7kCD7UmUAf3IXR0J2TfYE7VgNv63EpFuOA1W_AfhGssaAoOOEALw_wcB&gclsrc=aw.ds"
+            ><u>this year's chosen charity.</u></a
+          >
+        </li>
+      </ol>
+      <p>
+        We recently updated our race declaration form to reflect how things will
+        operate on the day and what protections will be in place. To let us know
+        your choice please email us at info@chilternchase.com
+      </p>
+    </div>
   </div>
 </section>
-      <!-- Breadcrumbs Section-->
-      <section class="section breadcrumb-wrapper bg-primary">
-        <div class="shell">
-          <h1>Race details</h1>
+<!-- Breadcrumbs Section-->
+<section class="section breadcrumb-wrapper bg-primary">
+  <div class="shell">
+    <h1>Race details</h1>
+  </div>
+</section>
+<!-- Join Our Team-->
+<section class="section section-lg bg-white">
+  <div class="shell shell-wide">
+    <div style="text-align: center">
+      <!--<h2 style="color:orange;">Registration for Chiltern Chase 2020 now open!</h2>-->
+    </div>
+
+    <div class="range">
+      <div class="cell-md-6">
+        <!--<img src="../../static/app/content/images/start-line.jpg" alt="" width="870" height="490"/>-->
+        <iframe
+          src="https://player.vimeo.com/video/269182629"
+          width="100%"
+          height="430"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="cell-md-6">
+        <div class="block-md">
+          <p>
+            The Chiltern Chase is a multi-terrain run, covering 5km, 10km or
+            15km. This popular course is based around the beautiful South
+            Oxfordshire village of Ewelme. Runners enjoy picturesque bridleways
+            and rugged trails of the Chiltern Way, accompanied by red kites
+            overhead and occasional hare and deer. Running for over 11 years,
+            The Chiltern Chase has raised over £100,000 for charity, and is
+            managed by an experienced committee and supportive marshals.
+            Refreshments are provided by Ewelme School PTA, so join us in a
+            great day out for both runners and supporters alike.
+          </p>
+          <a
+            class="button button-primary"
+            target="_blank"
+            href="https://register.enthuse.com/ps/event/ChilternChase15K10K5K2021"
+            >Register now</a
+          >
         </div>
-      </section>
-      <!-- Join Our Team-->
-      <section class="section section-lg bg-white">
-        <div class="shell shell-wide">
-            <div style="text-align:center;">
-                <!--<h2 style="color:orange;">Registration for Chiltern Chase 2020 now open!</h2>-->
-            </div>
-
-          <div class="range">
-
-                  <div class="cell-md-6">
-              <!--<img src="../../static/app/content/images/start-line.jpg" alt="" width="870" height="490"/>-->
-                <iframe src="https://player.vimeo.com/video/269182629" width="100%" height="430" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="cell-md-6">
-              <div class="block-md">
-
-                <p>The Chiltern Chase is a multi-terrain run, covering 5km, 10km or 15km. This popular course is based around the beautiful South Oxfordshire village of Ewelme. Runners enjoy picturesque bridleways and rugged trails of the Chiltern Way, accompanied by red kites overhead and occasional hare and deer. Running for over 11 years, The Chiltern Chase has raised over £100,000 for charity, and is managed by an experienced committee and supportive marshals. Refreshments are provided by Ewelme School PTA, so join us in a great day out for both runners and supporters alike.</p>
-                  <a class="button button-primary" target="_blank" href="https://register.enthuse.com/ps/event/ChilternChase15K10K5K2021">Register now</a>
-              </div>
-                <div class="block-md" style="margin-top:20px">
-                    <p>You will be able to pay on the day, however we can only accept payment by cash or cheque.</p>
-                </div>
-            </div>
-          </div>
+        <div class="block-md" style="margin-top: 20px">
+          <p>
+            You will be able to pay on the day, however we can only accept
+            payment by cash or cheque.
+          </p>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section section-lg bg-white">
-        <div class="shell shell-wide" data-lightgallery="group">
-          <div class="row">
-          <div class="block-md">
+  <div class="shell shell-wide" data-lightgallery="group">
+    <div class="row">
+      <div class="block-md">
+        <!-- Other Race Information -->
+        <h2>Other race information</h2>
+        <a name="travel"></a>
+        <!-- Age Requirements -->
+        <h4 style="margin-top: 20px">Age requirements</h4>
+        <p>
+          <b
+            >You need to be at least 13 years old to run the 5k and 16 years old
+            to run the 10k.</b
+          >
+        </p>
 
-          <!-- Other Race Information -->
-          <h2>Other race information</h2>
-<a name="travel"></a>
-              <!-- Age Requirements -->
-              <h4 style="margin-top:20px">Age requirements</h4>
-              <p><b>You need to be at least 13 years old to run the 5k and 16 years old to run the 10k.</b></p>
+        <!-- Parking & Transport -->
+        <h4 style="margin-top: 20px">Parking & Transport</h4>
+        <p>
+          There will be parking available “above” Cow Common in a field on the
+          approach to Ewelme from “Hour glass corner” / Clacks Lane. From the
+          car park Cow Common is a short downhill walk through a field and a
+          couple of kissing gates. Those of you combining the Chiltern Chase
+          with your first date, this is your time. Car park will open at 7:30am.
+          <br />
+        </p>
 
-              <!-- Parking & Transport -->
-              <h4 style="margin-top:20px">Parking & Transport</h4>
-              <p>There will be parking available “above” Cow Common in a field on the approach to Ewelme from “Hour glass corner” / Clacks Lane. From the car park Cow Common is a short downhill walk through a field and a couple of kissing gates. Those of you combining the Chiltern Chase with your first date, this is your time. Car park will open at 7:30am.
-              <br>
-              <p>For Satellite Navigation: Use Post Code OX10 6HQ (The postcode may take you outside Ewelme School. There will be blue signs to guide you to the car park from there.) From M40 - distance: 6 miles, Time: 20mins</p>
+        <p>
+          For Satellite Navigation: Use Post Code OX10 6HQ (The postcode may
+          take you outside Ewelme School. There will be blue signs to guide you
+          to the car park from there.) From M40 - distance: 6 miles, Time:
+          20mins
+        </p>
 
-              <!-- Directions -->
-              <h4 style="margin-top:20px">Directions</h4>
-              <li style="margin-left:15px">Exit M40 Junction 6</li>
-              <li style="margin-left:15px">Head towards Watlington on the B4009</li>
-              <li style="margin-left:15px">Carry on Straight into Watlington until you reach T Junction</li>
-              <li style="margin-left:15px">Turn right heading towards Benson. Stay on this road</li>
-              <li style="margin-left:15px">Drive through Village of Britwell Salome (+/- 1 Mile)</li>
-              <li style="margin-left:15px">Continue on B4009 (1.5 Miles)</li>
-              <li style="margin-left:15px">Road makes a sharp right hand drive past 1st junction on LHS signposted Ewelme(0.2 Miles). Take next left to Ewelme (+/- 1/2 mile)</li>
-              <li style="margin-left:15px">Follow this road into Ewelme. At junction go straight across over small bridge and bear left through RAF Benson. (+/- 1 mile)</li>
-              <li style="margin-left:15px">Road bends to left, follow up the hill and take the next left signposted Ewelme (+/= 1 mile)</li>
-              <li style="margin-left:15px">Take quick left again and follow road down and up dip until car park on RHS (+/- 1mile)</li>
-              <li style="margin-left:15px">PLEASE DRIVE SLOWLY ALONG THIS ROAD – VERY NARROW</li>
-                <br>
-              <p>We ask runners to kindly not park in the village. Please use only the allocated car park, there will be plenty of space and there are marshals who will assist with parking.</p>
+        <!-- Directions -->
+        <h4 style="margin-top: 20px">Directions</h4>
+        <li style="margin-left: 15px">Exit M40 Junction 6</li>
+        <li style="margin-left: 15px">Head towards Watlington on the B4009</li>
+        <li style="margin-left: 15px">
+          Carry on Straight into Watlington until you reach T Junction
+        </li>
+        <li style="margin-left: 15px">
+          Turn right heading towards Benson. Stay on this road
+        </li>
+        <li style="margin-left: 15px">
+          Drive through Village of Britwell Salome (+/- 1 Mile)
+        </li>
+        <li style="margin-left: 15px">Continue on B4009 (1.5 Miles)</li>
+        <li style="margin-left: 15px">
+          Road makes a sharp right hand drive past 1st junction on LHS
+          signposted Ewelme(0.2 Miles). Take next left to Ewelme (+/- 1/2 mile)
+        </li>
+        <li style="margin-left: 15px">
+          Follow this road into Ewelme. At junction go straight across over
+          small bridge and bear left through RAF Benson. (+/- 1 mile)
+        </li>
+        <li style="margin-left: 15px">
+          Road bends to left, follow up the hill and take the next left
+          signposted Ewelme (+/= 1 mile)
+        </li>
+        <li style="margin-left: 15px">
+          Take quick left again and follow road down and up dip until car park
+          on RHS (+/- 1mile)
+        </li>
+        <li style="margin-left: 15px">
+          PLEASE DRIVE SLOWLY ALONG THIS ROAD – VERY NARROW
+        </li>
+        <br />
+        <p>
+          We ask runners to kindly not park in the village. Please use only the
+          allocated car park, there will be plenty of space and there are
+          marshals who will assist with parking.
+        </p>
 
-              <p>Travel to the Chiltern Chase is tricky via public transport. The nearest railway station is Cholsey 5 miles away and buses on a Sunday through Ewelme have faded into the mists of time (there are none!)</p>
+        <p>
+          Travel to the Chiltern Chase is tricky via public transport. The
+          nearest railway station is Cholsey 5 miles away and buses on a Sunday
+          through Ewelme have faded into the mists of time (there are none!)
+        </p>
 
-              <!-- Runner Information -->
-              <h4 style="margin-top:20px">Runner Information</h4>
-              <p>All runners will be briefed by Marcus our M of C immediately prior to the race about potential hazards. This includes:</p>
+        <!-- Runner Information -->
+        <h4 style="margin-top: 20px">Runner Information</h4>
+        <p>
+          All runners will be briefed by Marcus our M of C immediately prior to
+          the race about potential hazards. This includes:
+        </p>
 
-              <li style="margin-left:15px">the need to keep to the signposted routes</li>
-              <li style="margin-left:15px">taking special care when crossing roads, the marshals are on the course to direct you and will not to stop the traffic</li>
-              <li style="margin-left:15px">taking special care when crossing roads, the marshals are on the course to direct you and will not to stop the traffic</li>
-              <li style="margin-left:15px">being considerate to other runners when going at narrow sections</li>
-              <li style="margin-left:15px">ensuring you consume sufficient water</li>
-              <li style="margin-left:15px">not using mobile phones or music players whilst you run. PLEASE OBSERVE THIS RULE for your personal safety. Part of the route is on shared roads. Marshalls will stop any runners who might be seen wearing any earphones/headphones.</li>
+        <li style="margin-left: 15px">
+          the need to keep to the signposted routes
+        </li>
+        <li style="margin-left: 15px">
+          taking special care when crossing roads, the marshals are on the
+          course to direct you and will not to stop the traffic
+        </li>
+        <li style="margin-left: 15px">
+          taking special care when crossing roads, the marshals are on the
+          course to direct you and will not to stop the traffic
+        </li>
+        <li style="margin-left: 15px">
+          being considerate to other runners when going at narrow sections
+        </li>
+        <li style="margin-left: 15px">ensuring you consume sufficient water</li>
+        <li style="margin-left: 15px">
+          not using mobile phones or music players whilst you run. PLEASE
+          OBSERVE THIS RULE for your personal safety. Part of the route is on
+          shared roads. Marshalls will stop any runners who might be seen
+          wearing any earphones/headphones.
+        </li>
 
-              <!-- General Route Safety and Marshalling -->
-              <h4 style="margin-top:20px">General Route Safety and Marshalling</h4>
-              <p></p>
-              <li style="margin-left:15px">The route is partly cross country hence it is possible that some slips and trips may occur however the Organising Committee will endeavour to ensure that as far as reasonable practicable significant hazards will be either be removed or marked accordingly.</li>
-              <li style="margin-left:15px">All significant route changes points will have at least one marshal to supplement signage.</li>
-              <li style="margin-left:15px">All marshals will be fully briefed prior to taking up their stations by Dave our infamous Marshal Coordinator. They have been instructed to bring a mobile phone and will have the number of the First Aid providers and Race Director Mike. All marshals and organisers will be provided with, and be wearing  yellow hi-vis bibs for visibility.</li>
-              <li style="margin-left:15px">Marshals will be provided with a leaflet detailing; the route, their position on it, their duties and emergency contact numbers.</li>
-              <li style="margin-left:15px">Route marshals will remain at their station until stood down by the “sweeper”.</li>
-              <li style="margin-left:15px">If you have any difficulties during the run please contact a marshal.</li>
+        <!-- General Route Safety and Marshalling -->
+        <h4 style="margin-top: 20px">General Route Safety and Marshalling</h4>
+        <p></p>
+        <li style="margin-left: 15px">
+          The route is partly cross country hence it is possible that some slips
+          and trips may occur however the Organising Committee will endeavour to
+          ensure that as far as reasonable practicable significant hazards will
+          be either be removed or marked accordingly.
+        </li>
+        <li style="margin-left: 15px">
+          All significant route changes points will have at least one marshal to
+          supplement signage.
+        </li>
+        <li style="margin-left: 15px">
+          All marshals will be fully briefed prior to taking up their stations
+          by Dave our infamous Marshal Coordinator. They have been instructed to
+          bring a mobile phone and will have the number of the First Aid
+          providers and Race Director Mike. All marshals and organisers will be
+          provided with, and be wearing yellow hi-vis bibs for visibility.
+        </li>
+        <li style="margin-left: 15px">
+          Marshals will be provided with a leaflet detailing; the route, their
+          position on it, their duties and emergency contact numbers.
+        </li>
+        <li style="margin-left: 15px">
+          Route marshals will remain at their station until stood down by the
+          “sweeper”.
+        </li>
+        <li style="margin-left: 15px">
+          If you have any difficulties during the run please contact a marshal.
+        </li>
 
-              <!-- Race number and timing chip -->
-              <h4 style="margin-top:20px">Race Number and timing chip</h4>
-              <p></p>
-              <li style="margin-left:15px">Please make sure the number is visible on the front of your vest during the run.</li>
-              <li style="margin-left:15px">Please attach timing chap from race pack to shoe or race number.  We will remove this in the Finish area after the race. Keep eyes peeled for yellow bibbed bods with wire cutters.</li>
+        <!-- Race number and timing chip -->
+        <h4 style="margin-top: 20px">Race Number and timing chip</h4>
+        <p></p>
+        <li style="margin-left: 15px">
+          Please make sure the number is visible on the front of your vest
+          during the run.
+        </li>
+        <li style="margin-left: 15px">
+          Please attach timing chap from race pack to shoe or race number. We
+          will remove this in the Finish area after the race. Keep eyes peeled
+          for yellow bibbed bods with wire cutters.
+        </li>
 
-              <!-- Be run smart -->
-              <h4 style="margin-top:20px">Be sun smart</h4>
-              <p>The sun can be strong at this time of year. Please take fluids on board before the race and consider wearing a cap and some high factor sun cream (we will provide some at the Start but it might be good to bring your own as well). Water will be available at the finish.</p>
+        <!-- Be run smart -->
+        <h4 style="margin-top: 20px">Be sun smart</h4>
+        <p>
+          The sun can be strong at this time of year. Please take fluids on
+          board before the race and consider wearing a cap and some high factor
+          sun cream (we will provide some at the Start but it might be good to
+          bring your own as well). Water will be available at the finish.
+        </p>
 
-              <!-- Final checklist -->
-              <h4 style="margin-top:20px">Final checklist</h4>
-              <p>Running shoes and socks, shorts, T-shirt/vest, sunscreen and pins. Plus a positive attitude and a smile!</p>
+        <!-- Final checklist -->
+        <h4 style="margin-top: 20px">Final checklist</h4>
+        <p>
+          Running shoes and socks, shorts, T-shirt/vest, sunscreen and pins.
+          Plus a positive attitude and a smile!
+        </p>
 
-              <!-- Race start -->
-              <h4 style="margin-top:20px">Race start</h4>
-              <p>After Marcus has done his pre-race brief can runners assemble at the Start line (big spanking new banner with “Start” on it) outside the pavilion where teas and yummy cakes will be served afterwards.</p>
-              <br>
-              <ul>
-                    <li>5km – 0950am for 1000am start</li>
-                    <li>15km – 1005am for 1010am start</li>
-                    <li>10KN – 1015am for 1020am start</li>
-              </ul>
+        <!-- Race start -->
+        <h4 style="margin-top: 20px">Race start</h4>
+        <p>
+          After Marcus has done his pre-race brief can runners assemble at the
+          Start line (big spanking new banner with “Start” on it) outside the
+          pavilion where teas and yummy cakes will be served afterwards.
+        </p>
+        <br />
+        <ul>
+          <li>5km – 0950am for 1000am start</li>
+          <li>15km – 1005am for 1010am start</li>
+          <li>10KN – 1015am for 1020am start</li>
+        </ul>
 
-              <p>The fastest 10k runners (sub 40 mins) are encouraged to start near the front and slower runners (60 mins+) towards the rear. 5k runners will be asked to start at the rear of the field.   Your timing chip, supplied by Sports Systems, will give your actual time. Unless you expect to finish at the front of the field, there is no need to start at the front. The first race (5km) race is due to start at 10.00am promptly.</p>
-              <p>Please note immediately after the start you will be on a public road so be alert for traffic.</p>
+        <p>
+          The fastest 10k runners (sub 40 mins) are encouraged to start near the
+          front and slower runners (60 mins+) towards the rear. 5k runners will
+          be asked to start at the rear of the field. Your timing chip, supplied
+          by Sports Systems, will give your actual time. Unless you expect to
+          finish at the front of the field, there is no need to start at the
+          front. The first race (5km) race is due to start at 10.00am promptly.
+        </p>
+        <p>
+          Please note immediately after the start you will be on a public road
+          so be alert for traffic.
+        </p>
 
-              <p>We love our course (<a target="_blank" href="https://vimeo.com/269182629">and here it is!</a>).</p>
+        <p>
+          We love our course (<a
+            target="_blank"
+            href="https://vimeo.com/269182629"
+            >and here it is!</a
+          >).
+        </p>
 
-              <p>It is a multi terrain route consisting of minor roads, private farm land (we have permission!), bridleways and footpaths.</p>
+        <p>
+          It is a multi terrain route consisting of minor roads, private farm
+          land (we have permission!), bridleways and footpaths.
+        </p>
 
-              <!-- Race finish & results -->
-              <h4 style="margin-top:20px">Race Finish & Results</h4>
-              <p>After crossing the finish line please keep moving to the finish area. There will be a number of us armed with cutters to remove timing chip from shoe, number or wherever you have fixed. Please seek us out when crossing the finishing line.</p>
-              <p>From there you can collect your race medal, get your breath back and maybe have a cheeky massage from our on-site experts (a small donation for this service would be nice and it is very popular so there may be a wait!)</p>
-              <p>Toffee, coffee and lemon drizzle cake as well as flapjack and shortbread awaits at the pavilion. And sweets!</p>
-              <p>Provisional results will be available on the day and in due course they will be posted to our website.</p>
+        <!-- Race finish & results -->
+        <h4 style="margin-top: 20px">Race Finish & Results</h4>
+        <p>
+          After crossing the finish line please keep moving to the finish area.
+          There will be a number of us armed with cutters to remove timing chip
+          from shoe, number or wherever you have fixed. Please seek us out when
+          crossing the finishing line.
+        </p>
+        <p>
+          From there you can collect your race medal, get your breath back and
+          maybe have a cheeky massage from our on-site experts (a small donation
+          for this service would be nice and it is very popular so there may be
+          a wait!)
+        </p>
+        <p>
+          Toffee, coffee and lemon drizzle cake as well as flapjack and
+          shortbread awaits at the pavilion. And sweets!
+        </p>
+        <p>
+          Provisional results will be available on the day and in due course
+          they will be posted to our website.
+        </p>
 
-              <!-- Facilities-->
-              <h2>Facilities</h2>
-              <!--Toilet and Changing Facilities -->
-              <h4 style="margin-top:20px">Toilet and Changing Facilities</h4>
-              <p>We regret that there are no changing facilities but we have great toilets (of the portable kind). Possessions may be left in the baggage horse box strictly at your own risk.
-                  We will keep an eye on them for you, but cannot guarantee their safety. Please present your race number to drop and collect baggage items. Toilets are positioned adjacent to the registration marquee. They will get busy just before the run starts so please be patient!</p>
+        <!-- Facilities-->
+        <h2>Facilities</h2>
+        <!--Toilet and Changing Facilities -->
+        <h4 style="margin-top: 20px">Toilet and Changing Facilities</h4>
+        <p>
+          We regret that there are no changing facilities but we have great
+          toilets (of the portable kind). Possessions may be left in the baggage
+          horse box strictly at your own risk. We will keep an eye on them for
+          you, but cannot guarantee their safety. Please present your race
+          number to drop and collect baggage items. Toilets are positioned
+          adjacent to the registration marquee. They will get busy just before
+          the run starts so please be patient!
+        </p>
 
-              <!-- First Aid -->
-              <h4 style="margin-top:20px">First Aid</h4>
-              <p>First Aid facilities will be available at the event.
-                  Please ensure any important medical information is detailed on the back of your race number.</p>
+        <!-- First Aid -->
+        <h4 style="margin-top: 20px">First Aid</h4>
+        <p>
+          First Aid facilities will be available at the event. Please ensure any
+          important medical information is detailed on the back of your race
+          number.
+        </p>
 
-              <!-- Water -->
-              <h4 style="margin-top:20px">Water</h4>
-              <p>We are proud to be plastic free again this year! Runners are encouraged to bring their own bottles. Water will be available in recyclable cups and/or for your own drinking bottle at the start and finish and at positions around the courses mentioned above.</p>
+        <!-- Water -->
+        <h4 style="margin-top: 20px">Water</h4>
+        <p>
+          We are proud to be plastic free again this year! Runners are
+          encouraged to bring their own bottles. Water will be available in
+          recyclable cups and/or for your own drinking bottle at the start and
+          finish and at positions around the courses mentioned above.
+        </p>
 
-              <!-- Miscellaneous -->
-              <h2>Miscellaneous</h2>
-              <p>After prize giving there will be a cheque presentation of £7,892 to last year main charity - <a href="https://sca-charity.org.uk/">South Central Ambulance First Responders</a>.
+        <!-- Miscellaneous -->
+        <h2>Miscellaneous</h2>
+        <p>
+          After prize giving there will be a cheque presentation of £7,892 to
+          last year main charity -
+          <a href="https://sca-charity.org.uk/"
+            >South Central Ambulance First Responders</a
+          >.
 
-              <!-- Feedback -->
-              <h4 style="margin-top:20px">Feedback</h4>
-              <p>We welcome feedback after the event – good or bad! Please send your comments to <a href="mailto:info@chilternchase.com">info@chilternchase.com</a>.  Also, please also contact us if you'd like to help next year.
+          <!-- Feedback -->
+        </p>
 
-              <!-- Condition of the course and race cancellation -->
-              <h4 style="margin-top:20px">Condition of the course and race cancellation</h4>
-              <p>The course is safe, albeit hilly, however in the event of a deluge or snow, prior to or during the event,  things could get a little slippery on some of the off-road sections.
-              <p>Please take extra care on the off-road sections and be mindful of other runners.</p>
-              <p>We regret that we cannot offer refunds if the race is cancelled due to extreme conditions as we will have already incurred all our running costs. As we organise the race to support local and national charities we ask for your understanding and support.</p>
-              <p>The likelihood of the race being cancelled due to extreme conditions in June is about as likely as a smooth Brexit but you never know.</p>
+        <h4 style="margin-top: 20px">Feedback</h4>
+        <p>
+          We welcome feedback after the event – good or bad! Please send your
+          comments to
+          <a href="mailto:info@chilternchase.com">info@chilternchase.com</a>.
+          Also, please also contact us if you'd like to help next year.
 
-              <!-- Licence Number -->
-              <h4 style="margin-top:20px">Licence Number</h4>
-              <p>The Chiltern Chase 5k, 10k and 15k race has been approved as a Race that will be held under UK Athletics Rules for Competition and in accordance with the Licence Requirements. Licence Number 2019-36253</p>
+          <!-- Condition of the course and race cancellation -->
+        </p>
 
-              <!-- Refreshments -->
-              <h4 style="margin-top:20px">Refreshments</h4>
-              <p>A selection of post race “pick me ups” including toffee, coffee and lemon drizzle cake as well as flapjack and shortbread will be available at the pavilion next to the Finish line on the day.</p>
-              <p>If you want something more substantial and to celebrate with ale or wine the <a href="http://www.shepherdshutewelme.co.uk/">Shepherds Hut</a> in the village and Gary our landlord will welcome you. They have a full Sunday roast selection and more and a very nice elevated garden!</p>
-              <p>Should you have any further questions before the day, please email <a href="mailto:info@chilternchase.com">info@chilternchase.com</a>. On the day of the event, visit our registration desk located at the entrance to Cow Common from the car park.</p>
-              <p>Thanks again and enjoy!!</p>
-              <p><b>2019 Chiltern Chase Committee</b></p>
+        <h4 style="margin-top: 20px">
+          Condition of the course and race cancellation
+        </h4>
+        <p>
+          The course is safe, albeit hilly, however in the event of a deluge or
+          snow, prior to or during the event, things could get a little slippery
+          on some of the off-road sections.
+        </p>
+        <p>
+          Please take extra care on the off-road sections and be mindful of
+          other runners.
+        </p>
+        <p>
+          We regret that we cannot offer refunds if the race is cancelled due to
+          extreme conditions as we will have already incurred all our running
+          costs. As we organise the race to support local and national charities
+          we ask for your understanding and support.
+        </p>
+        <p>
+          The likelihood of the race being cancelled due to extreme conditions
+          in June is about as likely as a smooth Brexit but you never know.
+        </p>
 
+        <!-- Licence Number -->
+        <h4 style="margin-top: 20px">Licence Number</h4>
+        <p>
+          The Chiltern Chase 5k, 10k and 15k race has been approved as a Race
+          that will be held under UK Athletics Rules for Competition and in
+          accordance with the Licence Requirements. Licence Number 2019-36253
+        </p>
+
+        <!-- Refreshments -->
+        <h4 style="margin-top: 20px">Refreshments</h4>
+        <p>
+          A selection of post race “pick me ups” including toffee, coffee and
+          lemon drizzle cake as well as flapjack and shortbread will be
+          available at the pavilion next to the Finish line on the day.
+        </p>
+        <p>
+          If you want something more substantial and to celebrate with ale or
+          wine the
+          <a href="http://www.shepherdshutewelme.co.uk/">Shepherds Hut</a> in
+          the village and Gary our landlord will welcome you. They have a full
+          Sunday roast selection and more and a very nice elevated garden!
+        </p>
+        <p>
+          Should you have any further questions before the day, please email
+          <a href="mailto:info@chilternchase.com">info@chilternchase.com</a>. On
+          the day of the event, visit our registration desk located at the
+          entrance to Cow Common from the car park.
+        </p>
+        <p>Thanks again and enjoy!!</p>
+        <p><b>2019 Chiltern Chase Committee</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-lg bg-gray-2">
+  <div class="shell shell-wide">
+    <div class="range range-40">
+      <div class="cell-sm-4">
+        <div class="icon-gradient-block wow fadeInUp" data-wow-delay="0.1s">
+          <div class="icon-gradient-item">
+            <span class="icon mdi mdi-run"></span>
           </div>
+          <h4 style="margin-bottom: 15px">10K Route</h4>
+          <ul class="list list-marked">
+            <li>
+              The 10k run starts on the Common, turns right onto a road on a
+              slight incline, it soon descends then levels out.
+            </li>
+            <li>
+              After about 1.5km the course turns sharp left before climbing
+              slightly & then descending to another road.
+            </li>
+            <li>
+              A short section of road is followed by a long gentle incline
+              beside a beech wood before opening up onto a wide track
+            </li>
+            <li>
+              The first water station is approximately 4K into the course after
+              which you turn left onto "set aside" land at the margins of a
+              field.
+            </li>
+            <li>
+              Once through the field gate you turn left and then left again onto
+              another wide track and the course gentle descends to the next
+              water station at approximately 6.5K
+            </li>
+            <li>
+              After the water station there is a short hill just before the 7k
+              mark, the course then descends gently on a gravel track before
+              changing to a narrow single track section
+            </li>
+            <li>
+              At the 8k point there is narrow gateway followed by a short field
+              section which brings you back into Ewelme
+            </li>
+            <li>
+              The last 1.5km of the course is via a narrow track and ultimately
+              the main street of Ewelme before leading back to the finish on the
+              Common
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="cell-sm-4">
+        <div class="icon-gradient-block wow fadeInUp" data-wow-delay="0.2s">
+          <div class="icon-gradient-item">
+            <span class="icon mdi mdi-run"></span>
+          </div>
+          <h4 style="margin-bottom: 15px">5K Route</h4>
+          <ul class="list list-marked">
+            <li>
+              The 5k race starts in the same place as the 10k race & follows the
+              same route for the first 0.5km
+            </li>
+            <li>It then turns left & remains on road for about another km</li>
+            <li>
+              It then turns left onto an off road section before joining the 10k
+              route just before the 7k marker (2k mark for the 5k race)
+            </li>
+            <li>
+              The rest of the course is the same as the 10k finishing at the
+              same place on Ewelme Common
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="cell-sm-4">
+        <div class="icon-gradient-block wow fadeInUp" data-wow-delay="0.3s">
+          <div class="icon-gradient-item">
+            <span class="icon mdi mdi-run"></span>
+          </div>
+          <h4 style="margin-bottom: 15px">15K Route</h4>
+          <ul class="list list-marked">
+            <li>
+              The 15K race start with the 10K course followed immediately by the
+              5K course
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-lg bg-white">
+  <div class="shell shell-wide" data-lightgallery="group">
+    <div class="row">
+      <!-- Isotope Content-->
+      <div class="col-lg-12">
+        <div
+          class="row isotope"
+          data-isotope-layout="fitRows"
+          data-isotope-group="gallery"
+        >
+          <div
+            class="col-xs-12 col-sm-6 col-lg-3 isotope-item"
+            data-filter="Type 1"
+          >
+            <div class="gallery-item-wrap">
+              <a
+                class="gallery-item"
+                href="../../static/app/content/images/5k-map4.png"
+                data-lightgallery="item"
+                ><img
+                  src="../../static/app/content/images/5k-map4.png"
+                  alt=""
+                  width="570"
+                  height="380"
+              /></a>
+              <div class="gallery-item-content">
+                <div class="range range-xs-middle range-10">
+                  <h5>5K map view</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-xs-12 col-sm-6 col-lg-3 isotope-item"
+            data-filter="Type 1"
+          >
+            <div class="gallery-item-wrap">
+              <a
+                class="gallery-item"
+                href="../../static/app/content/images/5k-route-info.png"
+                data-lightgallery="item"
+                ><img
+                  src="../../static/app/content/images/5k-route-info.png"
+                  alt=""
+                  width="570"
+                  height="380"
+              /></a>
+              <div class="gallery-item-content">
+                <div class="range range-xs-middle range-10">
+                  <h5>5K route info</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-xs-12 col-sm-6 col-lg-3 isotope-item"
+            data-filter="Type 1"
+          >
+            <div class="gallery-item-wrap">
+              <a
+                class="gallery-item"
+                href="../../static/app/content/images/10k-map3.png"
+                data-lightgallery="item"
+                ><img
+                  src="../../static/app/content/images/10k-map3.png"
+                  alt=""
+                  width="570"
+                  height="380"
+              /></a>
+              <div class="gallery-item-content">
+                <div class="range range-xs-middle range-10">
+                  <h5>10K map view</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-xs-12 col-sm-6 col-lg-3 isotope-item"
+            data-filter="Type 2"
+          >
+            <div class="gallery-item-wrap">
+              <a
+                class="gallery-item"
+                href="../../static/app/content/images/10k-route-info.png"
+                data-lightgallery="item"
+                ><img
+                  src="../../static/app/content/images/10k-route-info.png"
+                  alt=""
+                  width="570"
+                  height="380"
+              /></a>
+              <div class="gallery-item-content">
+                <div class="range range-xs-middle range-10">
+                  <h5>10K route info</h5>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-
- <section class="section section-lg bg-gray-2">
-        <div class="shell shell-wide">
-          <div class="range range-40">
-              <div class="cell-sm-4">
-              <div class="icon-gradient-block wow fadeInUp" data-wow-delay="0.1s">
-                <div class="icon-gradient-item"><span class="icon mdi mdi-run"></span></div>
-                <h4 style="margin-bottom:15px">10K Route</h4>
-                  <ul class="list list-marked">
-                        <li>The 10k run starts on road on a slight incline, it soon descends then levels out.</li>
-                        <li>The first hill starts at about 1.5km and climbs steadily for about 0.25km</li>
-                        <li>At the top of the climb you turn off the road onto a bridle way that takes you through a small copse then across the edge of a field before entering another copse</li>
-                        <li>The course dips down to the 3k marker & then climbs gently back onto a country road which descends gently</li>
-                        <li>Just before the 5k point there is sharp turn to the right & you enter an uphill section through a beech wood</li>
-                        <li>Exiting the wood the course turns left onto a gravel track around the edge of a field before turning right up a short hill just before the 7k mark</li>
-                        <li>The course now descends gently on a gravel track before changing to a narrow single track section</li>
-                        <li>At the 8k point there is narrow gateway followed by a short field section which brings you back into Ewelme</li>
-                        <li>The last 1.5km of the course is via lanes & ultimately the main street of Ewelme before leading back to the finish on the Common</></li>
-                  </ul>
-              </div>
-            </div>
-            <div class="cell-sm-4">
-              <div class="icon-gradient-block wow fadeInUp" data-wow-delay="0.2s">
-                <div class="icon-gradient-item"><span class="icon mdi mdi-run"></span></div>
-                <h4 style="margin-bottom:15px">5K Route</h4>
-                  <ul class="list list-marked">
-                  <li>The 5k race starts in the same place as the 10k race & follows the same route for the first 0.5km</li>
-                  <li>It then turns left & remains on road for about another km</li>
-                  <li>It then turns left onto an off road section before joining the 10k route just before the 7k marker (2k mark for the 5k race)</li>
-                  <li>The rest of the course is the same as the 10k finishing at the same place on Ewelme Common</li>
-                </ul>
-              </div>
-            </div>
-            <div class="cell-sm-4">
-              <div class="icon-gradient-block wow fadeInUp" data-wow-delay="0.3s">
-                <div class="icon-gradient-item"><span class="icon mdi mdi-run"></span></div>
-                <h4 style="margin-bottom:15px">15K Route</h4>
-                  <ul class="list list-marked">
-                    <li>The 15K race start with the 10K course followed immediately by the 5K course</li>
-                  </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    <section class="section section-lg bg-white">
-        <div class="shell shell-wide" data-lightgallery="group">
-          <div class="row">
-
-            <!-- Isotope Content-->
-            <div class="col-lg-12">
-              <div class="row isotope" data-isotope-layout="fitRows" data-isotope-group="gallery">
-
-                <div class="col-xs-12 col-sm-6 col-lg-3 isotope-item" data-filter="Type 1">
-                  <div class="gallery-item-wrap"><a class="gallery-item" href="../../static/app/content/images/5k-map4.png" data-lightgallery="item"><img src="../../static/app/content/images/5k-map4.png" alt="" width="570" height="380"/></a>
-                    <div class="gallery-item-content">
-                      <div class="range range-xs-middle range-10">
-                          <h5>5K map view</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-lg-3 isotope-item" data-filter="Type 1">
-                  <div class="gallery-item-wrap"><a class="gallery-item" href="../../static/app/content/images/5k-route-info.png" data-lightgallery="item"><img src="../../static/app/content/images/5k-route-info.png" alt="" width="570" height="380"/></a>
-                    <div class="gallery-item-content">
-                      <div class="range range-xs-middle range-10">
-                          <h5>5K route info</h5>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-lg-3 isotope-item" data-filter="Type 1">
-                  <div class="gallery-item-wrap"><a class="gallery-item" href="../../static/app/content/images/10k-map3.png" data-lightgallery="item"><img src="../../static/app/content/images/10k-map3.png" alt="" width="570" height="380"/></a>
-                    <div class="gallery-item-content">
-                       <div class="range range-xs-middle range-10">
-                          <h5>10K map view</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-lg-3 isotope-item" data-filter="Type 2">
-                  <div class="gallery-item-wrap"><a class="gallery-item" href="../../static/app/content/images/10k-route-info.png" data-lightgallery="item"><img src="../../static/app/content/images/10k-route-info.png" alt="" width="570" height="380"/></a>
-                    <div class="gallery-item-content">
-                     <div class="range range-xs-middle range-10">
-                          <h5>10K route info</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-     
 {% endblock %}
