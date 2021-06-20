@@ -41,6 +41,7 @@ urlpatterns = [
     path('travel-information/', app_views.travel_information, name='travel_information'),
     path('terms-of-use/', app.views.terms_of_use, name='terms-of-use'),
     path('privacy-policy/', app.views.privacy_policy, name='privacy-policy'),
+    path('race-declaration-2021/', app.views.race_declaration_2021, name='race_declaration_2021'),
     path('password_reset/', auth_views.PasswordResetView,
         {'template_name': 'app/password_reset_form.html',
          'email_template_name': 'app/registration/password_reset_email.html',

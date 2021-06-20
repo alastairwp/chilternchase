@@ -218,6 +218,17 @@ def leaderboards(request):
     )
 
 
+def race_declaration_2021(request):
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/race-declaration-2021.html',
+        {
+            'title': 'Race Declaration 2021 | Chiltern Chase',
+           
+        }
+    )
+
 def privacy_policy(request):
     assert isinstance(request, HttpRequest)
     return render(
