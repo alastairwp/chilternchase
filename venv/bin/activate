@@ -75,4 +75,4 @@ if [ -n "${BASH:-}" -o -n "${ZSH_VERSION:-}" ] ; then
     hash -r
 fi
 
-source "/Users/alastairwp/awp@yugen.digital/Dev/Python/ChilternChase/chilternchase/env_vars.sh"
+source "/Users/alastairwp/Desktop/Dev/Python/ChilternChase/chilternchase/env_vars.sh"
