@@ -1,0 +1,1 @@
+[29/Nov/2021 16:25:50] DEBUG [django.db.backends:123] (0.002) SELECT "app_testimonial"."testimonial_id", "app_testimonial"."message", "app_testimonial"."user_id", "app_testimonial"."previous_name", "app_testimonial"."race_year", "app_testimonial"."date_created", "app_testimonial"."date_updated" FROM "app_testimonial" ORDER BY "app_testimonial"."race_year" DESC LIMIT 4; args=()
