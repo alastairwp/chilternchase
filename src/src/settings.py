@@ -164,6 +164,7 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = False
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
 
+"""
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -195,4 +196,4 @@ LOGGING = {
             'level': 'DEBUG',
         },
     }
-}
+}"""
