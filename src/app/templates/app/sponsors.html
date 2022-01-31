@@ -1,57 +1,63 @@
-﻿{% extends "app/layout.html" %}
+﻿{% extends "app/layout.html" %} {% block content %}
 
-{% block content %}
-
-      <!-- Breadcrumbs Section-->
-      <section class="section breadcrumb-wrapper bg-primary">
-        <div class="shell">
-          <h1>Sponsors</h1>
-            <!--
+<!-- Breadcrumbs Section-->
+<section class="section breadcrumb-wrapper bg-primary">
+  <div class="shell">
+    <h1>Sponsors</h1>
+    <!--
           <ol class="breadcrumb-custom">
             <li><a href="index.html">Home</a></li>
             <li>Services
             </li>
           </ol>--><br /><br /><br />
+  </div>
+</section>
+<!-- Join Our Team-->
+<section class="section section-lg bg-white">
+  <div class="shell shell-wide">
+    <div class="range range-lg-justify">
+      <div class="cell-md-6">
+        <div><img src="../../static/app/content/images/sponsors.jpg" /></div>
+      </div>
+      <div class="cell-md-6 cell-lg-5">
+        <h2>We can donate more to charity because of our amazing sponsors!</h2>
+        <h5 class="text-regular">
+          Every year we are eternally grateful to our sponsors for donating
+          money to help cover the administrative costs and enable us to maximise
+          the money we can donate to our <a href="/charities">charities</a>.
+        </h5>
+        <!--<p></p>--><br /><a
+          class="button button-primary"
+          href="mailto:info@chilternchase.com"
+          >Become a sponsor</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Your Career Starts Here-->
+<section class="section section-lg bg-gray-2 text-center">
+  <div class="shell shell-wide">
+    <h2>Our Sponsors</h2>
+    <!--<p class="block-lg"></p>-->
+    <div class="range range-30">
+      {% for sponsor in sponsors %}
+      <div class="cell-sm-6 cell-md-4">
+        <div class="block-career">
+          <span>
+            {% if sponsor.logo_url %}
+            <img style="width: 180px" src="{{sponsor.logo_url.url }}" />
+            {% endif %}
+          </span>
+          <h4 class="block-career-title">
+            <a href="{{sponsor.logo_url.url }}">{{ sponsor.name }}</a>
+          </h4>
+          <p class="block-career-text">{{ sponsor.description }}</p>
         </div>
-      </section>
-      <!-- Join Our Team-->
-      <section class="section section-lg bg-white">
-        <div class="shell shell-wide">
-          <div class="range range-lg-justify">
-            <div class="cell-md-6">
-              <div><img src="../../static/app/content/images/sponsors.jpg" /></div>
-
-            </div>
-            <div class="cell-md-6 cell-lg-5">
-              <h2>We can donate more to charity because of our amazing sponsors!</h2>
-              <h5 class="text-regular">Every year we are eternally grateful to our sponsors for donating money to help cover the administrative costs and enable us to maximise the money we can donate to our <a href="/charities">charities</a>.</h5>
-              <!--<p></p>--><br /><a class="button button-primary" href="mailto:info@chilternchase.com">Become a sponsor</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Your Career Starts Here-->
-      <section class="section section-lg bg-gray-2 text-center">
-        <div class="shell shell-wide">
-          <h2>Our Sponsors</h2>
-          <!--<p class="block-lg"></p>-->
-          <div class="range range-30">
-
-              {% for sponsor in sponsors %}
-            <div class="cell-sm-6 cell-md-4">
-              <div class="block-career"><span>
-                {% if sponsor.logo_url %}
-                <img style="width:180px" src="{{sponsor.logo_url.url }}" />
-                {% endif %}
-              </span>
-                <h4 class="block-career-title"><a href="child-protection-services.html">{{ sponsor.name }}</a></h4>
-                <p class="block-career-text">{{ sponsor.description }}</p>
-              </div>
-            </div>
-              {% endfor %}
-
-          </div>
-        </div>
-      </section>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
 {% endblock %}
