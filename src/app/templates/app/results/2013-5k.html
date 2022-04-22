@@ -1,0 +1,1032 @@
+
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+      <!-- Breadcrumbs Section-->
+      <section class="section breadcrumb-wrapper bg-primary">
+        <div class="shell">
+          <h1>Results</h1>
+        </div>
+      </section>
+      <!-- Hover Row Table Section-->
+      
+      <!-- Striped Table Section-->
+      <section class="section section-lg bg-gray-2">
+        <div class="shell shell-wide">
+            <div class="range range-60 range-md-center">
+                <div class="cell-lg-8 cell-xl-8">
+                  {% if race_year and race_type %}
+                    <h3>{{ race_year }}&nbsp;-&nbsp;{{ race_type }}</h3>
+                  {% endif %}
+                  <div class="range range-xs-center">
+                    <div class="cell-sm-10 cell-lg-8">
+                      <div class="table-custom-wrap">
+                        <table class="table-custom table-fixed table-primary">
+                            <tr>
+                                <th>Position</th>
+                                <th>Name</th>
+                                <th>Team</th>
+                                <th>Chip Time</th>
+                                <th>Finish Time</th>
+                            </tr>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Matthew Aplin</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:22:27</td>
+                                        <td>00:22:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Gabriel Affonso</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:22:41</td>
+                                        <td>00:22:44</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Grant Hunter</td>
+                                        <td></td>
+                                        <td>00:22:45</td>
+                                        <td>00:22:47</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Benjamin Rodrigues</td>
+                                        <td></td>
+                                        <td>00:22:53</td>
+                                        <td>00:22:53</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Daniel Mowlem</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:23:27</td>
+                                        <td>00:23:29</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Toby Venner</td>
+                                        <td>Abingdon Amblers AC</td>
+                                        <td>00:23:55</td>
+                                        <td>00:23:56</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Niall Harris</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:23:56</td>
+                                        <td>00:23:57</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Benjamin Venner</td>
+                                        <td>Abingdon Amblers AC</td>
+                                        <td>00:23:57</td>
+                                        <td>00:23:58</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Kieran Green</td>
+                                        <td></td>
+                                        <td>00:24:00</td>
+                                        <td>00:24:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Jim Green</td>
+                                        <td></td>
+                                        <td>00:24:02</td>
+                                        <td>00:24:03</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>Jenny O'Conner</td>
+                                        <td></td>
+                                        <td>00:24:07</td>
+                                        <td>00:24:09</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>Ben McCrindle</td>
+                                        <td></td>
+                                        <td>00:24:13</td>
+                                        <td>00:24:19</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>Max Taylor-Lane</td>
+                                        <td></td>
+                                        <td>00:24:19</td>
+                                        <td>00:24:26</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>Isabela Rodrigues</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:25:29</td>
+                                        <td>00:25:29</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>Lyutfi Lyutfiev</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:25:32</td>
+                                        <td>00:25:33</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16</td>
+                                        <td>James Dunne</td>
+                                        <td></td>
+                                        <td>00:25:44</td>
+                                        <td>00:25:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>Peter Calow</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:25:50</td>
+                                        <td>00:25:53</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td>Will Bromage</td>
+                                        <td></td>
+                                        <td>00:26:26</td>
+                                        <td>00:26:28</td>
+                                    </tr>
+                                    <tr>
+                                        <td>19</td>
+                                        <td>Jake Chick</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:26:28</td>
+                                        <td>00:26:31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20</td>
+                                        <td>Emma Little</td>
+                                        <td></td>
+                                        <td>00:26:46</td>
+                                        <td>00:26:49</td>
+                                    </tr>
+                                    <tr>
+                                        <td>21</td>
+                                        <td>Peter Satchwell</td>
+                                        <td></td>
+                                        <td>00:26:42</td>
+                                        <td>00:26:49</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22</td>
+                                        <td>Charlotte  Satchwell</td>
+                                        <td></td>
+                                        <td>00:26:44</td>
+                                        <td>00:26:51</td>
+                                    </tr>
+                                    <tr>
+                                        <td>23</td>
+                                        <td>Tom Bowden</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:27:34</td>
+                                        <td>00:27:37</td>
+                                    </tr>
+                                    <tr>
+                                        <td>24</td>
+                                        <td>Ollie Wilcock</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:27:37</td>
+                                        <td>00:27:40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>25</td>
+                                        <td>Martin (for Son John Age 10) Spence</td>
+                                        <td></td>
+                                        <td>00:27:41</td>
+                                        <td>00:27:42</td>
+                                    </tr>
+                                    <tr>
+                                        <td>26</td>
+                                        <td>Hayley Scullion</td>
+                                        <td></td>
+                                        <td>00:28:07</td>
+                                        <td>00:28:08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>27</td>
+                                        <td>Asim Munir</td>
+                                        <td></td>
+                                        <td>00:28:21</td>
+                                        <td>00:28:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>28</td>
+                                        <td>Matthew Channon</td>
+                                        <td></td>
+                                        <td>00:29:32</td>
+                                        <td>00:29:38</td>
+                                    </tr>
+                                    <tr>
+                                        <td>29</td>
+                                        <td>Ian Morrison</td>
+                                        <td></td>
+                                        <td>00:29:35</td>
+                                        <td>00:29:46</td>
+                                    </tr>
+                                    <tr>
+                                        <td>30</td>
+                                        <td>Luke  Rayner</td>
+                                        <td></td>
+                                        <td>00:30:09</td>
+                                        <td>00:30:12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>31</td>
+                                        <td>Robert Johnson</td>
+                                        <td></td>
+                                        <td>00:30:09</td>
+                                        <td>00:30:14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>32</td>
+                                        <td>Colin Bennett</td>
+                                        <td></td>
+                                        <td>00:30:06</td>
+                                        <td>00:30:14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>33</td>
+                                        <td>Helen Rayner</td>
+                                        <td></td>
+                                        <td>00:30:13</td>
+                                        <td>00:30:16</td>
+                                    </tr>
+                                    <tr>
+                                        <td>34</td>
+                                        <td>Dan Baines</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:30:20</td>
+                                        <td>00:30:23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>35</td>
+                                        <td>Nicola Davies</td>
+                                        <td></td>
+                                        <td>00:30:21</td>
+                                        <td>00:30:23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>Rachael Green</td>
+                                        <td></td>
+                                        <td>00:30:22</td>
+                                        <td>00:30:24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>37</td>
+                                        <td>Alison  Gowers</td>
+                                        <td></td>
+                                        <td>00:30:43</td>
+                                        <td>00:30:49</td>
+                                    </tr>
+                                    <tr>
+                                        <td>38</td>
+                                        <td>Martyn Johnson</td>
+                                        <td></td>
+                                        <td>00:30:58</td>
+                                        <td>00:31:03</td>
+                                    </tr>
+                                    <tr>
+                                        <td>39</td>
+                                        <td>Thomas Morrison</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:31:03</td>
+                                        <td>00:31:05</td>
+                                    </tr>
+                                    <tr>
+                                        <td>40</td>
+                                        <td>Ian Sellar</td>
+                                        <td></td>
+                                        <td>00:31:06</td>
+                                        <td>00:31:12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>41</td>
+                                        <td>David Ravenhill</td>
+                                        <td></td>
+                                        <td>00:31:17</td>
+                                        <td>00:31:22</td>
+                                    </tr>
+                                    <tr>
+                                        <td>42</td>
+                                        <td>Joshua Knight</td>
+                                        <td></td>
+                                        <td>00:31:18</td>
+                                        <td>00:31:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>43</td>
+                                        <td>Kirsty  Ellis</td>
+                                        <td></td>
+                                        <td>00:31:23</td>
+                                        <td>00:31:26</td>
+                                    </tr>
+                                    <tr>
+                                        <td>44</td>
+                                        <td>James Blackmore</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:31:25</td>
+                                        <td>00:31:28</td>
+                                    </tr>
+                                    <tr>
+                                        <td>45</td>
+                                        <td>Alberto Giannetto</td>
+                                        <td></td>
+                                        <td>00:31:25</td>
+                                        <td>00:31:29</td>
+                                    </tr>
+                                    <tr>
+                                        <td>46</td>
+                                        <td>Alexander Calver</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:31:36</td>
+                                        <td>00:31:39</td>
+                                    </tr>
+                                    <tr>
+                                        <td>47</td>
+                                        <td>Kirsty Ouellette</td>
+                                        <td></td>
+                                        <td>00:31:38</td>
+                                        <td>00:31:44</td>
+                                    </tr>
+                                    <tr>
+                                        <td>48</td>
+                                        <td>David Hemming</td>
+                                        <td></td>
+                                        <td>00:31:38</td>
+                                        <td>00:31:44</td>
+                                    </tr>
+                                    <tr>
+                                        <td>49</td>
+                                        <td>Kate Drysdale</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:31:43</td>
+                                        <td>00:31:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>50</td>
+                                        <td>Joanna Brock</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>00:31:56</td>
+                                    </tr>
+                                    <tr>
+                                        <td>51</td>
+                                        <td>Philip Winfield</td>
+                                        <td></td>
+                                        <td>00:32:10</td>
+                                        <td>00:32:14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>52</td>
+                                        <td>Jordan Wootton</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:32:16</td>
+                                        <td>00:32:20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>53</td>
+                                        <td>Mark Dorsett</td>
+                                        <td></td>
+                                        <td>00:32:26</td>
+                                        <td>00:32:38</td>
+                                    </tr>
+                                    <tr>
+                                        <td>54</td>
+                                        <td>Henry White</td>
+                                        <td></td>
+                                        <td>00:33:13</td>
+                                        <td>00:33:21</td>
+                                    </tr>
+                                    <tr>
+                                        <td>55</td>
+                                        <td>Jemma Castle</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:33:26</td>
+                                        <td>00:33:28</td>
+                                    </tr>
+                                    <tr>
+                                        <td>56</td>
+                                        <td>Ellie Simpson</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:33:31</td>
+                                        <td>00:33:32</td>
+                                    </tr>
+                                    <tr>
+                                        <td>57</td>
+                                        <td>Margarita Perez Garcia</td>
+                                        <td></td>
+                                        <td>00:33:33</td>
+                                        <td>00:33:37</td>
+                                    </tr>
+                                    <tr>
+                                        <td>58</td>
+                                        <td>Izaac Cave</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:33:41</td>
+                                        <td>00:33:41</td>
+                                    </tr>
+                                    <tr>
+                                        <td>59</td>
+                                        <td>Emily Soffe</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:33:40</td>
+                                        <td>00:33:41</td>
+                                    </tr>
+                                    <tr>
+                                        <td>60</td>
+                                        <td>Freya Wilcock</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:34:00</td>
+                                        <td>00:34:01</td>
+                                    </tr>
+                                    <tr>
+                                        <td>61</td>
+                                        <td>Alini Shires</td>
+                                        <td>DT</td>
+                                        <td>00:34:00</td>
+                                        <td>00:34:09</td>
+                                    </tr>
+                                    <tr>
+                                        <td>62</td>
+                                        <td>Nell Summerley</td>
+                                        <td></td>
+                                        <td>00:34:36</td>
+                                        <td>00:34:37</td>
+                                    </tr>
+                                    <tr>
+                                        <td>63</td>
+                                        <td>Catherine Green</td>
+                                        <td>Benson Striders</td>
+                                        <td>00:34:34</td>
+                                        <td>00:34:40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>64</td>
+                                        <td>Tom Johnstone</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:34:32</td>
+                                        <td>00:34:43</td>
+                                    </tr>
+                                    <tr>
+                                        <td>65</td>
+                                        <td>Louise Summerley</td>
+                                        <td></td>
+                                        <td>00:34:42</td>
+                                        <td>00:34:44</td>
+                                    </tr>
+                                    <tr>
+                                        <td>66</td>
+                                        <td>Katie  Ginger</td>
+                                        <td></td>
+                                        <td>00:34:34</td>
+                                        <td>00:34:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>67</td>
+                                        <td>Anthony Sullivan</td>
+                                        <td></td>
+                                        <td>00:34:37</td>
+                                        <td>00:34:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>68</td>
+                                        <td>Grace Sullivan</td>
+                                        <td></td>
+                                        <td>00:34:42</td>
+                                        <td>00:34:51</td>
+                                    </tr>
+                                    <tr>
+                                        <td>69</td>
+                                        <td>Andrew White</td>
+                                        <td></td>
+                                        <td>00:34:50</td>
+                                        <td>00:34:59</td>
+                                    </tr>
+                                    <tr>
+                                        <td>70</td>
+                                        <td>Annabell Stone</td>
+                                        <td></td>
+                                        <td>00:35:04</td>
+                                        <td>00:35:05</td>
+                                    </tr>
+                                    <tr>
+                                        <td>71</td>
+                                        <td>Jessica Sarson</td>
+                                        <td></td>
+                                        <td>00:35:08</td>
+                                        <td>00:35:11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>72</td>
+                                        <td>Karen Parkins</td>
+                                        <td>Benson Striders</td>
+                                        <td>00:35:08</td>
+                                        <td>00:35:14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>73</td>
+                                        <td>Matthew Osborne</td>
+                                        <td></td>
+                                        <td>00:35:11</td>
+                                        <td>00:35:14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>74</td>
+                                        <td>Jasmine  Bonthrone</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:35:15</td>
+                                        <td>00:35:17</td>
+                                    </tr>
+                                    <tr>
+                                        <td>75</td>
+                                        <td>Marianne Haslam</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:35:07</td>
+                                        <td>00:35:18</td>
+                                    </tr>
+                                    <tr>
+                                        <td>76</td>
+                                        <td>Riannon Hayward</td>
+                                        <td></td>
+                                        <td>00:35:09</td>
+                                        <td>00:35:18</td>
+                                    </tr>
+                                    <tr>
+                                        <td>77</td>
+                                        <td>Rhys  Hemming</td>
+                                        <td></td>
+                                        <td>00:35:10</td>
+                                        <td>00:35:19</td>
+                                    </tr>
+                                    <tr>
+                                        <td>78</td>
+                                        <td>Colin Lane</td>
+                                        <td></td>
+                                        <td>00:35:12</td>
+                                        <td>00:35:21</td>
+                                    </tr>
+                                    <tr>
+                                        <td>79</td>
+                                        <td>Zoe Chick</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:35:13</td>
+                                        <td>00:35:24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>80</td>
+                                        <td>Clare Herlihy</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:35:19</td>
+                                        <td>00:35:31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>81</td>
+                                        <td>Hannah Dorsett</td>
+                                        <td></td>
+                                        <td>00:35:21</td>
+                                        <td>00:35:32</td>
+                                    </tr>
+                                    <tr>
+                                        <td>82</td>
+                                        <td>Sharon Hopgood</td>
+                                        <td></td>
+                                        <td>00:35:30</td>
+                                        <td>00:35:33</td>
+                                    </tr>
+                                    <tr>
+                                        <td>83</td>
+                                        <td>Michael Parsons</td>
+                                        <td></td>
+                                        <td>00:35:28</td>
+                                        <td>00:35:33</td>
+                                    </tr>
+                                    <tr>
+                                        <td>84</td>
+                                        <td>Louise Connor</td>
+                                        <td></td>
+                                        <td>00:35:30</td>
+                                        <td>00:35:35</td>
+                                    </tr>
+                                    <tr>
+                                        <td>85</td>
+                                        <td>Paula Dorsett</td>
+                                        <td></td>
+                                        <td>00:35:29</td>
+                                        <td>00:35:39</td>
+                                    </tr>
+                                    <tr>
+                                        <td>86</td>
+                                        <td>Dora Hemming</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:35:36</td>
+                                        <td>00:35:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>87</td>
+                                        <td>Emma Costello</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:35:44</td>
+                                        <td>00:35:46</td>
+                                    </tr>
+                                    <tr>
+                                        <td>88</td>
+                                        <td>Phoebe Gallagher</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:35:52</td>
+                                        <td>00:35:54</td>
+                                    </tr>
+                                    <tr>
+                                        <td>89</td>
+                                        <td>Georgia Earl</td>
+                                        <td>Abingdon Amblers AC</td>
+                                        <td>00:35:53</td>
+                                        <td>00:35:54</td>
+                                    </tr>
+                                    <tr>
+                                        <td>90</td>
+                                        <td>Ellie Seares</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:36:00</td>
+                                        <td>00:36:01</td>
+                                    </tr>
+                                    <tr>
+                                        <td>91</td>
+                                        <td>Gail Steeden</td>
+                                        <td></td>
+                                        <td>00:36:04</td>
+                                        <td>00:36:08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>92</td>
+                                        <td>Harry Sullivan</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:36:16</td>
+                                        <td>00:36:24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>93</td>
+                                        <td>Tina Willison</td>
+                                        <td></td>
+                                        <td>00:36:27</td>
+                                        <td>00:36:34</td>
+                                    </tr>
+                                    <tr>
+                                        <td>94</td>
+                                        <td>Arianne Walters</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:36:30</td>
+                                        <td>00:36:34</td>
+                                    </tr>
+                                    <tr>
+                                        <td>95</td>
+                                        <td>Grace Humphrey</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:36:36</td>
+                                        <td>00:36:39</td>
+                                    </tr>
+                                    <tr>
+                                        <td>96</td>
+                                        <td>Annie Jaquest</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:36:37</td>
+                                        <td>00:36:39</td>
+                                    </tr>
+                                    <tr>
+                                        <td>97</td>
+                                        <td>Mia Collins</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:36:44</td>
+                                        <td>00:36:44</td>
+                                    </tr>
+                                    <tr>
+                                        <td>98</td>
+                                        <td>Robyn Thompson</td>
+                                        <td></td>
+                                        <td>00:36:41</td>
+                                        <td>00:36:48</td>
+                                    </tr>
+                                    <tr>
+                                        <td>99</td>
+                                        <td>Ilaria Meliconi</td>
+                                        <td></td>
+                                        <td>00:37:06</td>
+                                        <td>00:37:10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>100</td>
+                                        <td>Kelly Porter</td>
+                                        <td></td>
+                                        <td>00:37:22</td>
+                                        <td>00:37:23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>101</td>
+                                        <td>Anna  Malkin</td>
+                                        <td></td>
+                                        <td>00:37:15</td>
+                                        <td>00:37:23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>102</td>
+                                        <td>Fiona Thompson</td>
+                                        <td></td>
+                                        <td>00:37:42</td>
+                                        <td>00:37:50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>103</td>
+                                        <td>Mary Waite</td>
+                                        <td></td>
+                                        <td>00:37:58</td>
+                                        <td>00:38:06</td>
+                                    </tr>
+                                    <tr>
+                                        <td>104</td>
+                                        <td>Lisa Robinson</td>
+                                        <td>Benson Striders</td>
+                                        <td>00:38:07</td>
+                                        <td>00:38:14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>105</td>
+                                        <td>Barbara Cadman</td>
+                                        <td>Burnham Joggers</td>
+                                        <td>00:38:07</td>
+                                        <td>00:38:16</td>
+                                    </tr>
+                                    <tr>
+                                        <td>106</td>
+                                        <td>Erica Greenfield</td>
+                                        <td>The Wonder Winners</td>
+                                        <td>00:38:19</td>
+                                        <td>00:38:19</td>
+                                    </tr>
+                                    <tr>
+                                        <td>107</td>
+                                        <td>Michelle Briggs</td>
+                                        <td></td>
+                                        <td>00:38:13</td>
+                                        <td>00:38:19</td>
+                                    </tr>
+                                    <tr>
+                                        <td>108</td>
+                                        <td>Anne Bottley</td>
+                                        <td></td>
+                                        <td>00:38:55</td>
+                                        <td>00:39:01</td>
+                                    </tr>
+                                    <tr>
+                                        <td>109</td>
+                                        <td>Carolyn Bennett</td>
+                                        <td>Burnham Joggers</td>
+                                        <td>00:39:00</td>
+                                        <td>00:39:09</td>
+                                    </tr>
+                                    <tr>
+                                        <td>110</td>
+                                        <td>Stephanie Colborne</td>
+                                        <td></td>
+                                        <td>00:39:08</td>
+                                        <td>00:39:12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>111</td>
+                                        <td>Carol Morrin</td>
+                                        <td></td>
+                                        <td>00:39:42</td>
+                                        <td>00:39:48</td>
+                                    </tr>
+                                    <tr>
+                                        <td>112</td>
+                                        <td>Harriet Jameson</td>
+                                        <td></td>
+                                        <td>00:39:53</td>
+                                        <td>00:39:55</td>
+                                    </tr>
+                                    <tr>
+                                        <td>113</td>
+                                        <td>Sara Fernandez</td>
+                                        <td>Student Hubs</td>
+                                        <td>00:40:27</td>
+                                        <td>00:40:41</td>
+                                    </tr>
+                                    <tr>
+                                        <td>114</td>
+                                        <td>Sheenagh Reynolds</td>
+                                        <td>hutchcomb bunnies</td>
+                                        <td>00:40:30</td>
+                                        <td>00:40:41</td>
+                                    </tr>
+                                    <tr>
+                                        <td>115</td>
+                                        <td>Jane Cunning</td>
+                                        <td></td>
+                                        <td>00:40:34</td>
+                                        <td>00:40:46</td>
+                                    </tr>
+                                    <tr>
+                                        <td>116</td>
+                                        <td>Sean Hannigan</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:43:14</td>
+                                        <td>00:43:16</td>
+                                    </tr>
+                                    <tr>
+                                        <td>117</td>
+                                        <td>Viv Hemming</td>
+                                        <td></td>
+                                        <td>00:43:10</td>
+                                        <td>00:43:19</td>
+                                    </tr>
+                                    <tr>
+                                        <td>118</td>
+                                        <td>Georgia Bonner</td>
+                                        <td></td>
+                                        <td>00:43:14</td>
+                                        <td>00:43:19</td>
+                                    </tr>
+                                    <tr>
+                                        <td>119</td>
+                                        <td>George Bridges</td>
+                                        <td></td>
+                                        <td>00:43:44</td>
+                                        <td>00:43:49</td>
+                                    </tr>
+                                    <tr>
+                                        <td>120</td>
+                                        <td>John East</td>
+                                        <td>Burnham Joggers</td>
+                                        <td>00:45:54</td>
+                                        <td>00:46:04</td>
+                                    </tr>
+                                    <tr>
+                                        <td>121</td>
+                                        <td>Carla Snowsill</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:46:04</td>
+                                        <td>00:46:04</td>
+                                    </tr>
+                                    <tr>
+                                        <td>122</td>
+                                        <td>Daisy  Nisbet</td>
+                                        <td>The Wonder Winners</td>
+                                        <td>00:46:09</td>
+                                        <td>00:46:10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>123</td>
+                                        <td>Sian Faulkner</td>
+                                        <td>Wallingford School</td>
+                                        <td>00:46:11</td>
+                                        <td>00:46:13</td>
+                                    </tr>
+                                    <tr>
+                                        <td>124</td>
+                                        <td>Richard Jameson</td>
+                                        <td></td>
+                                        <td>00:46:26</td>
+                                        <td>00:46:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>125</td>
+                                        <td>Hannah  Satchwell</td>
+                                        <td></td>
+                                        <td>00:46:43</td>
+                                        <td>00:46:53</td>
+                                    </tr>
+                                    <tr>
+                                        <td>126</td>
+                                        <td>Claire Satchwell</td>
+                                        <td></td>
+                                        <td>00:48:12</td>
+                                        <td>00:48:22</td>
+                                    </tr>
+                                    <tr>
+                                        <td>127</td>
+                                        <td>Maureen Fitzgerald</td>
+                                        <td></td>
+                                        <td>00:49:39</td>
+                                        <td>00:49:47</td>
+                                    </tr>
+                                    <tr>
+                                        <td>128</td>
+                                        <td>Sheijal Stewart</td>
+                                        <td>Magical Muppets</td>
+                                        <td>00:49:56</td>
+                                        <td>00:50:01</td>
+                                    </tr>
+                                    <tr>
+                                        <td>129</td>
+                                        <td>Katie Gillman</td>
+                                        <td></td>
+                                        <td>00:49:58</td>
+                                        <td>00:50:08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>130</td>
+                                        <td>Sam Gillman</td>
+                                        <td></td>
+                                        <td>00:53:04</td>
+                                        <td>00:53:14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>131</td>
+                                        <td>Becky Gillman</td>
+                                        <td>The Wonder Winners</td>
+                                        <td>00:55:20</td>
+                                        <td>00:55:21</td>
+                                    </tr>
+                                    <tr>
+                                        <td>132</td>
+                                        <td>Megan Bennett</td>
+                                        <td>The Wonder Winners</td>
+                                        <td>00:55:21</td>
+                                        <td>00:55:21</td>
+                                    </tr>
+                                    <tr>
+                                        <td>133</td>
+                                        <td>S Cummings</td>
+                                        <td></td>
+                                        <td>00:58:05</td>
+                                        <td>00:58:18</td>
+                                    </tr>
+                                    <tr>
+                                        <td>134</td>
+                                        <td>David Gillott</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>01:09:02</td>
+                                    </tr>
+                                    <tr>
+                                        <td>135</td>
+                                        <td>Chris Johnson</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>01:19:31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>136</td>
+                                        <td>Charlotte Bain</td>
+                                        <td>Oxford Hub</td>
+                                        <td></td>
+                                        <td>01:44:30</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="cell-lg-4">
+                  <div class="blog-aside-wrap">
+                      <!-- Blog Aside-->
+                      <aside class="blog-aside">
+                          <div class="range range-40 range-xl-90">
+
+                              <!-- Archive-->
+                              <div class="cell-xs-12 cell-sm-6 cell-lg-12">
+                                  <h5>Year</h5>
+                                  <div class="heading-divider"></div>
+                                  <div class="range">
+                                      <div class="cell-m-6">
+                                          <ul class="list list-marked">
+                                            {% if race_years %}
+                                            {% for race_year in race_years %}
+                                            {% if race_year.race_year == '2006' or race_year.race_year == '2007' or race_year.race_year == '2008' %}
+                                            <li>{{ race_year.race_year }} - <a href="/results/{{ race_year.race_year }}/10K">10K</a></li>
+                                              {% elif race_year.race_year == '2009' or race_year.race_year == '2010' or race_year.race_year == '2011' or race_year.race_year == '2012' or race_year.race_year == '2013' or race_year.race_year == '2014' %}
+                                            <li>{{ race_year.race_year }} - <a href="/results/{{ race_year.race_year }}/5K">5K</a> | <a href="/results/{{ race_year.race_year }}/10K">10K</a></li>
+                                            {% else %}
+                                            <li>{{ race_year.race_year }} - <a href="/results/{{ race_year.race_year }}/5K">5K</a> | <a href="/results/{{ race_year.race_year }}/10K">10K</a> | <a href="/results/{{ race_year.race_year }}/15K">15K</a></li>
+                                            {% endif %}
+                                            {% endfor %}
+                                            {% endif %}
+                                          </ul>
+                                      </div>
+
+                                      <div class="cell-xxs-6">
+
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </aside>
+                  </div>
+              </div>
+              </section>
+      
+
+{% endblock %}

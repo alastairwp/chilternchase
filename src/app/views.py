@@ -46,7 +46,7 @@ def get_charity_years(charity_id):
 
 def charity(request):
     assert isinstance(request, HttpRequest)
-    race_years = Result.objects.all().order_by('-race_year').distinct('race_year')
+    race_years = Race.objects.all().order_by('-race_year').distinct('race_year')
     if race_years:
         first_race_year = race_years.first()
     else:
@@ -67,7 +67,7 @@ def charity(request):
 
 def charitydetails(request, race_year):
     assert isinstance(request, HttpRequest)
-    race_years = Result.objects.all().order_by('-race_year').distinct('race_year')
+    race_years = Race.objects.all().order_by('-race_year').distinct('race_year')
     charities = CharityProfile.objects.filter(enabled=True).filter(race_year=race_year).filter(charity__isnull=False)
     raised_totals = CharityProfile.objects.all().values('charity_id').annotate(total_raised=Sum('amount_raised'))
     return render(
@@ -182,6 +182,7 @@ def home(request):
 
 def leaderboards(request):
     assert isinstance(request, HttpRequest)
+    """
     current_user = request.user
     mens_5k_leaders = Result.objects.filter(gender__iexact="male").filter(race_type__iexact="5K").order_by("finish_time")[:10]
     mens_10k_leaders = Result.objects.filter(gender__iexact="male").filter(race_type__iexact="10K").order_by("finish_time")[:10]
@@ -195,25 +196,13 @@ def leaderboards(request):
     womens_course_record_5k = Result.objects.filter(race_type__iexact="5K").filter(gender__iexact="female").order_by('finish_time').first()
     womens_course_record_10k = Result.objects.filter(race_type__iexact="10K").filter(gender__iexact="female").order_by('finish_time').first()
     womens_course_record_15k = Result.objects.filter(race_type__iexact="15K").filter(gender__iexact="female").order_by('finish_time').first()
-
+"""
     return render(
         request,
         'app/leaderboards.html',
         {
-            'mens_5k_leaders': mens_5k_leaders,
-            'mens_10k_leaders': mens_10k_leaders,
-            'mens_15k_leaders': mens_15k_leaders,
-            'womens_5k_leaders': womens_5k_leaders,
-            'womens_10k_leaders': womens_10k_leaders,
-            'womens_15k_leaders': womens_15k_leaders,
-            'current_user_id': current_user.id,
-            'title': 'Leaderboards | Chiltern Chase',
-            'mens_course_record_5k': mens_course_record_5k,
-            'mens_course_record_10k': mens_course_record_10k,
-            'mens_course_record_15k': mens_course_record_15k,
-            'womens_course_record_5k': womens_course_record_5k,
-            'womens_course_record_10k': womens_course_record_10k,
-            'womens_course_record_15k': womens_course_record_15k,
+            'title': 'Leaderboards | Chiltern Chase'
+            
         }
     )
 
@@ -267,30 +256,23 @@ def race_details(request):
 
 def results_home(request):
     assert isinstance(request, HttpRequest)
-    race_year = Result.objects.all().order_by('-race_year').distinct('race_year').first()
+    race_year = Race.objects.all().order_by('-race_year').distinct('race_year').first()
     result_url = '/results/' + str(race_year.race_year) + '/5K'
     return HttpResponseRedirect(result_url)
 
 
 def results(request, race_year, race_type):
     assert isinstance(request, HttpRequest)
-    results = Result.objects.filter(race_year=race_year).filter(race_type=race_type.upper()).order_by('position')
-    race_years = Result.objects.all().order_by('-race_year').distinct('race_year')
-    course_record_5k = Result.objects.filter(race_type__iexact="5K").order_by('finish_time').first()
-    course_record_10k = Result.objects.filter(race_type__iexact="10K").order_by('finish_time').first()
-    course_record_15k = Result.objects.filter(race_type__iexact="15K").order_by('finish_time').first()
+    race_years = Race.objects.all().order_by('-race_year').distinct('race_year')
+    template_name = 'app/results/{}-{}.html'.format(race_year, race_type)
     return render(
         request,
-        'app/results.html',
+        template_name,
         {
-            'results': results,
             'race_year': race_year,
             'race_years': race_years,
             'race_type': race_type,
-            'title': 'Results | Chiltern Chase',
-            'course_record_5k': course_record_5k,
-            'course_record_10k': course_record_10k,
-            'course_record_15k': course_record_15k
+            'title': 'Results | Chiltern Chase'
         }
     )
 

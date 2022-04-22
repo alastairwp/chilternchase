@@ -6,7 +6,7 @@ from .models import Result, Photo, Testimonial, UserPhoto
 from django.core.paginator import Paginator, PageNotAnInteger
 import datetime
 
-
+"""
 @login_required()
 def dashboard(request):
     assert isinstance(request, HttpRequest)
@@ -142,6 +142,6 @@ def photocapturedetails(request, race_year):
         }
     )
 
-
+"""
 
 

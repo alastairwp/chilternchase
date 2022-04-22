@@ -1,0 +1,1131 @@
+
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+      <!-- Breadcrumbs Section-->
+      <section class="section breadcrumb-wrapper bg-primary">
+        <div class="shell">
+          <h1>Results</h1>
+        </div>
+      </section>
+      <!-- Hover Row Table Section-->
+      
+      <!-- Striped Table Section-->
+      <section class="section section-lg bg-gray-2">
+        <div class="shell shell-wide">
+            <div class="range range-60 range-md-center">
+                <div class="cell-lg-8 cell-xl-8">
+                  {% if race_year and race_type %}
+                    <h3>{{ race_year }}&nbsp;-&nbsp;{{ race_type }}</h3>
+                  {% endif %}
+                  <div class="range range-xs-center">
+                    <div class="cell-sm-10 cell-lg-8">
+                      <div class="table-custom-wrap">
+                        <table class="table-custom table-fixed table-primary">
+                            <tr>
+                                <th>Position</th>
+                                <th>Name</th>
+                                <th>Team</th>
+                                <th>Chip Time</th>
+                                <th>Finish Time</th>
+                            </tr>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Matthew Jobson</td>
+                                        <td>White Horse Harriers AC</td>
+                                        <td>0:57:15</td>
+                                        <td>0:57:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Richard Gould</td>
+                                        <td>Alchester RC</td>
+                                        <td>0:59:10</td>
+                                        <td>0:59:10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Sebastien Garrigues</td>
+                                        <td>Abingdon AC</td>
+                                        <td>0:59:48</td>
+                                        <td>0:59:49</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Paul Jegou</td>
+                                        <td>White Horse Harriers AC</td>
+                                        <td>1:01:40</td>
+                                        <td>1:01:41</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Trevor Hunter</td>
+                                        <td>Handy Cross Runners</td>
+                                        <td>1:02:29</td>
+                                        <td>1:02:29</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Thomas Wilson</td>
+                                        <td>Abingdon AC</td>
+                                        <td>1:03:25</td>
+                                        <td>1:03:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Thomas Charleston</td>
+                                        <td>Didcot Runners</td>
+                                        <td>1:04:25</td>
+                                        <td>1:04:26</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Robert Smith</td>
+                                        <td></td>
+                                        <td>1:04:30</td>
+                                        <td>1:04:32</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Neil Salmons</td>
+                                        <td></td>
+                                        <td>1:05:36</td>
+                                        <td>1:05:38</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Henry Smith</td>
+                                        <td></td>
+                                        <td>1:05:53</td>
+                                        <td>1:05:55</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>Faye Sharpley</td>
+                                        <td>Thame Runners</td>
+                                        <td>1:06:10</td>
+                                        <td>1:06:11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>Oliver Noble Wood</td>
+                                        <td></td>
+                                        <td>1:07:10</td>
+                                        <td>1:07:12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>Howard Zabell</td>
+                                        <td>Newbury AC</td>
+                                        <td>1:08:01</td>
+                                        <td>1:08:03</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>Kate Jacobs</td>
+                                        <td>Swindon Harriers</td>
+                                        <td>1:08:05</td>
+                                        <td>1:08:06</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>Rod Murray</td>
+                                        <td></td>
+                                        <td>1:08:37</td>
+                                        <td>1:08:40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16</td>
+                                        <td>Stephen Lawrey</td>
+                                        <td></td>
+                                        <td>1:08:55</td>
+                                        <td>1:08:58</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>Fergal Donnelly</td>
+                                        <td>Reading Roadrunners</td>
+                                        <td>1:09:28</td>
+                                        <td>1:09:31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td>Jon Kew</td>
+                                        <td>Maidenhead AC</td>
+                                        <td>1:09:28</td>
+                                        <td>1:09:31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>19</td>
+                                        <td>Kinga Zielinska</td>
+                                        <td></td>
+                                        <td>1:09:33</td>
+                                        <td>1:09:34</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20</td>
+                                        <td>Barry Newton</td>
+                                        <td></td>
+                                        <td>1:09:44</td>
+                                        <td>1:09:49</td>
+                                    </tr>
+                                    <tr>
+                                        <td>21</td>
+                                        <td>Pete Jenkins</td>
+                                        <td>Tadley Runners</td>
+                                        <td>1:09:52</td>
+                                        <td>1:09:55</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22</td>
+                                        <td>Peter O'Shaughnessy</td>
+                                        <td></td>
+                                        <td>1:09:54</td>
+                                        <td>1:10:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>23</td>
+                                        <td>Darren Strange</td>
+                                        <td></td>
+                                        <td>1:10:08</td>
+                                        <td>1:10:10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>24</td>
+                                        <td>Peter Reeve</td>
+                                        <td></td>
+                                        <td>1:10:32</td>
+                                        <td>1:10:33</td>
+                                    </tr>
+                                    <tr>
+                                        <td>25</td>
+                                        <td>Andrew Lister</td>
+                                        <td>Kidlington Running &amp; AC</td>
+                                        <td>1:10:37</td>
+                                        <td>1:10:38</td>
+                                    </tr>
+                                    <tr>
+                                        <td>26</td>
+                                        <td>Daren Williams</td>
+                                        <td>Radley AC</td>
+                                        <td>1:10:36</td>
+                                        <td>1:10:40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>27</td>
+                                        <td>Ramon Ghosh</td>
+                                        <td>Singapore Shufflers</td>
+                                        <td>1:10:43</td>
+                                        <td>1:10:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>28</td>
+                                        <td>Matthew Heason</td>
+                                        <td></td>
+                                        <td>1:10:57</td>
+                                        <td>1:11:01</td>
+                                    </tr>
+                                    <tr>
+                                        <td>29</td>
+                                        <td>Edmund English</td>
+                                        <td></td>
+                                        <td>1:11:09</td>
+                                        <td>1:11:11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>30</td>
+                                        <td>Alexander De Hotot</td>
+                                        <td>White Horse Harriers AC</td>
+                                        <td>1:12:25</td>
+                                        <td>1:12:27</td>
+                                    </tr>
+                                    <tr>
+                                        <td>31</td>
+                                        <td>Brian Landowski</td>
+                                        <td>Wallingford Runners</td>
+                                        <td>1:12:28</td>
+                                        <td>1:12:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>32</td>
+                                        <td>Brian Vlastakis</td>
+                                        <td></td>
+                                        <td>1:13:31</td>
+                                        <td>1:13:35</td>
+                                    </tr>
+                                    <tr>
+                                        <td>33</td>
+                                        <td>Mark Tappern</td>
+                                        <td></td>
+                                        <td>1:13:44</td>
+                                        <td>1:13:51</td>
+                                    </tr>
+                                    <tr>
+                                        <td>34</td>
+                                        <td>Julia Healey</td>
+                                        <td></td>
+                                        <td>1:13:54</td>
+                                        <td>1:14:05</td>
+                                    </tr>
+                                    <tr>
+                                        <td>35</td>
+                                        <td>Lee Byrne</td>
+                                        <td></td>
+                                        <td>1:14:11</td>
+                                        <td>1:14:19</td>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>Jack Triggs</td>
+                                        <td></td>
+                                        <td>1:14:18</td>
+                                        <td>1:14:28</td>
+                                    </tr>
+                                    <tr>
+                                        <td>37</td>
+                                        <td>Marlese Rosch Haden</td>
+                                        <td></td>
+                                        <td>1:04:41</td>
+                                        <td>1:14:53</td>
+                                    </tr>
+                                    <tr>
+                                        <td>38</td>
+                                        <td>Paul Miles</td>
+                                        <td></td>
+                                        <td>1:14:47</td>
+                                        <td>1:14:56</td>
+                                    </tr>
+                                    <tr>
+                                        <td>39</td>
+                                        <td>Matthew Deeley</td>
+                                        <td></td>
+                                        <td>1:15:13</td>
+                                        <td>1:15:17</td>
+                                    </tr>
+                                    <tr>
+                                        <td>40</td>
+                                        <td>Bill McMullen</td>
+                                        <td></td>
+                                        <td>1:15:19</td>
+                                        <td>1:15:29</td>
+                                    </tr>
+                                    <tr>
+                                        <td>41</td>
+                                        <td>Christopher Beavis</td>
+                                        <td>Trail Running Association</td>
+                                        <td>1:15:39</td>
+                                        <td>1:15:43</td>
+                                    </tr>
+                                    <tr>
+                                        <td>42</td>
+                                        <td>Enis Evlat</td>
+                                        <td></td>
+                                        <td>1:15:37</td>
+                                        <td>1:15:47</td>
+                                    </tr>
+                                    <tr>
+                                        <td>43</td>
+                                        <td>Marc Wastle</td>
+                                        <td>White Horse Harriers AC</td>
+                                        <td>1:15:27</td>
+                                        <td>1:15:47</td>
+                                    </tr>
+                                    <tr>
+                                        <td>44</td>
+                                        <td>Darren Leader</td>
+                                        <td></td>
+                                        <td>1:15:37</td>
+                                        <td>1:15:50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>45</td>
+                                        <td>Stephen Stuart</td>
+                                        <td></td>
+                                        <td>1:15:50</td>
+                                        <td>1:15:57</td>
+                                    </tr>
+                                    <tr>
+                                        <td>46</td>
+                                        <td>Brian Copley</td>
+                                        <td>RunWallingford</td>
+                                        <td>1:15:59</td>
+                                        <td>1:16:03</td>
+                                    </tr>
+                                    <tr>
+                                        <td>47</td>
+                                        <td>Katie Shead</td>
+                                        <td></td>
+                                        <td>1:15:58</td>
+                                        <td>1:16:04</td>
+                                    </tr>
+                                    <tr>
+                                        <td>48</td>
+                                        <td>Sarah Paradine</td>
+                                        <td></td>
+                                        <td>1:16:23</td>
+                                        <td>1:16:24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>49</td>
+                                        <td>Helen Byrne</td>
+                                        <td></td>
+                                        <td>1:16:05</td>
+                                        <td>1:16:31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>50</td>
+                                        <td>Matt Jerome</td>
+                                        <td></td>
+                                        <td>1:16:29</td>
+                                        <td>1:16:35</td>
+                                    </tr>
+                                    <tr>
+                                        <td>51</td>
+                                        <td>Kevin Byrne</td>
+                                        <td>Headington RRC</td>
+                                        <td>1:16:39</td>
+                                        <td>1:16:42</td>
+                                    </tr>
+                                    <tr>
+                                        <td>52</td>
+                                        <td>Jez Allinson</td>
+                                        <td>Lonely Goats RC</td>
+                                        <td>1:17:08</td>
+                                        <td>1:17:20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>53</td>
+                                        <td>Jolyon Roe</td>
+                                        <td>Handy Cross Runners</td>
+                                        <td>1:17:30</td>
+                                        <td>1:17:37</td>
+                                    </tr>
+                                    <tr>
+                                        <td>54</td>
+                                        <td>Michael Maguire</td>
+                                        <td>Road Runners Club</td>
+                                        <td>1:17:54</td>
+                                        <td>1:18:02</td>
+                                    </tr>
+                                    <tr>
+                                        <td>55</td>
+                                        <td>Jeremy Lockett</td>
+                                        <td>Maidenhead AC</td>
+                                        <td>1:18:14</td>
+                                        <td>1:18:23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>56</td>
+                                        <td>Roy Treadwell</td>
+                                        <td>Oxford City AC</td>
+                                        <td>1:18:25</td>
+                                        <td>1:18:28</td>
+                                    </tr>
+                                    <tr>
+                                        <td>57</td>
+                                        <td>Mike Jacobs</td>
+                                        <td></td>
+                                        <td>1:18:30</td>
+                                        <td>1:18:35</td>
+                                    </tr>
+                                    <tr>
+                                        <td>58</td>
+                                        <td>Alan Roberts</td>
+                                        <td>Vale of Aylesbury AC</td>
+                                        <td>1:18:37</td>
+                                        <td>1:18:38</td>
+                                    </tr>
+                                    <tr>
+                                        <td>59</td>
+                                        <td>Nick McCleery</td>
+                                        <td></td>
+                                        <td>1:18:49</td>
+                                        <td>1:18:58</td>
+                                    </tr>
+                                    <tr>
+                                        <td>60</td>
+                                        <td>Helen Gilbert</td>
+                                        <td>Benson Striders</td>
+                                        <td>1:18:52</td>
+                                        <td>1:19:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>61</td>
+                                        <td>Amy Flaxman</td>
+                                        <td>RunWallingford</td>
+                                        <td>1:18:58</td>
+                                        <td>1:19:01</td>
+                                    </tr>
+                                    <tr>
+                                        <td>62</td>
+                                        <td>Eugene Green</td>
+                                        <td></td>
+                                        <td>1:18:56</td>
+                                        <td>1:19:06</td>
+                                    </tr>
+                                    <tr>
+                                        <td>63</td>
+                                        <td>Karen Snaith</td>
+                                        <td></td>
+                                        <td>1:19:07</td>
+                                        <td>1:19:09</td>
+                                    </tr>
+                                    <tr>
+                                        <td>64</td>
+                                        <td>Iain Lockey</td>
+                                        <td></td>
+                                        <td>1:19:06</td>
+                                        <td>1:19:10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>65</td>
+                                        <td>Philip Harrison</td>
+                                        <td></td>
+                                        <td>1:19:04</td>
+                                        <td>1:19:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>66</td>
+                                        <td>Graham Holland</td>
+                                        <td>White Horse Harriers AC</td>
+                                        <td>1:19:10</td>
+                                        <td>1:19:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>67</td>
+                                        <td>Clare Hazell</td>
+                                        <td>White Horse Harriers AC</td>
+                                        <td>1:19:13</td>
+                                        <td>1:19:19</td>
+                                    </tr>
+                                    <tr>
+                                        <td>68</td>
+                                        <td>Philip Ede</td>
+                                        <td></td>
+                                        <td>1:19:18</td>
+                                        <td>1:19:29</td>
+                                    </tr>
+                                    <tr>
+                                        <td>69</td>
+                                        <td>Adam Harris</td>
+                                        <td></td>
+                                        <td>1:19:27</td>
+                                        <td>1:19:31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>70</td>
+                                        <td>Nick Clark</td>
+                                        <td>Reading Joggers</td>
+                                        <td>1:19:31</td>
+                                        <td>1:19:34</td>
+                                    </tr>
+                                    <tr>
+                                        <td>71</td>
+                                        <td>Luke Veillet</td>
+                                        <td></td>
+                                        <td>1:19:27</td>
+                                        <td>1:19:39</td>
+                                    </tr>
+                                    <tr>
+                                        <td>72</td>
+                                        <td>Brian Veillet</td>
+                                        <td></td>
+                                        <td>1:19:27</td>
+                                        <td>1:19:39</td>
+                                    </tr>
+                                    <tr>
+                                        <td>73</td>
+                                        <td>Sam Mitchell</td>
+                                        <td></td>
+                                        <td>1:19:52</td>
+                                        <td>1:20:07</td>
+                                    </tr>
+                                    <tr>
+                                        <td>74</td>
+                                        <td>Hedvika Toncrova</td>
+                                        <td></td>
+                                        <td>1:20:14</td>
+                                        <td>1:20:20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>75</td>
+                                        <td>Bernard Calnan</td>
+                                        <td></td>
+                                        <td>1:20:38</td>
+                                        <td>1:20:53</td>
+                                    </tr>
+                                    <tr>
+                                        <td>76</td>
+                                        <td>Nicolas Defillion</td>
+                                        <td></td>
+                                        <td>1:21:06</td>
+                                        <td>1:21:13</td>
+                                    </tr>
+                                    <tr>
+                                        <td>77</td>
+                                        <td>Heather Crane</td>
+                                        <td>RunWallingford</td>
+                                        <td>1:21:09</td>
+                                        <td>1:21:13</td>
+                                    </tr>
+                                    <tr>
+                                        <td>78</td>
+                                        <td>Terry Coakley</td>
+                                        <td>White Horse Harriers AC</td>
+                                        <td>1:21:11</td>
+                                        <td>1:21:21</td>
+                                    </tr>
+                                    <tr>
+                                        <td>79</td>
+                                        <td>Alexandra Crai</td>
+                                        <td></td>
+                                        <td>1:22:08</td>
+                                        <td>1:22:19</td>
+                                    </tr>
+                                    <tr>
+                                        <td>80</td>
+                                        <td>Richard Guppy</td>
+                                        <td></td>
+                                        <td>1:22:19</td>
+                                        <td>1:22:28</td>
+                                    </tr>
+                                    <tr>
+                                        <td>81</td>
+                                        <td>Helen Smyth</td>
+                                        <td>White Horse Harriers AC</td>
+                                        <td>1:22:26</td>
+                                        <td>1:22:33</td>
+                                    </tr>
+                                    <tr>
+                                        <td>82</td>
+                                        <td>Jonathan Longley</td>
+                                        <td></td>
+                                        <td>1:23:04</td>
+                                        <td>1:23:14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>83</td>
+                                        <td>Christine Taylor</td>
+                                        <td></td>
+                                        <td>1:23:19</td>
+                                        <td>1:23:33</td>
+                                    </tr>
+                                    <tr>
+                                        <td>84</td>
+                                        <td>Rachel Bevington</td>
+                                        <td></td>
+                                        <td>1:23:35</td>
+                                        <td>1:23:40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>85</td>
+                                        <td>Abigail Clayton</td>
+                                        <td></td>
+                                        <td>1:23:44</td>
+                                        <td>1:23:49</td>
+                                    </tr>
+                                    <tr>
+                                        <td>86</td>
+                                        <td>Rod Henwood</td>
+                                        <td></td>
+                                        <td>1:23:54</td>
+                                        <td>1:24:05</td>
+                                    </tr>
+                                    <tr>
+                                        <td>87</td>
+                                        <td>Jamie Surman</td>
+                                        <td></td>
+                                        <td>1:24:43</td>
+                                        <td>1:24:53</td>
+                                    </tr>
+                                    <tr>
+                                        <td>88</td>
+                                        <td>Darrell Bressington</td>
+                                        <td>Maidenhead AC</td>
+                                        <td>1:24:55</td>
+                                        <td>1:25:04</td>
+                                    </tr>
+                                    <tr>
+                                        <td>89</td>
+                                        <td>John Conway</td>
+                                        <td></td>
+                                        <td>1:25:12</td>
+                                        <td>1:25:24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>90</td>
+                                        <td>Shannon Walker</td>
+                                        <td></td>
+                                        <td>1:26:00</td>
+                                        <td>1:26:08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>91</td>
+                                        <td>Wayne Moyses</td>
+                                        <td></td>
+                                        <td>1:26:02</td>
+                                        <td>1:26:10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>92</td>
+                                        <td>Sheila Bailey</td>
+                                        <td>White Horse Harriers AC</td>
+                                        <td>1:26:05</td>
+                                        <td>1:26:11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>93</td>
+                                        <td>Wadud Miah</td>
+                                        <td></td>
+                                        <td>1:26:30</td>
+                                        <td>1:26:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>94</td>
+                                        <td>Oonagh Thompson</td>
+                                        <td>Marlow Striders</td>
+                                        <td>1:27:19</td>
+                                        <td>1:27:27</td>
+                                    </tr>
+                                    <tr>
+                                        <td>95</td>
+                                        <td>Ross Ditchburn</td>
+                                        <td></td>
+                                        <td>1:27:27</td>
+                                        <td>1:27:38</td>
+                                    </tr>
+                                    <tr>
+                                        <td>96</td>
+                                        <td>Ivan Church</td>
+                                        <td></td>
+                                        <td>1:27:33</td>
+                                        <td>1:27:42</td>
+                                    </tr>
+                                    <tr>
+                                        <td>97</td>
+                                        <td>Guy Wigmore</td>
+                                        <td></td>
+                                        <td>1:27:33</td>
+                                        <td>1:27:43</td>
+                                    </tr>
+                                    <tr>
+                                        <td>98</td>
+                                        <td>Caroline Holden</td>
+                                        <td></td>
+                                        <td>1:27:48</td>
+                                        <td>1:27:53</td>
+                                    </tr>
+                                    <tr>
+                                        <td>99</td>
+                                        <td>Liz Losty</td>
+                                        <td></td>
+                                        <td>1:27:48</td>
+                                        <td>1:27:53</td>
+                                    </tr>
+                                    <tr>
+                                        <td>100</td>
+                                        <td>Matthew Harwood</td>
+                                        <td></td>
+                                        <td>1:27:52</td>
+                                        <td>1:28:06</td>
+                                    </tr>
+                                    <tr>
+                                        <td>101</td>
+                                        <td>Ian Sibbick</td>
+                                        <td></td>
+                                        <td>1:28:13</td>
+                                        <td>1:28:17</td>
+                                    </tr>
+                                    <tr>
+                                        <td>102</td>
+                                        <td>Mandy Winfield</td>
+                                        <td></td>
+                                        <td>1:28:40</td>
+                                        <td>1:28:54</td>
+                                    </tr>
+                                    <tr>
+                                        <td>103</td>
+                                        <td>Radu Cimpeanu</td>
+                                        <td></td>
+                                        <td>1:29:39</td>
+                                        <td>1:29:50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>104</td>
+                                        <td>Elisabeth Smith</td>
+                                        <td>Datchet Dashers</td>
+                                        <td>1:29:55</td>
+                                        <td>1:30:02</td>
+                                    </tr>
+                                    <tr>
+                                        <td>105</td>
+                                        <td>Sandra Barden</td>
+                                        <td></td>
+                                        <td>1:30:39</td>
+                                        <td>1:30:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>106</td>
+                                        <td>Anna Blumenow</td>
+                                        <td></td>
+                                        <td>1:30:41</td>
+                                        <td>1:30:54</td>
+                                    </tr>
+                                    <tr>
+                                        <td>107</td>
+                                        <td>Helen Pitcher</td>
+                                        <td></td>
+                                        <td>1:30:59</td>
+                                        <td>1:31:06</td>
+                                    </tr>
+                                    <tr>
+                                        <td>108</td>
+                                        <td>Jana Hladikova</td>
+                                        <td>BPP</td>
+                                        <td>1:30:59</td>
+                                        <td>1:31:16</td>
+                                    </tr>
+                                    <tr>
+                                        <td>109</td>
+                                        <td>Bina Ondrej</td>
+                                        <td>BPP</td>
+                                        <td>1:31:01</td>
+                                        <td>1:31:17</td>
+                                    </tr>
+                                    <tr>
+                                        <td>110</td>
+                                        <td>Stepjhanie Fagan</td>
+                                        <td></td>
+                                        <td>1:32:06</td>
+                                        <td>1:32:12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>111</td>
+                                        <td>Beth Wilson</td>
+                                        <td></td>
+                                        <td>1:32:17</td>
+                                        <td>1:32:24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>112</td>
+                                        <td>Beth Ireland</td>
+                                        <td>Abingdon AC</td>
+                                        <td>1:32:23</td>
+                                        <td>1:32:29</td>
+                                    </tr>
+                                    <tr>
+                                        <td>113</td>
+                                        <td>Tommy Wachowiak</td>
+                                        <td>Henley Hares</td>
+                                        <td>1:32:25</td>
+                                        <td>1:32:29</td>
+                                    </tr>
+                                    <tr>
+                                        <td>114</td>
+                                        <td>Joanne Gill</td>
+                                        <td>Reading Roadrunners</td>
+                                        <td>1:32:16</td>
+                                        <td>1:32:29</td>
+                                    </tr>
+                                    <tr>
+                                        <td>115</td>
+                                        <td>Hayley Fletcher</td>
+                                        <td></td>
+                                        <td>1:32:20</td>
+                                        <td>1:32:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>116</td>
+                                        <td>Mary Allan</td>
+                                        <td></td>
+                                        <td>1:32:20</td>
+                                        <td>1:32:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>117</td>
+                                        <td>Matthew Bolding</td>
+                                        <td></td>
+                                        <td>1:32:28</td>
+                                        <td>1:32:34</td>
+                                    </tr>
+                                    <tr>
+                                        <td>118</td>
+                                        <td>Sharon Bedford</td>
+                                        <td>White Horse Harriers AC</td>
+                                        <td>1:32:41</td>
+                                        <td>1:32:50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>119</td>
+                                        <td>Maria Hedge</td>
+                                        <td>Swindon Harriers</td>
+                                        <td>1:32:54</td>
+                                        <td>1:33:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>120</td>
+                                        <td>Caz Stokes</td>
+                                        <td>0</td>
+                                        <td>1:33:07</td>
+                                        <td>1:33:18</td>
+                                    </tr>
+                                    <tr>
+                                        <td>121</td>
+                                        <td>Gwen Guppy</td>
+                                        <td></td>
+                                        <td>1:33:44</td>
+                                        <td>1:33:53</td>
+                                    </tr>
+                                    <tr>
+                                        <td>122</td>
+                                        <td>Anton Andersen</td>
+                                        <td></td>
+                                        <td>1:34:12</td>
+                                        <td>1:34:23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>123</td>
+                                        <td>Michelle Launder</td>
+                                        <td></td>
+                                        <td>1:34:26</td>
+                                        <td>1:34:35</td>
+                                    </tr>
+                                    <tr>
+                                        <td>124</td>
+                                        <td>Clare Taylor</td>
+                                        <td></td>
+                                        <td>1:34:40</td>
+                                        <td>1:34:48</td>
+                                    </tr>
+                                    <tr>
+                                        <td>125</td>
+                                        <td>Sally Black</td>
+                                        <td></td>
+                                        <td>1:34:41</td>
+                                        <td>1:34:49</td>
+                                    </tr>
+                                    <tr>
+                                        <td>126</td>
+                                        <td>Catherine Slatter</td>
+                                        <td></td>
+                                        <td>1:34:42</td>
+                                        <td>1:34:55</td>
+                                    </tr>
+                                    <tr>
+                                        <td>127</td>
+                                        <td>Kjeld Taylor</td>
+                                        <td></td>
+                                        <td>1:34:51</td>
+                                        <td>1:34:58</td>
+                                    </tr>
+                                    <tr>
+                                        <td>128</td>
+                                        <td>Sarah Wolstenholme</td>
+                                        <td></td>
+                                        <td>1:34:50</td>
+                                        <td>1:34:58</td>
+                                    </tr>
+                                    <tr>
+                                        <td>129</td>
+                                        <td>Sabrina Longley</td>
+                                        <td></td>
+                                        <td>1:36:17</td>
+                                        <td>1:36:27</td>
+                                    </tr>
+                                    <tr>
+                                        <td>130</td>
+                                        <td>Kenneth Pegg</td>
+                                        <td>Henley Hares</td>
+                                        <td>1:36:40</td>
+                                        <td>1:36:52</td>
+                                    </tr>
+                                    <tr>
+                                        <td>131</td>
+                                        <td>Zoe Sands</td>
+                                        <td>Kidlington Running &amp; AC</td>
+                                        <td>1:37:05</td>
+                                        <td>1:37:17</td>
+                                    </tr>
+                                    <tr>
+                                        <td>132</td>
+                                        <td>Jessica McIver</td>
+                                        <td></td>
+                                        <td>1:37:23</td>
+                                        <td>1:37:37</td>
+                                    </tr>
+                                    <tr>
+                                        <td>133</td>
+                                        <td>Derek Dodd</td>
+                                        <td></td>
+                                        <td>1:37:48</td>
+                                        <td>1:37:57</td>
+                                    </tr>
+                                    <tr>
+                                        <td>134</td>
+                                        <td>Matthew Williamson</td>
+                                        <td></td>
+                                        <td>1:38:24</td>
+                                        <td>1:38:38</td>
+                                    </tr>
+                                    <tr>
+                                        <td>135</td>
+                                        <td>Joanna Kaszuba</td>
+                                        <td></td>
+                                        <td>1:38:48</td>
+                                        <td>1:38:59</td>
+                                    </tr>
+                                    <tr>
+                                        <td>136</td>
+                                        <td>Alexis Skeates</td>
+                                        <td></td>
+                                        <td>1:38:49</td>
+                                        <td>1:39:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>137</td>
+                                        <td>Annabelle Buckland</td>
+                                        <td></td>
+                                        <td>1:37:32</td>
+                                        <td>1:39:20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>138</td>
+                                        <td>Emma Harris</td>
+                                        <td></td>
+                                        <td>1:39:49</td>
+                                        <td>1:40:02</td>
+                                    </tr>
+                                    <tr>
+                                        <td>139</td>
+                                        <td>Fiona Thomson-Tur</td>
+                                        <td></td>
+                                        <td>1:39:49</td>
+                                        <td>1:40:02</td>
+                                    </tr>
+                                    <tr>
+                                        <td>140</td>
+                                        <td>Fliss Hoad</td>
+                                        <td>Benson Striders</td>
+                                        <td>1:39:55</td>
+                                        <td>1:40:08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>141</td>
+                                        <td>Andrew Malin</td>
+                                        <td></td>
+                                        <td>1:40:25</td>
+                                        <td>1:40:34</td>
+                                    </tr>
+                                    <tr>
+                                        <td>142</td>
+                                        <td>Martin Pether</td>
+                                        <td>White Horse Harriers AC</td>
+                                        <td>1:40:14</td>
+                                        <td>1:40:34</td>
+                                    </tr>
+                                    <tr>
+                                        <td>143</td>
+                                        <td>Mark Shayler</td>
+                                        <td>Abingdon AC</td>
+                                        <td>1:40:26</td>
+                                        <td>1:40:34</td>
+                                    </tr>
+                                    <tr>
+                                        <td>144</td>
+                                        <td>Angharad Synan</td>
+                                        <td></td>
+                                        <td>1:42:55</td>
+                                        <td>1:43:09</td>
+                                    </tr>
+                                    <tr>
+                                        <td>145</td>
+                                        <td>Vero Martinez</td>
+                                        <td></td>
+                                        <td>1:44:10</td>
+                                        <td>1:44:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>146</td>
+                                        <td>Nyree Stewart-Beavis</td>
+                                        <td>Trail Running Association</td>
+                                        <td>1:44:12</td>
+                                        <td>1:44:20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>147</td>
+                                        <td>Matteo Nasi</td>
+                                        <td>Headington RRC</td>
+                                        <td>1:45:19</td>
+                                        <td>1:45:33</td>
+                                    </tr>
+                                    <tr>
+                                        <td>148</td>
+                                        <td>Rachel Bray</td>
+                                        <td></td>
+                                        <td>1:46:58</td>
+                                        <td>1:47:14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>149</td>
+                                        <td>Jane Hoverd</td>
+                                        <td></td>
+                                        <td>1:46:58</td>
+                                        <td>1:47:14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>150</td>
+                                        <td>Sally Wood</td>
+                                        <td></td>
+                                        <td>1:58:05</td>
+                                        <td>1:58:19</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                           
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="cell-lg-4">
+                  <div class="blog-aside-wrap">
+                      <!-- Blog Aside-->
+                      <aside class="blog-aside">
+                          <div class="range range-40 range-xl-90">
+
+                              <!-- Archive-->
+                              <div class="cell-xs-12 cell-sm-6 cell-lg-12">
+                                  <h5>Year</h5>
+                                  <div class="heading-divider"></div>
+                                  <div class="range">
+                                      <div class="cell-m-6">
+                                          <ul class="list list-marked">
+                                            {% if race_years %}
+                                            {% for race_year in race_years %}
+                                            {% if race_year.race_year == '2006' or race_year.race_year == '2007' or race_year.race_year == '2008' %}
+                                            <li>{{ race_year.race_year }} - <a href="/results/{{ race_year.race_year }}/10K">10K</a></li>
+                                              {% elif race_year.race_year == '2009' or race_year.race_year == '2010' or race_year.race_year == '2011' or race_year.race_year == '2012' or race_year.race_year == '2013' or race_year.race_year == '2014' %}
+                                            <li>{{ race_year.race_year }} - <a href="/results/{{ race_year.race_year }}/5K">5K</a> | <a href="/results/{{ race_year.race_year }}/10K">10K</a></li>
+                                            {% else %}
+                                            <li>{{ race_year.race_year }} - <a href="/results/{{ race_year.race_year }}/5K">5K</a> | <a href="/results/{{ race_year.race_year }}/10K">10K</a> | <a href="/results/{{ race_year.race_year }}/15K">15K</a></li>
+                                            {% endif %}
+                                            {% endfor %}
+                                            {% endif %}
+                                          </ul>
+                                      </div>
+
+                                      <div class="cell-xxs-6">
+
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </aside>
+                  </div>
+              </div>
+              </section>
+      
+
+{% endblock %}
