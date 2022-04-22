@@ -257,7 +257,7 @@ def race_details(request):
 def results_home(request):
     assert isinstance(request, HttpRequest)
     race_year = Race.objects.all().order_by('-race_year').distinct('race_year').first()
-    result_url = '/results/' + str(race_year.race_year) + '/5K'
+    result_url = '/results/' + str(race_year.race_year) + '/5k'
     return HttpResponseRedirect(result_url)
 
 
