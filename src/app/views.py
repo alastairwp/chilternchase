@@ -111,25 +111,14 @@ def faq(request):
 
 def gallery(request):
     assert isinstance(request, HttpRequest)
-    race_years = Photo.objects.all().order_by('-race_year').distinct('race_year')
+    race_years = Race.objects.all().order_by('-race_year').distinct('race_year')
     race_year = race_years.first()
-    image_list = Photo.objects.filter(race_year=race_year.race_year).distinct('filename')
-    paginator = Paginator(image_list, 100)  # Show 100 contacts per page
-    page = request.GET.get('page')
-    try:
-        images = paginator.page(page)
-    except PageNotAnInteger:
-        # If page is not an integer, deliver first page.
-        images = paginator.page(1)
-    except EmptyPage:
-        # If page is out of range (e.g. 9999), deliver last page of results.
-        images = paginator.page(paginator.num_pages)
-
+    template_name = 'app/photos/{}.html'.format(race_year)
+    
     return render(
         request,
-        'app/gallery.html',
+        template_name,
         {
-            'images': images,
             'race_years': race_years,
             'url_race_year': race_year.race_year,
             'title': 'Gallery | Chiltern Chase'
@@ -140,28 +129,15 @@ def gallery(request):
 def gallerydetails(request, race_year):
     assert isinstance(request, HttpRequest)
     race_years = Photo.objects.all().order_by('-race_year').distinct('race_year')
-    image_list = Photo.objects.filter(race_year=race_year).distinct('filename')
-    total_images = image_list.count()
-    paginator = Paginator(image_list, 100)  # Show 30 contacts per page
-    page = request.GET.get('page')
-    try:
-        images = paginator.page(page)
-    except PageNotAnInteger:
-        # If page is not an integer, deliver first page.
-        images = paginator.page(1)
-    except EmptyPage:
-        # If page is out of range (e.g. 9999), deliver last page of results.
-        images = paginator.page(paginator.num_pages)
+    template_name = 'app/photos/{}.html'.format(race_year)
 
     return render(
         request,
-        'app/gallery.html',
+        template_name,
         {
-            'images': images,
             'race_years': race_years,
             'url_race_year': race_year,
             'title': 'Gallery | Chiltern Chase',
-            'total_images': total_images,
         }
     )
 
