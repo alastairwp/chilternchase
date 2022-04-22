@@ -264,7 +264,7 @@ def results_home(request):
 def results(request, race_year, race_type):
     assert isinstance(request, HttpRequest)
     race_years = Race.objects.all().order_by('-race_year').distinct('race_year')
-    template_name = 'app/results/{}-{}.html'.format(race_year, race_type)
+    template_name = 'app/results/{}-{}.html'.format(race_year, race_type.lower())
     return render(
         request,
         template_name,
