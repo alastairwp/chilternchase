@@ -865,42 +865,18 @@
                   </div>
                 </div>
         
+                <!-- Race Archive -->
                 <div class="cell-lg-4">
-                  <div class="blog-aside-wrap">
-                      <!-- Blog Aside-->
-                      <aside class="blog-aside">
-                          <div class="range range-40 range-xl-90">
-
-                              <!-- Archive-->
-                              <div class="cell-xs-12 cell-sm-6 cell-lg-12">
-                                  <h5>Year</h5>
-                                  <div class="heading-divider"></div>
-                                  <div class="range">
-                                      <div class="cell-m-6">
-                                          <ul class="list list-marked">
-                                            {% if race_years %}
-                                            {% for race_year in race_years %}
-                                            {% if race_year.race_year == '2006' or race_year.race_year == '2007' or race_year.race_year == '2008' %}
-                                            <li>{{ race_year.race_year }} - <a href="/results/{{ race_year.race_year }}/10K">10K</a></li>
-                                              {% elif race_year.race_year == '2009' or race_year.race_year == '2010' or race_year.race_year == '2011' or race_year.race_year == '2012' or race_year.race_year == '2013' or race_year.race_year == '2014' %}
-                                            <li>{{ race_year.race_year }} - <a href="/results/{{ race_year.race_year }}/5K">5K</a> | <a href="/results/{{ race_year.race_year }}/10K">10K</a></li>
-                                            {% else %}
-                                            <li>{{ race_year.race_year }} - <a href="/results/{{ race_year.race_year }}/5K">5K</a> | <a href="/results/{{ race_year.race_year }}/10K">10K</a> | <a href="/results/{{ race_year.race_year }}/15K">15K</a></li>
-                                            {% endif %}
-                                            {% endfor %}
-                                            {% endif %}
-                                          </ul>
-                                      </div>
-
-                                      <div class="cell-xxs-6">
-
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </aside>
-                  </div>
-              </div>
+                    <div class="blog-aside-wrap">
+                        <!-- Blog Aside-->
+                        <aside class="blog-aside">
+                            <div class="range range-40 range-xl-90">
+                              {% include "app/results/race-archive.html" with race_year=2011 %}
+                              
+                            </div>
+                        </aside>
+                    </div>
+                </div>
               </section>
       
 
