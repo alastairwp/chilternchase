@@ -1,0 +1,519 @@
+
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+      <!-- Breadcrumbs Section-->
+      <section class="section breadcrumb-wrapper bg-primary">
+        <div class="shell">
+          <h1>Results</h1>
+        </div>
+      </section>
+      <!-- Hover Row Table Section-->
+      
+      <!-- Striped Table Section-->
+      <section class="section section-lg bg-gray-2">
+        <div class="shell shell-wide">
+            <div class="range range-60 range-md-center">
+                <div class="cell-lg-8 cell-xl-8">
+                  {% if race_year and race_type %}
+                    <h3>{{ race_year }}&nbsp;-&nbsp;{{ race_type }}</h3>
+                  {% endif %}
+                  <div class="range range-xs-center">
+                    <div class="cell-sm-10 cell-lg-8">
+                      <div class="table-custom-wrap">
+                        <table class="table-custom table-fixed table-primary">
+                            <tr>
+                                <th>Position</th>
+                                <th>Name</th>
+                                <th>Team</th>
+                                <th>Finish Time</th>
+                                <th>Chip Time</th>
+                            </tr>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Connor Morgan</td>
+                                        <td>Abingdon AC</td>
+                                        <td>00:18:40</td>
+                                        <td>00:18:36</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Darren Tremble</td>
+                                        <td>Royal Air Force AC</td>
+                                        <td>00:19:48</td>
+                                        <td>00:19:44</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Rafi Wilkinson</td>
+                                        <td>FETCH Everyone (FERC)</td>
+                                        <td>00:20:17</td>
+                                        <td>00:20:17</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Richard Mason</td>
+                                        <td>FETCH Everyone (FERC)</td>
+                                        <td>00:20:19</td>
+                                        <td>00:20:14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Maelo Moulim-Gorouguez</td>
+                                        <td></td>
+                                        <td>00:20:22</td>
+                                        <td>00:20:17</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Chris Storey</td>
+                                        <td>Corby AC</td>
+                                        <td>00:23:08</td>
+                                        <td>00:23:03</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Rafi Mullin</td>
+                                        <td></td>
+                                        <td>00:23:54</td>
+                                        <td>00:23:47</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Ralph Mayall</td>
+                                        <td></td>
+                                        <td>00:24:00</td>
+                                        <td>00:23:54</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Chaudra Ray</td>
+                                        <td></td>
+                                        <td>00:24:08</td>
+                                        <td>00:24:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Tom Anderson</td>
+                                        <td></td>
+                                        <td>00:24:38</td>
+                                        <td>00:24:34</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>Jogman Limbu</td>
+                                        <td></td>
+                                        <td>00:25:07</td>
+                                        <td>00:25:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>Zak Reichman</td>
+                                        <td></td>
+                                        <td>00:25:57</td>
+                                        <td>00:25:52</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>Holly Curtayne</td>
+                                        <td></td>
+                                        <td>00:26:21</td>
+                                        <td>00:26:14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>Finlay Gilroy</td>
+                                        <td></td>
+                                        <td>00:26:38</td>
+                                        <td>00:26:33</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>Jemima Pettifer</td>
+                                        <td></td>
+                                        <td>00:27:33</td>
+                                        <td>00:27:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16</td>
+                                        <td>Charlie Young</td>
+                                        <td></td>
+                                        <td>00:27:42</td>
+                                        <td>00:27:37</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>Andrew Dart</td>
+                                        <td></td>
+                                        <td>00:28:03</td>
+                                        <td>00:27:52</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td>Lola Gunn</td>
+                                        <td>Abingdon AC</td>
+                                        <td>00:28:37</td>
+                                        <td>00:28:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>19</td>
+                                        <td>Guy Wigmore</td>
+                                        <td></td>
+                                        <td>00:28:43</td>
+                                        <td>00:28:33</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20</td>
+                                        <td>Reuben Taylor</td>
+                                        <td></td>
+                                        <td>00:29:09</td>
+                                        <td>00:29:05</td>
+                                    </tr>
+                                    <tr>
+                                        <td>21</td>
+                                        <td>Nick Wilkinson</td>
+                                        <td></td>
+                                        <td>00:29:10</td>
+                                        <td>00:28:57</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22</td>
+                                        <td>Catherine Chamberlin</td>
+                                        <td>Benson Striders</td>
+                                        <td>00:29:12</td>
+                                        <td>00:29:05</td>
+                                    </tr>
+                                    <tr>
+                                        <td>23</td>
+                                        <td>Hannah Green</td>
+                                        <td></td>
+                                        <td>00:29:13</td>
+                                        <td>00:29:07</td>
+                                    </tr>
+                                    <tr>
+                                        <td>24</td>
+                                        <td>Adam Seal</td>
+                                        <td></td>
+                                        <td>00:29:23</td>
+                                        <td>00:29:11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>25</td>
+                                        <td>Florence Gilroy</td>
+                                        <td></td>
+                                        <td>00:29:34</td>
+                                        <td>00:29:27</td>
+                                    </tr>
+                                    <tr>
+                                        <td>26</td>
+                                        <td>Anthony Mullin</td>
+                                        <td></td>
+                                        <td>00:29:41</td>
+                                        <td>00:29:34</td>
+                                    </tr>
+                                    <tr>
+                                        <td>27</td>
+                                        <td>Les Bond</td>
+                                        <td></td>
+                                        <td>00:30:00</td>
+                                        <td>00:29:51</td>
+                                    </tr>
+                                    <tr>
+                                        <td>28</td>
+                                        <td>Hazel Benfold</td>
+                                        <td>Abingdon AC</td>
+                                        <td>00:31:27</td>
+                                        <td>00:31:20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>29</td>
+                                        <td>Jessie Clayton</td>
+                                        <td></td>
+                                        <td>00:31:45</td>
+                                        <td>00:31:36</td>
+                                    </tr>
+                                    <tr>
+                                        <td>30</td>
+                                        <td>Heather Leedham</td>
+                                        <td></td>
+                                        <td>00:32:01</td>
+                                        <td>00:31:49</td>
+                                    </tr>
+                                    <tr>
+                                        <td>31</td>
+                                        <td>Adam Wood</td>
+                                        <td></td>
+                                        <td>00:32:09</td>
+                                        <td>00:31:52</td>
+                                    </tr>
+                                    <tr>
+                                        <td>32</td>
+                                        <td>Eliana Mayall</td>
+                                        <td></td>
+                                        <td>00:32:30</td>
+                                        <td>00:32:22</td>
+                                    </tr>
+                                    <tr>
+                                        <td>33</td>
+                                        <td>Alex Leedham</td>
+                                        <td></td>
+                                        <td>00:32:31</td>
+                                        <td>00:32:19</td>
+                                    </tr>
+                                    <tr>
+                                        <td>34</td>
+                                        <td>Reuben Leedham</td>
+                                        <td></td>
+                                        <td>00:32:31</td>
+                                        <td>00:32:20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>35</td>
+                                        <td>Sally Redhead</td>
+                                        <td></td>
+                                        <td>00:32:35</td>
+                                        <td>00:32:23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>Alex Cosgrove</td>
+                                        <td></td>
+                                        <td>00:32:37</td>
+                                        <td>00:32:24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>37</td>
+                                        <td>Dorota Niemcewicz</td>
+                                        <td></td>
+                                        <td>00:33:10</td>
+                                        <td>00:32:55</td>
+                                    </tr>
+                                    <tr>
+                                        <td>38</td>
+                                        <td>Michael Search</td>
+                                        <td>Kidlington Running & AC</td>
+                                        <td>00:33:19</td>
+                                        <td>00:33:09</td>
+                                    </tr>
+                                    <tr>
+                                        <td>39</td>
+                                        <td>Michelle Wells</td>
+                                        <td></td>
+                                        <td>00:34:08</td>
+                                        <td>00:33:54</td>
+                                    </tr>
+                                    <tr>
+                                        <td>40</td>
+                                        <td>Sanjay Ramburuth</td>
+                                        <td></td>
+                                        <td>00:34:46</td>
+                                        <td>00:34:36</td>
+                                    </tr>
+                                    <tr>
+                                        <td>41</td>
+                                        <td>Lokendra Gurung</td>
+                                        <td></td>
+                                        <td>00:35:05</td>
+                                        <td>00:34:59</td>
+                                    </tr>
+                                    <tr>
+                                        <td>42</td>
+                                        <td>Jonny Nichols</td>
+                                        <td></td>
+                                        <td>00:35:18</td>
+                                        <td>00:35:13</td>
+                                    </tr>
+                                    <tr>
+                                        <td>43</td>
+                                        <td>Jane Smale</td>
+                                        <td></td>
+                                        <td>00:35:36</td>
+                                        <td>00:35:24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>44</td>
+                                        <td>Rachel White</td>
+                                        <td></td>
+                                        <td>00:35:36</td>
+                                        <td>00:35:26</td>
+                                    </tr>
+                                    <tr>
+                                        <td>45</td>
+                                        <td>Georgiana Ciobotaru</td>
+                                        <td></td>
+                                        <td>00:36:29</td>
+                                        <td>00:36:21</td>
+                                    </tr>
+                                    <tr>
+                                        <td>46</td>
+                                        <td>Lenka Rysova</td>
+                                        <td></td>
+                                        <td>00:36:30</td>
+                                        <td>00:36:21</td>
+                                    </tr>
+                                    <tr>
+                                        <td>47</td>
+                                        <td>John Wells</td>
+                                        <td></td>
+                                        <td>00:36:51</td>
+                                        <td>00:36:37</td>
+                                    </tr>
+                                    <tr>
+                                        <td>48</td>
+                                        <td>Sam Clayton</td>
+                                        <td></td>
+                                        <td>00:37:49</td>
+                                        <td>00:37:38</td>
+                                    </tr>
+                                    <tr>
+                                        <td>49</td>
+                                        <td>Barry Gilbert</td>
+                                        <td></td>
+                                        <td>00:37:57</td>
+                                        <td>00:37:41</td>
+                                    </tr>
+                                    <tr>
+                                        <td>50</td>
+                                        <td>Surilikk Di Marna</td>
+                                        <td></td>
+                                        <td>00:38:25</td>
+                                        <td>00:38:14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>51</td>
+                                        <td>Philip Winfield</td>
+                                        <td></td>
+                                        <td>00:38:28</td>
+                                        <td>00:38:21</td>
+                                    </tr>
+                                    <tr>
+                                        <td>52</td>
+                                        <td>Samia Wilkinson</td>
+                                        <td></td>
+                                        <td>00:38:49</td>
+                                        <td>00:38:36</td>
+                                    </tr>
+                                    <tr>
+                                        <td>53</td>
+                                        <td>Shems Wilkinson</td>
+                                        <td></td>
+                                        <td>00:38:49</td>
+                                        <td>00:38:35</td>
+                                    </tr>
+                                    <tr>
+                                        <td>54</td>
+                                        <td>Emily Johns</td>
+                                        <td></td>
+                                        <td>00:39:55</td>
+                                        <td>00:39:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>55</td>
+                                        <td>Peter Mitchell</td>
+                                        <td></td>
+                                        <td>00:40:04</td>
+                                        <td>00:39:54</td>
+                                    </tr>
+                                    <tr>
+                                        <td>56</td>
+                                        <td>Susie Barber</td>
+                                        <td></td>
+                                        <td>00:40:09</td>
+                                        <td>00:40:03</td>
+                                    </tr>
+                                    <tr>
+                                        <td>57</td>
+                                        <td>Rob Barber</td>
+                                        <td></td>
+                                        <td>00:40:10</td>
+                                        <td>00:40:03</td>
+                                    </tr>
+                                    <tr>
+                                        <td>58</td>
+                                        <td>Sarah Herring</td>
+                                        <td></td>
+                                        <td>00:43:27</td>
+                                        <td>00:43:13</td>
+                                    </tr>
+                                    <tr>
+                                        <td>59</td>
+                                        <td>Sadie,Edwards</td>
+                                        <td></td>
+                                        <td>00:44:49</td>
+                                        <td>00:44:32</td>
+                                    </tr>
+                                    <tr>
+                                        <td>60</td>
+                                        <td>Tom Edwards</td>
+                                        <td></td>
+                                        <td>00:44:49</td>
+                                        <td>00:44:32</td>
+                                    </tr>
+                                    <tr>
+                                        <td>61</td>
+                                        <td>Donna,Mitchell</td>
+                                        <td></td>
+                                        <td>00:50:48</td>
+                                        <td>00:50:32</td>
+                                    </tr>
+                                    <tr>
+                                        <td>62</td>
+                                        <td>Lisa,Robinson</td>
+                                        <td></td>
+                                        <td>00:53:25</td>
+                                        <td>00:53:25</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                           
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="cell-lg-4">
+                  <div class="blog-aside-wrap">
+                      <!-- Blog Aside-->
+                      <aside class="blog-aside">
+                          <div class="range range-40 range-xl-90">
+
+                              <!-- Archive-->
+                              <div class="cell-xs-12 cell-sm-6 cell-lg-12">
+                                  <h5>Year</h5>
+                                  
+                                  <div class="heading-divider"></div>
+                                  <p><sup>*</sup> = Results coming soon</p>
+                                  <div class="range">
+                                      <div class="cell-m-6">
+                                          <ul class="list list-marked">
+                                              {% if race_years %}
+                                              {% for race_year in race_years %}
+                                              {% if race_year.race_year == '2006' or race_year.race_year == '2007' or race_year.race_year == '2008' %}
+                                              <li>{{ race_year.race_year }} - <a href="/results/{{ race_year.race_year }}/10K">10K</a></li>
+                                                {% elif race_year.race_year == '2009' or race_year.race_year == '2010' or race_year.race_year == '2011' or race_year.race_year == '2012' or race_year.race_year == '2013' or race_year.race_year == '2014' %}
+                                              <li>{{ race_year.race_year }} - <a href="/results/{{ race_year.race_year }}/5K">5K</a> | <a href="/results/{{ race_year.race_year }}/10K">10K</a></li>
+                                              {% elif race_year.race_year == '2022' %}
+                                              <li>{{ race_year.race_year }} - <a href="/results/{{ race_year.race_year }}/5K">5K</a> | <a href="/results/{{ race_year.race_year }}/10K">15K<sup>*</sup></a></li>
+                                              {% else %}
+                                              <li>{{ race_year.race_year }} - <a href="/results/{{ race_year.race_year }}/5K">5K</a> | <a href="/results/{{ race_year.race_year }}/10K">10K</a> | <a href="/results/{{ race_year.race_year }}/15K">15K</a></li>
+                                              {% endif %}
+                                              {% endfor %}
+                                              {% endif %}
+                                          </ul>
+                                      </div>
+
+                                      <div class="cell-xxs-6">
+
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </aside>
+                  </div>
+              </div>
+              </section>
+      
+
+{% endblock %}
