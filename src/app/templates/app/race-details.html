@@ -1,9 +1,11 @@
 ﻿{% extends "app/layout.html" %} {% block content %} {% load humanize %}
-<section class="section section-xl bg-primary bg-primary-mod-1" style="background-color:#009dab;padding-top:30px;margin-bottom:0px;padding-bottom:30px">
+{% load static %}
+<section class="section section-xl bg-primary bg-primary-mod-1" style="background-color:#ffffff;padding-top:0px;margin-bottom:0px;padding-bottom:0px">
   <div class="shell shell-wide" style="padding:0px;margin-bottom:0px;">
 
       <div style="text-align:center;">
-          <a href="/race-details/" style="padding:0px;margin:0px;font-size:large"><u>Announcement: The Chiltern Chase is reverting to the original 10K race only from 2023 onwards. The 10K is by far our most popular and scenic race and we hope you will continue to enjoy it. The format may change slightly and we will update this site with details accordingly. </u></a>
+          <!--<a href="/race-details/" style="padding:0px;margin:0px;font-size:large"><u>Announcement: The Chiltern Chase is reverting to the original 10K race only from 2023 onwards. The 10K is by far our most popular and scenic race and we hope you will continue to enjoy it. The format may change slightly and we will update this site with details accordingly. </u></a>-->
+          <!-- <img src="{% static 'app/content/images/web-banner-demo.jpg' %}"> -->
       </div>
   </div>
 </section>
@@ -20,6 +22,7 @@
   <div class="shell shell-wide">
     <div style="text-align: center">
       <!--<h2 style="color:orange;">Registration for Chiltern Chase 2020 now open!</h2>-->
+     
     </div>
 
     <div class="range">
@@ -66,7 +69,7 @@
 <section class="section section-lg bg-white">
   <div class="shell shell-wide" data-lightgallery="group">
     <div class="row">
-      <div class="block-md">
+      <div>
         <!-- Other Race Information -->
         <h2>Pre-race Instructions</h2>
         <a name="travel"></a>
