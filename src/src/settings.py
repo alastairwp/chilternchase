@@ -63,10 +63,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'src.urls'
-
-
+# ****************************************************
+# NOTE TO ME Remove the following 2 lines to work in *
+# ****************************************************
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
+# ****************************************************
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'app/static/app/content')
 MEDIA_URL = '/media/'
