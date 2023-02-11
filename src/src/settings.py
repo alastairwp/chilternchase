@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('CC_SECRET_KEY')
 # *******************************
 DEBUG = True
 
-ALLOWED_HOSTS = os.environ.get('CC_DJANGO_ALLOWED_HOSTS').split(',')
+ALLOWED_HOSTS = [os.environ.get('CC_DJANGO_ALLOWED_HOSTS').split(',')]
 
 
 # Application definition
@@ -66,8 +66,8 @@ ROOT_URLCONF = 'src.urls'
 # ****************************************************
 # NOTE TO ME Remove the following 2 lines to work in *
 # ****************************************************
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = True
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_SSL_REDIRECT = True
 # ****************************************************
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'app/static/app/content')
@@ -96,7 +96,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'src.wsgi.application'
 
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -116,7 +116,7 @@ DATABASES = {
         'PORT': os.environ.get('CC_DB_PORT'),
     }
 }
-
+"""
 # import dj_database_url
 # DATABASES['default'] = dj_database_url.config()
 
