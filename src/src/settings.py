@@ -96,7 +96,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'src.wsgi.application'
 
-
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -116,7 +116,7 @@ DATABASES = {
         'PORT': os.environ.get('CC_DB_PORT'),
     }
 }
-"""
+
 # import dj_database_url
 # DATABASES['default'] = dj_database_url.config()
 
