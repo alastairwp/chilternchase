@@ -28,13 +28,16 @@ SECRET_KEY = os.environ.get('CC_SECRET_KEY')
 
 # *******************************
 # Live settings
-DEBUG = False
-ALLOWED_HOSTS = os.environ.get('CC_DJANGO_ALLOWED_HOSTS').split(',')
+# DEBUG = False
+# ALLOWED_HOSTS = os.environ.get('CC_DJANGO_ALLOWED_HOSTS').split(',')
 # *******************************
+
+
+# *******************************
+# Dev settings
 DEBUG = True
-
-# ALLOWED_HOSTS = [os.environ.get('CC_DJANGO_ALLOWED_HOSTS').split(',')]
-
+ALLOWED_HOSTS = ['*']
+# *******************************
 
 # Application definition
 
@@ -96,7 +99,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'src.wsgi.application'
 
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -116,7 +119,7 @@ DATABASES = {
         'PORT': os.environ.get('CC_DB_PORT'),
     }
 }
-
+"""
 # import dj_database_url
 # DATABASES['default'] = dj_database_url.config()
 
