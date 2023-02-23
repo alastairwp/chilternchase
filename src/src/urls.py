@@ -12,8 +12,8 @@ import user.views as user_views
 import app.forms
 
 
-handler404 = 'app.views.handler404'
-handler500 = 'app.views.handler500'
+#handler404 = 'app.views.handler404'
+#handler500 = 'app.views.handler500'
 
 
 urlpatterns = [
