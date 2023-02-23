@@ -12,13 +12,13 @@ from django.core.paginator import Paginator, PageNotAnInteger
 
 
 def handler404(request, *args, **argv):
-    response = render_to_response("errors/404.html", {})
+    response = render("errors/404.html", {})
     response.status_code = 404
     return response
 
 
 def handler500(request, *args, **argv):
-    response = render_to_response("errors/500.html", {})
+    response = render("errors/500.html", {})
     response.status_code = 500
     return response
 
